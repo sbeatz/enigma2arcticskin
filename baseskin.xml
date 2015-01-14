@@ -2432,7 +2432,7 @@ scrollbarMode="showOnDemand" scrollbarWidth="5" zPosition="20" scrollbarSliderBo
                                     MultiContentEntryText(pos = (130, 17), size = (445, 60), flags = RT_HALIGN_LEFT, text = 
 
 1), # index 1 is the language name,
-                                    MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the 
+                                   # MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the 
 
 pixmap
                                 ],
