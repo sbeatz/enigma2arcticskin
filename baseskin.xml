@@ -4995,4 +4995,24 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowBL.png" position="1581,32" size="30,28" zPosition="1" />
 		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowleft.png" position="1585,-1" size="7,33" zPosition="1" />
 	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="NetatmoSetup" position="0, 0" size="1920,1080" title="VTI EPGPanel" transparent="0">
+		<eLabel backgroundColor="lightpanel" name="" position="0,0" size="910,1080" />
+		<!--Titel-->
+		<eLabel name="" position="-15,19" size="80,51" zPosition="13" font="PVR; 60" text="d" halign="right" valign="center" />
+		<widget backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" halign="left" position="70,24" render="Label" size="517,51" source="Title" transparent="0" zPosition="30" noWrap="1" />
+		<!--Schatten-->
+		<ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
+		<!--Uhr-->
+		<widget backgroundColor="lightpanel" font="Regular; 24" foregroundColor="darkpanel" halign="right" position="1802,0" render="Label" size="103,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/uhrpanel.png" position="1751,0" size="410,60" zPosition="1" />
+		<eLabel name="" position="1778,6" size="30,40" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
+		
+		<widget name="config" position="0,90" size="910,850" itemHeight="36" backgroundColor="lightpanel" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5" />
+		<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" source="key_green" render="Label" position="47,1026" size="228,50" transparent="0" valign="center" zPosition="11" />
+		<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" source="key_red" render="Label" position="47,966" size="226,50" transparent="0" valign="center" zPosition="11" />
+		<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightpanel" />
+		<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="un4a00a0a" zPosition="10" valign="center" halign="left" />
+	</screen>
 </skin>
