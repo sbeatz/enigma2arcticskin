@@ -3636,7 +3636,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		</widget>
 		<widget backgroundColor="lightpanel" colorEventProgressbarBorder="foreground" picServiceEventProgressbar="Arctic/pic/channellistprogress.png" colorEventProgressbarBorderSelected="white" colorServiceDescription="foreground" foregroundColor="foreground" foregroundColorServiceNotAvail="foreground" itemHeight="100" name="list" position="0,133" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="0" serviceInfoFont="Regular;22" serviceItemHeight="100" serviceNameFont="Bold;22" serviceNumberFont="Bold;22" size="641,947" transparent="1" zPosition="30">
 		</widget>
-		<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" noWrap="1" position="1440,715" size="390,39" text="NÃ¤chste Sendungen" transparent="1" valign="top" zPosition="35" />
+		<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" noWrap="1" position="1440,715" size="390,39" text="N&#228;chste Sendungen" transparent="1" valign="top" zPosition="35" />
 		<widget backgroundColor="lightpanel" font="Regular;20" foregroundColor="darkpanel" noWrap="1" position="1445,754" render="NextEvents" size="390,160" source="ServiceEvent" transparent="1" zPosition="55">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -3723,7 +3723,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 
 		<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" position="114,30" size="173,46" text="LIVE TV" valign="top" zPosition="5" />
 
-		<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" noWrap="1" position="1440,715" size="390,39" text="NÃ¤chste Sendungen" transparent="1" valign="top" zPosition="35" />
+		<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" noWrap="1" position="1440,715" size="390,39" text="N&#228;chste Sendungen" transparent="1" valign="top" zPosition="35" />
 		<widget backgroundColor="lightpanel" font="Regular;20" foregroundColor="darkpanel" position="1445,754" render="CoolNextEvent" size="390,160" source="Service" transparent="0" zPosition="55">
 		</widget>
 		<!--<eLabel backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" name="" noWrap="1" position="1440,940" size="390,35" text="Primetime" transparent="1" valign="top" zPosition="35" />
