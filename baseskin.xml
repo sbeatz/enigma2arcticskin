@@ -3673,7 +3673,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="666,0" size="1208,709" zPosition="-100" />
 		<ePixmap name="" pixmap="Arctic/pic/channellistshadow.png" alphatest="blend" position="641,0" size="13,1080" transparent="1" zPosition="-10" />
-		<widget OverScan="0" backgroundColor="darkgrey" position="699,33" render="Pig" size="1152,653" source="session.VideoPicture" zPosition="-501">
+		<widget OverScan="0" backgroundColor="darkgrey"  position="694,28" render="Pig" size="1162,663" source="session.VideoPicture" zPosition="-501">
 			<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
