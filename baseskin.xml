@@ -4940,4 +4940,59 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		</widget>
 		<ePixmap name="" pixmap="Arctic/pic/channellistbg.png" position="0, 0" size="1920,1080" transparent="1" zPosition="-500" />
 	</screen>
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="SimplePlayer" position="0, 0" size="1920, 1080" transparent="0">
+		<eLabel backgroundColor="lightpanel" foregroundColor="lightpanel" name="" position="0,979" size="1920,111" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowtop.png" position="0,972" size="1000,7" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowtop.png" position="1000,972" size="920,7" />
+		<widget backgroundColor="lightpanel" font="Regular; 34" foregroundColor="darkpanel" position="45,990" render="Label" size="1333,50" source="session.CurrentService" valign="center" zPosition="1" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="Cover" position="1082,341" size="0,0" zPosition="2" alphatest="blend" />
+		<widget backgroundColor="grey_light" foregroundColor="MenuBlue" position="46,1051" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<ePixmap alphatest="blend" name="" pixmap="/usr/share/enigma2/Arctic/pic/progressoverlay.png" position="45,1050" size="1200,20" zPosition="20" />
+		<widget backgroundColor="lightpanel" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+			<convert type="ServicePosition">Remaining,ShowHours</convert>
+		</widget>
+		<widget backgroundColor="lightpanel" font="Regular; 16" halign="left" position="1369,1045" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
+			<convert type="ServicePosition">Length,ShowHours</convert>
+		</widget>
+		<eLabel backgroundColor="darkpanel" name="" position="1360,1047" size="2,25" zPosition="10" />
+		<widget alphatest="blend" path="/usr/share/enigma2/Arctic/audioicon" position="1763,996" render="AudioIcon" size="85,58" source="session.CurrentService" zPosition="1">
+			<convert type="VAudioInfo">AudioIcon</convert>
+		</widget>
+		<widget alphatest="blend" pixmap="/usr/share/enigma2/Arctic/pic/OverlayTopRecording.png" position="1854,991" render="Pixmap" size="64,64" source="session.RecordState" zPosition="2">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget alphatest="blend" pixmap="/usr/share/enigma2/Arctic/pic/badges/video/576.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">0,799</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="/usr/share/enigma2/Arctic/pic/badges/video/720.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">800,1280</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget alphatest="blend" pixmap="/usr/share/enigma2/Arctic/pic/badges/video/1080.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">1281,1920</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget backgroundColor="lightpanel" font="Regular; 24" foregroundColor="darkpanel" halign="right" position="1793,0" render="Label" size="103,50" source="global.CurrentTime" transparent="0" valign="center" zPosition="20">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget backgroundColor="lightpanel" font="Regular; 16" foregroundColor="darkpanel" halign="right" position="1582,0" render="Label" size="216,51" source="global.CurrentTime" transparent="0" valign="center" zPosition="20">
+			<convert type="ClockToText">Format: %A %d.%m.%Y</convert>
+		</widget>
+		<eLabel backgroundColor="lightpanel" name="" position="1600,0" size="320,51" zPosition="4" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowbottom.png" position="1610,52" size="310,7" zPosition="4" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/lightpanelcornerBL.png" position="1592,41" size="10,10" zPosition="5" />
+		<eLabel backgroundColor="darkpanel" name="" position="1600,51" size="320,1" zPosition="5" />
+		<eLabel backgroundColor="lightpanel" name="" position="1591,0" size="10,42" zPosition="5" />
+		<eLabel backgroundColor="darkpanel" name="" position="1591,0" size="1,42" zPosition="10" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowBL.png" position="1581,32" size="30,28" zPosition="1" />
+		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowleft.png" position="1585,-1" size="7,33" zPosition="1" />
+	</screen>
 </skin>
