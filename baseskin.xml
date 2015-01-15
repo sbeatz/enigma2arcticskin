@@ -4940,7 +4940,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		</widget>
 		<ePixmap name="" pixmap="Arctic/pic/channellistbg.png" position="0, 0" size="1920,1080" transparent="1" zPosition="-500" />
 	</screen>
-	<screen backgroundColor="transparent" flags="wfNoBorder" name="SimplePlayer" position="0, 0" size="1920, 1080" transparent="0">
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="MediaPortal SimplePlayer" position="0, 0" size="1920, 1080" transparent="0">
 		<eLabel backgroundColor="lightpanel" foregroundColor="lightpanel" name="" position="0,979" size="1920,111" />
 		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowtop.png" position="0,972" size="1000,7" />
 		<ePixmap name="" pixmap="/usr/share/enigma2/Arctic/pic/dropshadowtop.png" position="1000,972" size="920,7" />
