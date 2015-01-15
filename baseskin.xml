@@ -4693,10 +4693,9 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<widget backgroundColor="transparent" font="Wetter; 1" foregroundColor="transparent" halign="center" position="33,45" render="VWeatherUpdater" size="10,60" source="global.CurrentTime" valign="center" zPosition="10" />
 		<widget backgroundColor="lightpanel" font="Regular;24" foregroundColor="darkpanel" halign="right" noWrap="1" position="1716,823" render="Label" size="30,30" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
 			<convert type="VWeather">currentWeatherTemp</convert>
+			<convert type="TextAddAfter">&#176;C</convert>
 		</widget>
-		<widget backgroundColor="lightpanel" font="Regular;24" foregroundColor="darkpanel" halign="left" noWrap="1" position="1746,823" render="Label" size="80,30" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
-			<convert type="VWeather">CF</convert>
-		</widget>
+		
 		<widget backgroundColor="lightpanel" font="Wetter; 45" foregroundColor="darkpanel" halign="center" noWrap="1" position="1796,803" render="Label" size="80,80" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
 			<convert type="VWeather">currentWeatherCode</convert>
 		</widget>
@@ -4809,10 +4808,9 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<widget backgroundColor="transparent" font="Wetter; 1" foregroundColor="transparent" halign="center" position="33,45" render="VWeatherUpdater" size="10,60" source="global.CurrentTime" valign="center" zPosition="10" />
 		<widget backgroundColor="lightpanel" font="Regular;24" foregroundColor="darkpanel" halign="right" noWrap="1" position="1716,823" render="Label" size="30,30" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
 			<convert type="VWeather">currentWeatherTemp</convert>
+			<convert type="TextAddAfter">&#176;C</convert>
 		</widget>
-		<widget backgroundColor="lightpanel" font="Regular;24" foregroundColor="darkpanel" halign="left" noWrap="1" position="1746,823" render="Label" size="80,30" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
-			<convert type="VWeather">CF</convert>
-		</widget>
+	
 		<widget backgroundColor="lightpanel" font="Wetter; 45" foregroundColor="darkpanel" halign="center" noWrap="1" position="1796,803" render="Label" size="80,80" source="session.CurrentService" transparent="1" valign="center" zPosition="10">
 			<convert type="VWeather">currentWeatherCode</convert>
 		</widget>
