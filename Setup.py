@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re, os, threading
 from re import findall, search, split, sub
 from enigma import RT_WRAP, RT_VALIGN_CENTER, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_HALIGN_CENTER, gFont, eListbox,eListboxPythonMultiContent, getDesktop
@@ -70,6 +71,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
         self["key_blue"] = StaticText("")
         self["key_yellow"] = StaticText("")
         self.sysfilesSaved = self.checkFileSafe()
+        self.onlineversion = 0
         self.sysfilesOverwritten = self.checkFileOverwritten()
         if self.sysfilesSaved == False:
             self["key_green"] = StaticText("Systemdateien sichern")
@@ -78,16 +80,32 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
 
         if self.sysfilesOverwritten == False:
             self["key_yellow"] = StaticText("Systemdateien ueberschreiben")
-        
+        versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
+        self.version = int(versionstring)
+        self.checkUpdate()
         self.list = [ ]
         ConfigListScreen.__init__(self, self.list, session)
         self.createSetup()
 
     def updateFiles(self):
         urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/baseskin.xml','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/baseskin.xml')
+    
+    def checkUpdate(self):
+        urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/version','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion')
+        onlineversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion','r').read()
+        self.onlineversion = int(onlineversionstring)
+        if self.onlineversion > self.version:
+            self.session.openWithCallback(self.doUpdate, MessageBox, _(u"Es ist ein Update für Arctic Skin verfügbar - Möchten Sie es jetzt installieren?"), MessageBox.TYPE_YESNO)
+    
+    def doUpdate(self, answer):
+        if answer:
+            urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/Setup.py','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/Setup.py')
+            urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/plugin.py','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/plugin.py')
+            file = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','w')
+            file.write(str(self.onlineversion)
+            file.close()
+            self.session.openWithCallback(self.restartGUI, MessageBox, _("Die Arctic Skin App wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
         
-
-
     def createSetup(self):
         self.updateFiles()
         if os_path.exists('/usr/share/enigma2/Arctic') == False:
