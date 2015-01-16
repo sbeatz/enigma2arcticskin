@@ -1399,7 +1399,7 @@ gma2/python/Plugins/Extensions/MovieDB/spinner/wait8.png,/usr/lib/enigma2/python
 		<ePixmap alphatest="on" pixmap="skin_default/vkey_text.png" position="0,0" size="1,1" zPosition="-4" />
 		<widget name="header" position="0,160" size="610,36" font="Regular;20" transparent="1" noWrap="1" foregroundColor="darkpanel" zPosition="30" />
 		<widget name="text" foregroundColor="darkpanel" position="0,200" size="610,60" font="Regular;40" transparent="1" noWrap="1" halign="right" zPosition="30" />
-		<widget name="list" zPosition="30" foregroundColor="darkpanel" position="0,280" size="610,225" selectionDisabled="1" transparent="1" />
+		<widget name="list" zPosition="30" foregroundColor="darkpanel" position="0,280" size="610,225" selectionDisabled="1" transparent="0" />
 		<!--Schatten-->
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="611, 0" size="7, 1080" transparent="1" />
 		<!--Uhr-->
