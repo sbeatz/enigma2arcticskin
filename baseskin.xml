@@ -5087,7 +5087,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 			 <widget name="list" position="0,90" itemHeight="36" size="910,382" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
 			<!--widget name="pixmap" position="200,0" size="190,250" /-->
 			<widget name="info" position="238,476" zPosition="4" size="430,50" font="Regular;25"  transparent="0" halign="center" valign="center" />
-			<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_red" position="46,1026" size="793,50" transparent="0" valign="center" zPosition="11" />
+			<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_blue" position="46,1026" size="793,50" transparent="0" valign="center" zPosition="11" />
                                            <eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="blue_transparent" zPosition="10" valign="center" halign="left" backgroundColor="lightpanel" />              
                               <ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
   	</screen>
