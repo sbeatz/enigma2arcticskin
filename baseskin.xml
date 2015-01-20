@@ -5029,8 +5029,8 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 	<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightpanel" />
 	<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="blue_transparent" zPosition="10" valign="center" halign="left" backgroundColor="lightpanel" />
 	<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="un4a00a0a" zPosition="10" valign="center" halign="left" />
-	<widget name="ecmlabels" font="Regular;19" position="8,250" zPosition="2" size="100,350" transparent="1" />
-	<widget name="ecmValues" font="Regular;19" position="121,250" zPosition="3" size="738,350" transparent="1" />
+	<widget name="ecmlabels" font="Regular;19" position="8,250" zPosition="2" size="100,400" transparent="0" />
+	<widget name="ecmValues" font="Regular;19" position="121,250" zPosition="3" size="738,400" transparent="0" />
 	<widget position="14,674" size="460,60" source="session.CurrentService" render="Label" font="Regular;22" transparent="0">
 		<convert type="ServiceName">Name</convert>
 	</widget>
