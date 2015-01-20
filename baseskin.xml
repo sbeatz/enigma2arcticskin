@@ -5067,4 +5067,28 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
             	<widget name="info_au" position="12,253" zPosition="4" size="400,400" font="Regular;20" transparent="0" halign="left" valign="center" /> 
            	<widget name="info_blockall" position="339,252" zPosition="4" size="250,400" font="Regular;20" transparent="0" halign="left" valign="center" />
  	</screen>
+ 	<screen name="Getcccamlist" position="0,0" size="1920,1080" title="CR-Feed-CCcam-Download" flags="wfNoBorder" backgroundColor="transparent">
+		<eLabel position="0,0" size="910,1079" zPosition="-1" backgroundColor="lightpanel" />            
+		<eLabel name="" position="-15,19" size="80,51" zPosition="13" font="PVR; 60" text="d" halign="right" valign="center" />
+		<widget backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" halign="left" position="70,24" render="Label" size="517,51" source="Title" transparent="0" zPosition="30" noWrap="1" />
+		                <!--widget name="text" position="0,0" size="550,25" font="Regular;22" /--><!--widget name="list" position="30,15" size="500,370" scrollbarMode="showOnDemand" transparent="1" zPosition="2" /-->                       
+		 <widget name="list" position="0,90" itemHeight="36" size="910,382" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
+		<!--widget name="pixmap" position="200,0" size="190,250" /-->
+		<widget name="info" position="238,476" zPosition="4" size="430,50" font="Regular;25"  transparent="0" halign="center" valign="center" />
+		<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_red" position="46,1026" size="793,50" transparent="0" valign="center" zPosition="11" />
+                                           <eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="blue_transparent" zPosition="10" valign="center" halign="left" backgroundColor="lightpanel" />              
+                              <ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
+	 </screen>
+	 <screen name="Getoscamlist" position="0,0" size="1920,1080" title="CR-Feed-Oscam-Download" flags="wfNoBorder" backgroundColor="transparent">
+			<eLabel position="0,0" size="910,1079" zPosition="-1" backgroundColor="lightpanel" />            
+			<eLabel name="" position="-15,19" size="80,51" zPosition="13" font="PVR; 60" text="d" halign="right" valign="center" />
+			<widget backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" halign="left" position="70,24" render="Label" size="517,51" source="Title" transparent="0" zPosition="30" noWrap="1" />
+			                <!--widget name="text" position="0,0" size="550,25" font="Regular;22" /--><!--widget name="list" position="30,15" size="500,370" scrollbarMode="showOnDemand" transparent="1" zPosition="2" /-->                       
+			 <widget name="list" position="0,90" itemHeight="36" size="910,382" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
+			<!--widget name="pixmap" position="200,0" size="190,250" /-->
+			<widget name="info" position="238,476" zPosition="4" size="430,50" font="Regular;25"  transparent="0" halign="center" valign="center" />
+			<widget backgroundColor="lightpanel" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_red" position="46,1026" size="793,50" transparent="0" valign="center" zPosition="11" />
+                                           <eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="blue_transparent" zPosition="10" valign="center" halign="left" backgroundColor="lightpanel" />              
+                              <ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
+  	</screen>
 </skin>
