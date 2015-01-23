@@ -5097,4 +5097,49 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
                                            <eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="blue_transparent" zPosition="10" valign="center" halign="left" backgroundColor="lightpanel" />              
                               <ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
   	</screen>
+  	
+<screen backgroundColor="transparent" flags="wfNoBorder" name="CutListEditor" position="0,0" size="1920, 1080" title="CutList Editor" transparent="0">
+  <eLabel backgroundColor="lightpanel" name="" position="0,-2" size="410,1080" />
+  <widget backgroundColor="lightpanel" source="cutlist" itemHeight="50" position="0,130" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" size="410,795" transparent="0" zPosition="3" render="Listbox">
+<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos=(5,0), size=(150, 36), text = 1),
+						MultiContentEntryText(pos=(155,0), size=(100, 36), text = 2, flags = RT_HALIGN_RIGHT)
+					],
+				"fonts": [gFont("Regular", 22)],
+				"itemHeight": 24
+				}
+			</convert>
+</widget>
+<widget name="Timeline" pointer="Arctic/pic/pointer.png:875,1" position="45,1038" size="1600,13" transparent="0" zPosition="30" />
+
+  
+  <widget backgroundColor="lightpanel" font="headline; 24" foregroundColor="darkpanel" halign="left" noWrap="1" position="114,41" render="Label" size="281,51" source="Title" transparent="0" zPosition="1" />
+  
+  
+<widget name="SeekState" position="1571,986" zPosition="20" size="150,36" halign="center" font="Regular;22" valign="center" backgroundColor="background_left" />
+  <eLabel backgroundColor="lightpanel" text="&gt;" font="PVR; 36" foregroundColor="button_green" halign="left" position="79,944" size="56,72" transparent="0" valign="center" zPosition="11" />
+  <eLabel backgroundColor="lightpanel" font="PVR; 36" text="|&lt;" foregroundColor="un4a00a0a" halign="left" position="3,944" size="83,72" transparent="0" valign="center" zPosition="11" />
+  <eLabel backgroundColor="lightpanel" font="PVR; 36" foregroundColor="blue_transparent" halign="left" position="197,944" size="90,72" transparent="0" valign="center" zPosition="11" text="&gt;|" />
+  <eLabel text="||" backgroundColor="lightpanel" font="PVR; 36" foregroundColor="button_yellow" halign="center" position="124,944" size="83,72" transparent="0" valign="center" zPosition="11" />
+  
+  
+  
+  
+  
+  <ePixmap alphatest="blend" transparent="1" name="" pixmap="Arctic/pic/dropshadowright.png" position="411,0" size="10,1080" zPosition="-10" />
+  <widget name="Video" backgroundColor="darkgrey" position="0,0" size="1920,1080" zPosition="-5">
+
+  </widget>
+  <widget backgroundColor="lightpanel" font="light; 24" foregroundColor="darkpanel" halign="right" noWrap="1" position="1727,986" render="Label" size="184,50" source="session.CurrentService" transparent="0" valign="top" zPosition="35">
+    <convert type="ServicePosition">Position,Detailed</convert>
+  </widget>
+  <widget backgroundColor="lightpanel" font="light; 24" foregroundColor="darkpanel" halign="left" noWrap="1" position="309,983" render="Label" size="621,45" source="session.CurrentService" transparent="0" valign="top" zPosition="35">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="lightpanel" valign="top" halign="right" />
+<eLabel name="" position="41,981" size="1880,100" zPosition="0" /><ePixmap name="" position="410,973" size="1510,7" pixmap="Arctic/pic/dropshadowtop.png" />
+</screen>
+
+  	
 </skin>
