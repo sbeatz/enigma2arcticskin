@@ -537,8 +537,9 @@ self.instance.move(ePoint(0,top))
 		<widget alphatest="blend" name="resolution" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/wide.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/4_3.png" position="1134,935" size="88,0" transparent="1" zPosition="3" />
 		<widget alphatest="blend" name="videoformat" pixmaps="/usr/share/enigma2/Arctic/pic/moviedb/xvid.png,/usr/share/enigma2/Arctic/pic/moviedb/x264.png,/usr/share/enigma2/Arctic/pic/moviedb/mpg4.png,/usr/share/enigma2/Arctic/pic/moviedb/mpeg2.png,/usr/share/enigma2/Arctic/pic/moviedb/divx.png,/usr/share/enigma2/Arctic/pic/moviedb/avc.png,/usr/share/enigma2/Arctic/pic/moviedb/microsoft.png" position="564,927" size="73,40" transparent="1" zPosition="3" />
 		<widget alphatest="blend" name="rating_icons" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_0.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_1.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_2.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_3.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_4.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_5.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_6.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_7.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_8.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_9.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/info_window_icon_rating_star_10.png" position="1673,924" size="185,37" transparent="1" zPosition="3" />
-		<widget backgroundColor="aawhite" font="Regular; 18" foregroundColor="lightpanel" halign="center" name="year" position="54,926" size="91,35" transparent="1" zPosition="3" />
-		<widget backgroundColor="aawhite" font="Regular; 18" foregroundColor="darkpanel" halign="center" name="duration" position="147,926" size="196,35" transparent="1" zPosition="3" />
+		<widget alphatest="blend" name="fsk_icons" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/0.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/6.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/12.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/16.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/icons/18.png" position="278,809" size="80,80" transparent="1" zPosition="3" />
+		<widget backgroundColor="darkpanel" font="Regular; 18" foregroundColor="lightpanel" halign="center" name="year" position="54,926" size="91,35" transparent="0" zPosition="3" />
+		<widget backgroundColor="lightpanel" font="Regular; 18" foregroundColor="darkpanel" halign="center" name="duration" position="147,926" size="196,35" transparent="0" zPosition="3" />
 		<!--<widget source="session.CurrentService" render="AnimatedPictures" pixdelay="40" polltime="550" control="1" position="910,460" size="100,100" zPosition="10" 
 
 pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/spinner/wait1.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/spinner/wait2.png,/usr/lib/enigma2/pyth
@@ -551,9 +552,9 @@ gma2/python/Plugins/Extensions/MovieDB/spinner/wait8.png,/usr/lib/enigma2/python
 
 /MovieDB/spinner/wait10.png,/usr/lib/enigma2/python/Plugins/Extensions/MovieDB/spinner/wait11.png" transparent="1" alphatest="blend">
             </widget>-->
-		<widget backgroundColor="transparent" render="VRunningText" font="Regular; 20" foregroundColor="white" halign="block" source="description" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1057,615" size="808,258" transparent="0" valign="bottom" zPosition="201" />
-		<widget backgroundColorSelected="transparent" name="list" position="376,448" scrollbarMode="showNever" size="654,420" selectionPixmap="Arctic/pic/moviedbsellistbg.png" transparent="1" zPosition="100" />
-		<widget backgroundColor="transparent" font="Bold; 20" foregroundColor="darkpanel" halign="left" name="moviecount" position="124,60" size="173,61" transparent="0" valign="center" zPosition="3" />
+		<widget backgroundColor="transparent" render="VRunningText" font="Regular; 20" foregroundColor="white" halign="left" source="description" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1057,615" size="808,258" transparent="0" valign="bottom" zPosition="201" />
+		<widget backgroundColorSelected="transparent" name="list" position="376,448" scrollbarMode="showNever" size="654,420" selectionPixmap="Arctic/pic/moviedbsellistbg.png" transparent="1" zPosition="20" />
+		<widget backgroundColor="transparent" font="Bold; 20" foregroundColor="darkpanel" halign="left" name="moviecount" position="124,70" size="173,36" transparent="0" valign="center" zPosition="3" />
 		<widget backgroundColor="transparent" font="Bold; 20" foregroundColor="darkpanel" halign="left" name="page" position="124,100" size="173,61" transparent="0" valign="center" zPosition="3" />
 		<eLabel position="601,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="transparent" halign="left" transparent="0" />
 		<eLabel name="" position="300,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="transparent" transparent="0" />
@@ -563,9 +564,13 @@ gma2/python/Plugins/Extensions/MovieDB/spinner/wait8.png,/usr/lib/enigma2/python
 		<widget backgroundColor="transparent" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_red" position="42,1035" size="250,39" transparent="0" valign="center" zPosition="11" />
 		<widget backgroundColor="transparent" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_blue" position="1098,1035" size="410,39" transparent="0" valign="center" zPosition="11" />
 		<widget backgroundColor="transparent" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_yellow" position="643,1035" size="410,39" transparent="0" valign="center" zPosition="2" />
+		
 		<widget alphatest="blend" name="container1" pixmap="Arctic/pic/moviedb/container.png" position="53,919" size="292,48" />
 		<widget alphatest="blend" name="container2" pixmap="Arctic/pic/moviedb/container.png" position="365,919" size="292,48" />
-		<widget alphatest="blend" name="container3" pixmap="Arctic/pic/moviedb/container.png" position="1573,919" size="292,48" />
+		<widget alphatest="blend" name="container3" pixmap="Arctic/pic/moviedb/container1.png" position="1665,919" size="200,48" />
+		<widget name="menubg" position="0,0" size="600,1080" backgroundColor="lightpanel" zPosition="98"/>
+		<widget name="menulist" position="0,90" size="600,990" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" zPosition="100"/>
+		<widget name="menushadow" pixmap="Arctic/pic/dropshadowright.png" position="601, 0" size="7, 1080" transparent="1" zPosition="98" alphatest="blend"/>
 	</screen>
 	<!--  SeriesScreen -->
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="SeriesScreen" position="0,0" size="1920,1080" title="SERIEN:">
@@ -592,7 +597,7 @@ gma2/python/Plugins/Extensions/MovieDB/spinner/wait8.png,/usr/lib/enigma2/python
 		<widget backgroundColorSelected="transparent" backgroundColor="transparent" name="list" position="371,448" scrollbarMode="showNever" selectionPixmap="Arctic/pic/moviedbsellistbg.png" size="654,420" transparent="0" zPosition="100" />
 		<widget backgroundColorSelected="transparent" name="seasonlist" position="371,448" scrollbarMode="showNever" selectionPixmap="Arctic/pic/moviedbsellistbg.png" size="654,420" transparent="1" zPosition="100" />
 		<widget backgroundColorSelected="transparent" name="episodelist" position="371,448" scrollbarMode="showNever" selectionPixmap="Arctic/pic/moviedbsellistbg.png" size="654,420" transparent="1" zPosition="100" />
-		<widget backgroundColor="transparent" render="VRunningText" font="Regular; 20" foregroundColor="white" halign="block" source="description" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1057,617" size="808,258" transparent="0" valign="bottom" zPosition="201" />
+		<widget backgroundColor="transparent" render="VRunningText" font="Regular; 20" foregroundColor="white" halign="left" source="description" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1057,617" size="808,258" transparent="0" valign="bottom" zPosition="201" />
 		<widget backgroundColor="transparent" font="Bold; 20" foregroundColor="darkpanel" halign="left" name="page" position="124,100" size="173,61" transparent="0" valign="center" zPosition="3" />
 		<eLabel position="601,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="transparent" halign="left" transparent="0" />
 		<eLabel name="" position="300,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="transparent" transparent="0" />
@@ -606,6 +611,7 @@ gma2/python/Plugins/Extensions/MovieDB/spinner/wait8.png,/usr/lib/enigma2/python
 		<widget alphatest="blend" name="container2" pixmap="Arctic/pic/moviedb/container.png" position="365,919" size="292,48" />
 		<ePixmap alphatest="blend" name="container3" pixmap="Arctic/pic/moviedb/container.png" position="1573,919" size="292,48" />
 	</screen>
+
 	<screen backgroundColor="black" flags="wfNoBorder" name="MovieDBConfigScreen" position="0,0" size="887,1080" title="MovieDB Setup">
 		<eLabel backgroundColor="lightpanel" name="" position="0,0" size="880,1080" />
 		<!--Titel-->
