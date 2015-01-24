@@ -3811,12 +3811,12 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<eLabel backgroundColor="lightpanel" foregroundColor="lightpanel" name="" position="0,920" size="1920,160" zPosition="-2" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,913" size="1000,7" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,913" size="920,7" />
-		<widget backgroundColor="lightpanel" font="Regular; 22" foregroundColor="darkpanel" halign="right" position="1402,926" render="Label" size="93,35" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
+		<widget backgroundColor="aawhite" font="Regular; 22" foregroundColor="darkpanel" halign="right" position="1402,926" render="Label" size="93,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">NoSeconds</convert>
 		</widget>
 		<eLabel backgroundColor="darkpanel" foregroundColor="darkpanel" name="" position="1501,925" size="3,35" zPosition="1" />
-		<widget backgroundColor="lightpanel" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1508,925" render="Label" size="137,35" source="session.Event_Now" transparent="0" valign="center" zPosition="1">
+		<widget backgroundColor="aawhite" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1508,925" render="Label" size="137,35" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -3849,11 +3849,11 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
-		<widget backgroundColor="lightpanel" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1430,962" render="Label" size="85,50" source="session.Event_Now" transparent="0" valign="center" zPosition="3">
+		<widget backgroundColor="aawhite" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1430,962" render="Label" size="85,50" source="session.Event_Now" transparent="1" valign="center" zPosition="3">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget backgroundColor="lightpanel" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1508,962" render="Label" size="110,50" source="session.Event_Now" transparent="0" valign="center" zPosition="3">
+		<widget backgroundColor="aawhite" font="Regular; 22" foregroundColor="darkpanel" halign="left" position="1508,962" render="Label" size="110,50" source="session.Event_Now" transparent="1" valign="center" zPosition="3">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
