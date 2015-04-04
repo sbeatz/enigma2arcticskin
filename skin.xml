@@ -209,6 +209,13 @@
 		<parameter name="GMultiEPGTimelineFont" value="Regular,18" />
 		<parameter name="GMultiEPGTimelineItemHeight" value="25" />
 		<parameter name="GMultiEPGTimelineItemSize" value="100,25" />
+		<parameter name="MultiQuickButtonListPic1" value="10,12,770,25" />
+		<parameter name="MultiQuickButtonList" value="100,25" />
+		<parameter name="MultiQuickButtonListPic2" value="5,0,35,25" />
+		<parameter name="MultiQuickButtonListFont" value="Regular,20" />
+		<parameter name="MultiQuickButtonListItemHeight" value="40" />
+		<parameter name="MultiQuickButtonListFont" value="Regular,20" />
+		<parameter name="MultiQuickButtonListItemHeight" value="40" />
 	</parameters>
 	<colors>
 		<color name="accent" value="#0051a5e8" />
@@ -2176,15 +2183,15 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,762" size="264,39" transparent="0" valign="top" zPosition="11" noWrap="1" />
 		<widget font="Regular;22" position="10,10" name="lab1" size="887,60" backgroundColor="background" halign="center" valign="center" />
 	</screen>
-	<screen backgroundColor="background" name="OscamButler" position="center,center" size="610,800" title="OscamButler" transparent="0">
+	<screen backgroundColor="background" name="OscamButler" position="center,center" size="910,800" title="OscamButler" transparent="0">
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name=" " position="5,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 		<eLabel name=" " position="274,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttonblue" position="320,762" size="288,39" transparent="0" valign="top" zPosition="2" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttongreen" position="47,762" size="228,39" transparent="0" valign="top" zPosition="11" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttonred" position="47,712" size="226,39" transparent="0" valign="top" zPosition="11" />
-		<widget name="config" position="0,100" size="610,600" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5" />
-		<widget name="info_txt" position="10,10" size="590,83" font="Regular;22" backgroundColor="background" foregroundColor="foreground" zPosition="5" />
+		<widget name="config" position="0,200" size="910,600" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5" />
+		<widget name="info_txt" position="10,10" size="590,100" font="Regular;20" backgroundColor="background" foregroundColor="foreground" zPosition="5" />
 	</screen>
 	<screen name="oscamsettings" position="0,0" size="1920,1080" title="OScam Settings" transparent="0" backgroundColor="transparent">
 		<eLabel position="0,0" size="610,1080" zPosition="-1" backgroundColor="background" />
