@@ -210,12 +210,14 @@
 		<parameter name="GMultiEPGTimelineItemHeight" value="25" />
 		<parameter name="GMultiEPGTimelineItemSize" value="100,25" />
 		<parameter name="MultiQuickButtonListPic1" value="10,12,770,25" />
-		<parameter name="MultiQuickButtonList" value="45,0,780,25" />
+		<parameter name="MultiQuickButtonList" value="45,4,780,40" />
 		<parameter name="MultiQuickButtonListPic2" value="5,0,35,25" />
 		<parameter name="MultiQuickButtonListFont" value="Regular,20" />
 		<parameter name="MultiQuickButtonListItemHeight" value="40" />
 		<parameter name="MultiQuickButtonListFont" value="Regular,20" />
 		<parameter name="MultiQuickButtonListItemHeight" value="40" />
+		<parameter name="PiconManagerList" value="10,4,1280,39" />
+		<parameter name="PiconManagerListItemHeight" value="40" />
 	</parameters>
 	<colors>
 		<color name="accent" value="#0051a5e8" />
