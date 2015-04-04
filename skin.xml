@@ -1970,19 +1970,6 @@ else:
 		<widget backgroundColor="background" itemHeight="60" name="list" position="0,123" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="4" size="1154,810" transparent="1" zPosition="3" />
 		<widget font="Regular;22" halign="center" name="waitingtext" position="1,122" size="1154,827" valign="center" zPosition="40" backgroundColor="lightgrey" />
 	</screen>
-	<screen name="MPList" position="center,center" size="1800,900" title="MediaPortal">
-		<eLabel name="" position="0,850" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" />
-		<widget name="funsport" position="904,60" scrollbarMode="showOnDemand" size="437,766" transparent="1" itemHeight="62" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-		<widget font="Regular;26" name="Funsport" position="904,10" size="437,45" transparent="1" />
-		<widget name="grauzone" position="457,60" scrollbarMode="showOnDemand" size="437,766" transparent="1" itemHeight="62" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-		<widget font="Regular; 26" name="Grauzone" position="457,10" size="437,45" transparent="1" />
-		<widget name="mediatheken" position="10,60" scrollbarMode="showOnDemand" size="437,766" transparent="1" itemHeight="62" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-		<widget font="Regular;26" name="Mediatheken" position="10,10" size="437,45" transparent="1" />
-		<widget font="Regular; 26" halign="center" name="name" position="10,10" size="0,0" transparent="1" />
-		<widget name="porn" position="1351,60" scrollbarMode="showOnDemand" size="437,766" transparent="1" itemHeight="62" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-		<widget font="Regular;26" name="Porn" position="1351,10" size="437,45" transparent="1" />
-		<widget font="Regular;18" foregroundColor="foreground" halign="left" name="red" position="42,855" size="505,39" transparent="0" valign="top" zPosition="11" />
-	</screen>
 	<screen backgroundColor="background" name="MultiQuickButton" position="center,center" size="610,800" title="MultiQuickButton Panel" transparent="0">
 		<eLabel position="274,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
