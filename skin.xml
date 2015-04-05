@@ -2604,7 +2604,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="bt_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_menu.png" position="1215,293" zPosition="1" size="32,32" alphatest="on" />
 		<widget name="bt_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_ok.png" position="1215,43" zPosition="1" size="32,32" alphatest="on" />
 		<widget name="bt_text" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_text.png" position="1215,143" zPosition="1" size="32,32" alphatest="on" />
-		<widget name="config" position="10,160" size="1180,574" foregroundColor="background" backgroundColorSelected="accent" backgroundColor="foreground" scrollbarMode="showOnDemand" transparent="0" zPosition="5" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" textOffset="20,7" />
+		<widget name="config" position="10,160" size="1180,574" font="Regular;18" foregroundColor="background" backgroundColorSelected="accent" backgroundColor="foreground" scrollbarMode="showOnDemand" transparent="0" zPosition="5" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" textOffset="20,0" />
 		<widget name="config_information" position="461,371" zPosition="3" size="338,300" backgroundColor="foreground" />
 		<widget name="config_information_text" position="401,148" size="332,555" backgroundColor="foreground" transparent="0" halign="left" zPosition="3" font="Regular; 16" />
 		<widget name="cover" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/no_cover.png" position="1551,67" size="0,0" zPosition="2" transparent="1" alphatest="blend" />
