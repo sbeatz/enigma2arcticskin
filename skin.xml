@@ -2581,7 +2581,8 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="filelist" backgroundColor="background" position="0,50" itemHeight="36" zPosition="1" size="610,650" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget name="target" position="10,10" size="590,40" valign="center" font="Regular;22" />
 	</screen>
-	<screen name="SerienRecorder3.0" backgroundColor="background" position="center,center" size="1600,900" title="Serien Recorder">
+	<screen name="SerienRecorder3.0" backgroundColor="background" position="center,center" size="1600,900" title="Serien Recorder" >
+		<eLabel position="0,0" backgroundColor="foreground" size="1190,740" zPosition="-1"/>
 		<eLabel name="bt_blue" position="437,846" size="44,39" font="PVR; 40" text="a" foregroundColor="accent" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name="bt_green" position="437,791" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name="bt_red" position="5,791" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" backgroundColor="background" />
@@ -2603,19 +2604,19 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="bt_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_menu.png" position="1215,293" zPosition="1" size="32,32" alphatest="on" />
 		<widget name="bt_ok" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_ok.png" position="1215,43" zPosition="1" size="32,32" alphatest="on" />
 		<widget name="bt_text" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/key_text.png" position="1215,143" zPosition="1" size="32,32" alphatest="on" />
-		<widget name="config" position="10,160" size="1180,574" foregroundColor="foreground" backgroundColor="background" scrollbarMode="showOnDemand" transparent="0" zPosition="5" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" textOffset="20,2" />
-		<widget name="config_information" position="461,371" zPosition="3" size="338,300" backgroundColor="background" />
-		<widget name="config_information_text" position="401,148" size="332,555" backgroundColor="background" transparent="0" halign="left" zPosition="3" font="Regular; 16" />
+		<widget name="config" position="10,160" size="1180,574" foregroundColor="background" backgroundColorSelected="accent" backgroundColor="foreground" scrollbarMode="showOnDemand" transparent="0" zPosition="5" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" textOffset="20,7" />
+		<widget name="config_information" position="461,371" zPosition="3" size="338,300" backgroundColor="foreground" />
+		<widget name="config_information_text" position="401,148" size="332,555" backgroundColor="foreground" transparent="0" halign="left" zPosition="3" font="Regular; 16" />
 		<widget name="cover" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/no_cover.png" position="1551,67" size="0,0" zPosition="2" transparent="1" alphatest="blend" />
-		<widget name="headline" position="10,0" size="1180,40" backgroundColor="background" transparent="0" font="Regular;26" valign="center" halign="left" />
-		<widget name="info" position="10,160" size="1180,574" font="Regular;24" backgroundColor="background" transparent="1" zPosition="1" />
-		<widget name="list" foregroundColor="foreground" position="10,160" size="1180,574" backgroundColor="background" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" scrollbarMode="showOnDemand" transparent="0" zPosition="5" itemHeight="100" />
+		<widget name="headline" position="10,0" size="1180,40" backgroundColor="foreground" transparent="0" font="Regular;26" valign="center" halign="left" />
+		<widget name="info" position="10,160" size="1180,574" font="Regular;24" backgroundColor="foreground" zPosition="1" />
+		<widget name="list" foregroundColor="background" backgroundColorSelected="accent" position="10,160" size="1180,574" backgroundColor="foreground" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" scrollbarMode="showOnDemand" transparent="0" zPosition="5" />
 		<widget name="path" position="10,40" size="1180,55" foregroundColor="foreground" backgroundColor="background" transparent="0" font="Regular;19" valign="center" halign="left" />
-		<widget name="popup_bg" position="170,160" size="600,390" backgroundColor="darkpanel" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/popup_bg.png" transparent="1" zPosition="4" />
-		<widget name="popup_list" position="10,160" itemHeight="100" size="1180,574" backgroundColor="background" scrollbarMode="showOnDemand" transparent="0" zPosition="5" />
-		<widget name="popup_list2" position="10,160" size="1180,574" backgroundColor="background" foregroundColor="foreground" scrollbarMode="showOnDemand" transparent="0" zPosition="6" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" />
+		<widget name="popup_bg" position="170,160" size="600,390"  backgroundColor="darkpanel" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/images/popup_bg.png" transparent="1" zPosition="4" />
+		<widget name="popup_list" position="10,160" size="1180,574" foregroundColor="background" backgroundColorSelected="accent" backgroundColor="foreground" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" scrollbarMode="showOnDemand" transparent="0" zPosition="5" />
+		<widget name="popup_list2" position="10,160" size="1180,574" foregroundColor="background" backgroundColorSelected="accent" backgroundColor="foreground" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" scrollbarMode="showOnDemand" transparent="0" zPosition="5" />
 		<widget name="separator" position="10,145" size="880,2" backgroundColor="grey" zPosition="6" />
-		<widget name="STB_Channel" position="360,115" size="200,30" font="Regular; 25" backgroundColor="accent" foregroundColor="white" />
+		<widget name="STB_Channel" position="360,115" size="200,30" font="Regular; 20" backgroundColor="accent" foregroundColor="white" />
 		<widget name="text_0" position="1259,92" size="336,36" zPosition="1" font="Regular; 19" halign="left" backgroundColor="background" transparent="0" />
 		<widget name="text_1" position="1259,142" size="336,36" zPosition="1" font="Regular;19" halign="left" backgroundColor="background" transparent="0" />
 		<widget name="text_2" position="1259,192" size="336,36" zPosition="1" font="Regular;19" halign="left" backgroundColor="background" transparent="0" />
@@ -2626,10 +2627,10 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="text_ok" position="1259,42" size="336,36" zPosition="1" font="Regular;19" halign="left" backgroundColor="background" transparent="0" />
 		<widget name="text_red" position="58,789" size="374,50" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="0" />
 		<widget name="text_yellow" position="58,844" size="374,50" zPosition="1" font="Regular; 18" halign="left" backgroundColor="background" transparent="0" />
-		<widget name="title" position="20,44" size="843,55" foregroundColor="foreground" backgroundColor="background" transparent="0" font="Regular; 18" valign="center" halign="left" />
-		<widget name="version" position="1514,3" size="0,0" foregroundColor="foreground" backgroundColor="background" transparent="1" font="Regular; 22" valign="center" halign="right" />
+		<widget name="title" position="20,44" size="843,55" foregroundColor="background" backgroundColor="foreground" transparent="0" font="Regular; 18" valign="center" halign="left" />
+		<widget name="version" position="1514,3" size="0,0" foregroundColor="background" backgroundColor="foreground" transparent="1" font="Regular; 22" valign="center" halign="right" />
 		<widget name="Web_Channel" position="45,115" size="200,30" font="Regular; 25" backgroundColor="accent" foregroundColor="white" />
-	</screen>
+</screen>
 	<screen backgroundColor="background" name="ServiceInfo" position="center,center" size="610,800" title="ServiceInfo" transparent="0">
 		<eLabel position="274,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
