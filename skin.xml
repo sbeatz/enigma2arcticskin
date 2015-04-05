@@ -2630,11 +2630,6 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="version" position="1514,3" size="0,0" foregroundColor="foreground" backgroundColor="background" transparent="1" font="Regular; 22" valign="center" halign="right" />
 		<widget name="Web_Channel" position="45,115" size="200,30" font="Regular; 25" backgroundColor="accent" foregroundColor="white" />
 	</screen>
-	<screen name="SerienRecorderUpdateScreen" position="center,center" size="720,320" title="Serien Recorder Update">
-		<widget name="activityslider" position="5,280" size="710,25" borderWidth="1" transparent="0" zPosition="4" />
-		<widget name="srlog" position="5,5" size="710,310" font="Regular;18" valign="center" halign="center" foregroundColor="foreground" transparent="0" zPosition="5" />
-		<widget name="status" position="30,280" size="660,25" font="Regular;20" valign="center" halign="center" foregroundColor="foreground" transparent="0" zPosition="6" />
-	</screen>
 	<screen backgroundColor="background" name="ServiceInfo" position="center,center" size="610,800" title="ServiceInfo" transparent="0">
 		<eLabel position="274,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
