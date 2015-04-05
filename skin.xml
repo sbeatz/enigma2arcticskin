@@ -28,7 +28,7 @@
 		<parameter name="ServicelistServiceNameFontSize" value="22" />
 		<parameter name="ServicelistServiceInfoFontSize" value="18" />
 		<parameter name="ServicelistServiceNumberFontSize" value="20" />
-		<parameter name="ServicelistCustomPiconSize" value="100,60" />
+		<parameter name="ServicelistCustomPiconSize" value="112,46" />
 		<parameter name="ServicelistServiceNumberOffset" value="20" />
 		<parameter name="ServicelistServiceNumberOffsetNormal" value="0" />
 		<parameter name="ServicelistProgressbarOffset" value="80" />
@@ -46,7 +46,7 @@
 		<parameter name="ServicelistRecordServicePixmap100" value="0,25,30,30" />
 		<parameter name="ServicelistRecordServicePixmap" value="0,0,30,30" />
 		<parameter name="ServicelistServiceName100" value="30,15,1900,40" />
-		<parameter name="ServicelistServiceName" value="0,0,1900,40" />
+		<parameter name="ServicelistServiceName" value="0,0,1900,3" />
 		<parameter name="ServicelistServiceInfo100" value="30,5,1900,40" />
 		<parameter name="ServicelistServiceInfo" value="0,0,1900,40" />
 		<parameter name="ChoicelistDash" value="0,5,800,36" />
@@ -2705,10 +2705,10 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget font="Regular;22" name="aftertext" position="350,10" size="237,36" backgroundColor="background" zPosition="5" />
 		<widget font="Regular;22" name="current_status" position="0,50" size="610,350" valign="center" halign="center" backgroundColor="background" foregroundColor="foreground" zPosition="5" />
 		<widget font="Regular;22" name="input" position="285,10" size="50,36" backgroundColor="background" zPosition="5" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,450" size="288,50" transparent="0" valign="center" zPosition="2" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,400" size="228,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,450" size="226,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,400" size="288,50" transparent="0" valign="center" zPosition="2" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="blue_text" position="320,450" size="288,50" transparent="0" valign="center" zPosition="2" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="green_text" position="47,400" size="228,50" transparent="0" valign="center" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="red_text" position="47,450" size="226,50" transparent="0" valign="center" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="yellow_text" position="320,400" size="288,50" transparent="0" valign="center" zPosition="2" />
 		<widget font="Regular;22" name="pretext" position="20,10" size="255,36" backgroundColor="background" zPosition="5" />
 	</screen>
 	<screen flags="wfNoBorder" name="Standby" position="1920,1080" size="720,576" title="Standby" />
