@@ -35,6 +35,7 @@
 		<parameter name="ServicelistProgressbarDefaultOffset" value="80" />
 		<parameter name="ServicelistServiceTypePixOffset" value="38" />
 		<parameter name="ServicelistOffset" value="70" />
+		<parameter name="ServicelistDoubleSpacedMinHeight" value="50" />
 		<parameter name="Servicelist100Picon" value="20,15,100,60" />
 		<parameter name="ServicelistPicon" value="0,0,50,30" />
 		<parameter name="ServicelistServiceTypePixmap" value="0,0,50,30" />
@@ -216,6 +217,11 @@
 		<parameter name="MultiQuickButtonListItemHeight" value="40" />
 		<parameter name="PiconManagerList" value="10,4,1280,39" />
 		<parameter name="PiconManagerListItemHeight" value="40" />
+		<parameter name="ServiceInfoItemHeight" value="40" />
+		<parameter name="ServiceInfoItem1" value="10,45,30,30" />
+		<parameter name="ServiceInfoItem2" value="10,45,30,30" />
+		<parameter name="ServiceInfoItem3" value="10,45,30,30" />
+		<parameter name="ServiceInfoFont" value="Regular,20" />
 	</parameters>
 	<colors>
 		<color name="accent" value="#0051a5e8" />
