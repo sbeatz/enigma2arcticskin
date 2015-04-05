@@ -1784,10 +1784,10 @@ self.instance.move(ePoint(0,top))
 		<widget backgroundColor="grey_light" foregroundColor="accent" position="46,1051" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget backgroundColor="background" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
+		<widget backgroundColor="background" foregroundColor="foreground" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
 			<convert type="ServicePosition">Remaining,ShowHours</convert>
 		</widget>
-		<widget backgroundColor="background" font="Regular; 16" halign="left" position="1369,1045" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="10" noWrap="1">
+		<widget backgroundColor="background" foregroundColor="foreground" font="Regular; 16" halign="left" position="1369,1045" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="10" noWrap="1">
 			<convert type="ServicePosition">Length,ShowHours</convert>
 		</widget>
 		<widget alphatest="blend" path="/usr/share/enigma2/Arctic/audioicon" position="1763,996" render="AudioIcon" size="85,58" source="session.CurrentService" zPosition="1">
