@@ -2935,7 +2935,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<eLabel backgroundColor="darkpanel" name="" position="1615,1042" size="2,25" zPosition="10" />
 		<eLabel font="Regular; 16" name="" position="296,853" size="100,0" text="Plot" transparent="1" zPosition="3" />
 		<eLabel name="" position="1778,6" size="30,40" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
-		<widget alphatest="blend" zPosition="1" pixmap="Arctic/pic/shadow-focus.png" position="0,790" size="258,290" />
+		<widget name="covershadow" alphatest="blend" zPosition="1" pixmap="Arctic/pic/shadow-focus.png" position="0,790" size="258,290" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,981" size="1000,7" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,981" size="920,7" />
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/progressoverlay.png" position="287,1050" size="1200,20" zPosition="20" />
