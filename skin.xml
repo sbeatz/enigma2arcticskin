@@ -1441,7 +1441,7 @@ self.instance.move(ePoint(0,top))
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,712" size="226,39" transparent="0" valign="top" zPosition="11" />
 		<widget name="executable" position="10,10" size="590,36" font="Regular;22" backgroundColor="background" foregroundColor="foreground" zPosition="5" />
 		<widget name="filelist" position="0,50" size="610,700" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,762" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="keyblue" position="320,762" size="288,39" transparent="0" valign="top" zPosition="2" />
 	</screen>
 	<screen name="Getcccamlist" position="0,0" size="1920,1080" title="CR-Feed-CCcam-Download" flags="wfNoBorder" backgroundColor="transparent">
 		<eLabel position="0,0" size="910,1079" zPosition="-1" backgroundColor="background" />
@@ -1633,7 +1633,9 @@ self.instance.move(ePoint(0,top))
 		<widget source="ServiceEvent" render="NextEvents" position="330,380" size="462,110" noWrap="1" font="Regular; 18">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget name="ZapHistoryList" position="0,0" size="300,500" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" itemHeight="40" />
+		<eLabel backgroundColor="lightgrey" name="" position="0,0" size="300,500" />
+		<widget name="ZapHistoryList" position="0,0" size="300,500" zPosition="30" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" itemHeight="40" backgroundColor="lightgrey" />
+		<ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="280,0" size="20,500" transparent="1" zPosition="31" />
 	</screen>
 	<screen name="InfoPanel" position="0,0" size="1920,1080" backgroundColor="transparent">
 		<eLabel name="" position="300,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
@@ -2495,7 +2497,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" position="1219,926" render="Label" size="134,35" source="session.Event_Now" transparent="0" valign="top" zPosition="3" noWrap="1">
+		<widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" position="1224,926" render="Label" size="134,35" source="session.Event_Now" transparent="0" valign="top" zPosition="3" noWrap="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
@@ -2559,11 +2561,11 @@ flags = RT_HALIGN_LEFT, text = 4),
 			<convert type="Textreplace">TEMP:</convert>
 		</widget>
 		<widget backgroundColor="transparent" font="Wetter; 1" foregroundColor="transparent" halign="center" position="33,45" render="VWeatherUpdater" size="10,60" source="global.CurrentTime" valign="center" zPosition="10" />
-		<widget backgroundColor="lightgrey" font="Regular; 22" foregroundColor="foreground" halign="center" noWrap="1" position="1635,983" render="Label" size="80,35" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
+		<widget backgroundColor="lightgrey" font="Regular; 22" foregroundColor="foreground" halign="center" noWrap="1" position="1655,983" render="Label" size="80,35" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
 			<convert type="VWeather">currentWeatherTemp</convert>
 			<convert type="TextAddAfter">&#xB0;C</convert>
 		</widget>
-		<widget backgroundColor="lightgrey" font="Wetter; 30" foregroundColor="foreground" halign="center" noWrap="1" position="1644,935" render="Label" size="70,70" source="session.CurrentService" transparent="0" valign="top" zPosition="9">
+		<widget backgroundColor="lightgrey" font="Wetter; 30" foregroundColor="foreground" halign="center" noWrap="1" position="1664,935" render="Label" size="70,70" source="session.CurrentService" transparent="0" valign="top" zPosition="9">
 			<convert type="VWeather">currentWeatherCode</convert>
 		</widget>
 		<widget backgroundColor="background" font="Regular;24" foregroundColor="foreground" halign="left" valign="top" position="220,350" render="VRunningText" options="movetype=running,startpoint=0,direction=left,steptime=120,repeat=2,always=0,startdelay=3000,nowrap" size="720,40" source="session.Event_Now" zPosition="1">
@@ -2734,25 +2736,25 @@ flags = RT_HALIGN_LEFT, text = 4),
 	<screen name="Subtitles" position="center,center" transparent="0" backgroundColor="background" size="610, 400">
 		<widget name="config" position="0,0" size="610,400" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="10" />
 	</screen>
-	<screen backgroundColor="background" name="TimerEditList" position="center,center" size="610,880" title="Timer" transparent="0">
-		<eLabel position="274,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-		<eLabel name="" position="5,833" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="274,832" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-		<eLabel name=" " position="7,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,838" size="288,39" transparent="0" valign="top" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,838" size="228,39" transparent="0" valign="top" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,778" size="226,39" transparent="0" valign="top" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,778" size="288,39" transparent="0" valign="top" zPosition="2" />
-		<widget backgroundColor="background" enableWrapAround="1" itemHeight="120" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="610,760" zPosition="20">
-			<convert type="TemplatedMultiContent">{"template": 
+	<screen backgroundColor="background" name="TimerEditList" position="center,center" size="910,880" title="Timer" transparent="0">
+  		<eLabel position="274,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  		<eLabel name="" position="5,833" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  		<eLabel name="" position="274,832" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  		<eLabel name=" " position="7,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,838" size="288,39" transparent="0" valign="top" zPosition="11" />
+  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,838" size="228,39" transparent="0" valign="top" zPosition="11" />
+  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,778" size="226,39" transparent="0" valign="top" zPosition="11" />
+  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,778" size="288,39" transparent="0" valign="top" zPosition="2" />
+  		<widget backgroundColor="background" enableWrapAround="1" itemHeight="120" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,760" zPosition="20">
+    			<convert type="TemplatedMultiContent">{"template": 
                             [
-                                MultiContentEntryText(pos = (55, 8), size = (550, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                                MultiContentEntryText(pos = (55, 8), size = (850, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
 
                             ],
                             "fonts": [gFont("Regular", 32),gFont("Regular", 16)],
                             "itemHeight": 120
                         }</convert>
-		</widget>
+  		</widget>
 	</screen>
 	<screen backgroundColor="background" name="TimerEntry" position="center,center" size="910,800" title="Timer Editor" transparent="0">
 		<eLabel name="" position="300,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
