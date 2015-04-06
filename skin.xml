@@ -1541,7 +1541,7 @@ self.instance.move(ePoint(0,top))
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" position="1219,926" render="Label" size="134,35" source="session.Event_Now" transparent="0" valign="top" zPosition="3" noWrap="1">
+		<widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" position="1224,926" render="Label" size="134,35" source="session.Event_Now" transparent="0" valign="top" zPosition="3" noWrap="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		</widget>
