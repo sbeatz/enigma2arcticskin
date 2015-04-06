@@ -2060,11 +2060,11 @@ else:
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="52,762" size="226,39" transparent="0" valign="top" zPosition="11" />
 	</screen>
 	<screen backgroundColor="background" name="MyPluginManager" position="center,center" size="910,830" transparent="0">
-  <eLabel position="274,783" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-  <eLabel name="" position="5,783" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-  <eLabel name=" " position="5,728" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  <widget backgroundColor="background" enableWrapAround="1" position="0,0" render="Listbox" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,720" source="list" zPosition="10">
-    <convert type="TemplatedMultiContent">{"template": 
+		<eLabel position="274,783" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,783" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name=" " position="5,728" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+		<widget backgroundColor="background" enableWrapAround="1" position="0,0" render="Listbox" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,720" source="list" zPosition="10">
+			<convert type="TemplatedMultiContent">{"template": 
                             [
                                 MultiContentEntryText(pos = (55, 6), size = (850, 33), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
                                 MultiContentEntryText(pos = (55, 38), size = (850, 29), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2),
@@ -2073,11 +2073,11 @@ else:
                             "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
                             "itemHeight": 72
                         }</convert>
-  </widget>
-  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="52,770" size="223,57" transparent="0" valign="center" zPosition="11" />
-  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,735" size="226,39" transparent="0" valign="top" zPosition="11" />
-  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,788" size="288,39" transparent="0" valign="top" zPosition="2" />
-</screen>
+		</widget>
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="52,770" size="223,57" transparent="0" valign="center" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,735" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,788" size="288,39" transparent="0" valign="top" zPosition="2" />
+	</screen>
 	<screen backgroundColor="background" name="NetatmoSetup" position="center,center" size="910,800" title="NetatmoSetup" transparent="0">
 		<eLabel name="" position="278,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name=" " position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
@@ -2642,7 +2642,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="title" position="20,44" size="843,55" foregroundColor="background" backgroundColor="foreground" transparent="0" font="Regular; 18" valign="center" halign="left" />
 		<widget name="version" position="1514,3" size="0,0" foregroundColor="background" backgroundColor="foreground" transparent="1" font="Regular; 22" valign="center" halign="right" />
 		<widget name="Web_Channel" position="45,115" size="200,30" font="Regular; 25" backgroundColor="accent" foregroundColor="white" />
-</screen>
+	</screen>
 	<screen backgroundColor="background" name="ServiceInfo" position="center,center" size="610,800" title="ServiceInfo" transparent="0">
 		<eLabel position="274,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
@@ -2741,16 +2741,16 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="config" position="0,0" size="610,400" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="10" />
 	</screen>
 	<screen backgroundColor="background" name="TimerEditList" position="center,center" size="910,880" title="Timer" transparent="0">
-  		<eLabel position="274,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-  		<eLabel name="" position="5,833" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-  		<eLabel name="" position="274,832" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-  		<eLabel name=" " position="7,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,838" size="288,39" transparent="0" valign="top" zPosition="11" />
-  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,838" size="228,39" transparent="0" valign="top" zPosition="11" />
-  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,778" size="226,39" transparent="0" valign="top" zPosition="11" />
-  		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,778" size="288,39" transparent="0" valign="top" zPosition="2" />
-  		<widget backgroundColor="background" enableWrapAround="1" itemHeight="120" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,760" zPosition="20">
-    			<convert type="TemplatedMultiContent">{"template": 
+		<eLabel position="274,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,833" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,832" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="7,773" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,838" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,838" size="228,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,778" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,778" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<widget backgroundColor="background" enableWrapAround="1" itemHeight="120" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,760" zPosition="20">
+			<convert type="TemplatedMultiContent">{"template": 
                             [
                                 MultiContentEntryText(pos = (55, 8), size = (850, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
 
@@ -2758,7 +2758,7 @@ flags = RT_HALIGN_LEFT, text = 4),
                             "fonts": [gFont("Regular", 32),gFont("Regular", 16)],
                             "itemHeight": 120
                         }</convert>
-  		</widget>
+		</widget>
 	</screen>
 	<screen backgroundColor="background" name="TimerEntry" position="center,center" size="910,800" title="Timer Editor" transparent="0">
 		<eLabel name="" position="300,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
@@ -3257,7 +3257,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<ePixmap alphatest="on" pixmap="skin_default/buttons/green.png" position="0,425" size="140,40" zPosition="5" />
 		<eLabel font="Regular;18" halign="center" position="0,425" size="140,40" text="Select" transparent="1" valign="center" zPosition="6" />
 	</screen>
-		<screen name="GraphMultiEPG1" position="center,center" size="1720,880" title="Electronic Programm Guide">
+	<screen name="GraphMultiEPG1" position="center,center" size="1720,880" title="Electronic Programm Guide">
 		<eLabel name="" position="1055,837" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name="" position="705,837" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name="" position="355,837" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
@@ -3399,95 +3399,88 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget name="timeline5" pixmap="AtileHD/extensions/timeline.png" position="0,305" size="1,5" zPosition="0" />
 	</screen>
 	<screen name="TimeDateInput" position="center,center" size="600,150" title="Time/Date Input">
-  <widget name="config" position="0,0" size="600,100" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
-  <widget name="cancel" position="0,0" size="0,0" />
-  <widget name="ok" position="0,0" size="0,0" />
-<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="oktext" position="47,108" size="226,39" transparent="0" valign="top" zPosition="11" />
- <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="canceltext" position="320,108" size="270,39" transparent="0" valign="top" zPosition="2" />
-  <eLabel position="274,103" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-   <eLabel name="" position="5,103" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-</screen>
-<screen position="center,center" size="700,650" title="Sport1 Ticker v1.0" name="sport1Setup">
-			<widget name="config" textOffset="20,7" position="0,0" size="640,600" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
-			<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttongreen" position="47,608" size="226,39" transparent="0" valign="top" zPosition="11" />
- <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttonred" position="320,608" size="270,39" transparent="0" valign="top" zPosition="2" />
-  <eLabel position="274,603" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-   <eLabel name="" position="5,603" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />		
-</screen>
-<screen name="AutoTimerSettings" position="center,center" size="910,750" title="AutoTimer Settings">
+		<widget name="config" position="0,0" size="600,100" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
+		<widget name="cancel" position="0,0" size="0,0" />
+		<widget name="ok" position="0,0" size="0,0" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="oktext" position="47,108" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="canceltext" position="320,108" size="270,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,103" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,103" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen position="center,center" size="700,650" title="Sport1 Ticker v1.0" name="sport1Setup">
+		<widget name="config" textOffset="20,7" position="0,0" size="640,600" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttongreen" position="47,608" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="buttonred" position="320,608" size="270,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,603" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,603" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />		
+	</screen>
+	<screen name="AutoTimerSettings" position="center,center" size="910,750" title="AutoTimer Settings">
 		<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-
 		<widget source="help" render="Label" position="10,600" size="890,100" font="Regular;20" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  	</screen>
-  	<screen name="AutoTimerEditor" position="center,center" size="910,800" title="Edit AutoTimer">
-<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen name="AutoTimerEditor" position="center,center" size="910,800" title="Edit AutoTimer">
+		<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget source="help" render="Label" position="10,600" size="890,100" font="Regular;20" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" position="47,763" size="228,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-    <eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-    <eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  
-			</screen>
-			<screen name="AutoTimerFilterEditor" position="center,center" size="910,800" title="Edit AutoTimer Filter">
-<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen name="AutoTimerFilterEditor" position="center,center" size="910,800" title="Edit AutoTimer Filter">
+		<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget source="help" render="Label" position="10,600" size="890,100" font="Regular;20" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" position="47,763" size="228,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-    <eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-    <eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  
-			</screen>
-			<screen name="AutoTimerServiceEditor" position="center,center" size="910,800" title="Edit AutoTimer Services">
-<widget name="config" position="0,0" size="910,700" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
-
-
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen name="AutoTimerServiceEditor" position="center,center" size="910,800" title="Edit AutoTimer Services">
+		<widget name="config" position="0,0" size="910,700" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" position="47,763" size="228,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-    <eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-    <eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  
-			</screen>
-			<screen name="AutoTimerImporter" position="center,center" size="910,800" title="Import AutoTimer">
-<widget name="list" position="0,0" size="910,700" itemHeight="40" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+
+	</screen>
+	<screen name="AutoTimerImporter" position="center,center" size="910,800" title="Import AutoTimer">
+		<widget name="list" position="0,0" size="910,700" itemHeight="40" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" position="47,763" size="228,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-    <eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-    <eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  	</screen>
-  	<screen name="AutoTimerOverview" position="center,center" size="910,800" title="AutoTimer Overview">
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen name="AutoTimerOverview" position="center,center" size="910,800" title="AutoTimer Overview">
 		<widget name="entries" position="0,0" size="910,700" itemHeight="40" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" position="47,763" size="228,39" transparent="0" valign="top" zPosition="11" />
-     <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-    <eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-    <eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  	</screen>
-  	<screen name="AutoTimerPreview" position="center,center" size="910,750" title="Preview AutoTimer">
-<widget source="timerlist" render="Listbox" position="0,0" size="910,700" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png">
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_blue" position="320,763" size="288,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+		<eLabel name="" position="274,758" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name=" " position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
+	<screen name="AutoTimerPreview" position="center,center" size="910,750" title="Preview AutoTimer">
+		<widget source="timerlist" render="Listbox" position="0,0" size="910,700" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos=( 10, 5), size=(890,36), text = 3, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
@@ -3500,9 +3493,9 @@ flags = RT_HALIGN_LEFT, text = 4),
 				}
 			</convert>
 		</widget>
-			<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
-    <eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-    <eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-  	</screen>
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+		<eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+	</screen>
 </skin>
