@@ -8,6 +8,10 @@
 		<font filename="Arctic/fonts/Asap-Bold.ttf" name="Bold" scale="140" />
 		<font filename="Arctic/fonts/Asap-Bold.ttf" name="headline" scale="140" />
 		<font filename="Arctic/fonts/Asap-Regular.ttf" name="light" scale="140" />
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="RegularUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="BoldUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="headlineUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="lightUnscaled" scale="100" />
 		<font filename="Arctic/fonts/RobotoCondensed-Bold.ttf" name="VMCBold" scale="140" />
 		<font filename="Arctic/fonts/Roboto-Regular.ttf" name="VMCRegular" scale="140" />
 		<font filename="Arctic/fonts/Roboto-Light.ttf" name="VMCLight" scale="140" />
