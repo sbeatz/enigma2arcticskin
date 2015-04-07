@@ -3417,8 +3417,8 @@ flags = RT_HALIGN_LEFT, text = 4),
 	<screen name="AutoTimerSettings" position="center,center" size="910,750" title="AutoTimer Settings">
 		<widget name="config" position="0,0" size="910,600" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		<widget source="help" render="Label" position="10,600" size="890,100" font="Regular;20" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" render="Label" source="key_red" render="Label" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" render="Label" source="key_green" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,708" size="226,39" transparent="0" valign="top" zPosition="11" />
+		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="320,708" size="288,39" transparent="0" valign="top" zPosition="2" />
 		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 	</screen>
