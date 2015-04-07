@@ -3498,4 +3498,53 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<eLabel position="274,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,703" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 	</screen>
+	<screen flags="wfNoBorder" name="NetatmoBar_V1" position="0,0" size="1920,105">
+  <widget alphatest="on" pixmaps="wifi_unknown.png,wifi_low.png,wifi_medium.png,wifi_high.png,wifi_full.png" pixtype="wifi_status" plugin_pixmaps="images" position="317,8" render="NetatmoPixmap" size="42,37" source="session.CurrentService" />
+  <widget backgroundColor="background" font="Regular;24" foregroundColor="foreground" position="80,8" render="Label" size="250,35" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">indoor.module_name</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="537,8" render="Label" size="180,35" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">$Temperature:</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="727,8" render="Label" size="120,35" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">indoor.temperature</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="959,8" render="Label" size="230,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">$Humidity:</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1190,8" render="Label" size="110,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">indoor.humidity</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1445,8" render="Label" size="80,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">$CO2:</convert>
+  </widget>
+  <widget alphatest="on" pixmaps="co2_1.png,co2_2.png,co2_3.png,co2_4.png,co2_5.png,co2_6.png,co2_7.png,co2_8.png,co2_9.png,co2_10.png" pixtype="co2" plugin_pixmaps="images" position="1685,8" render="NetatmoPixmap" size="35,35" source="session.CurrentService" />
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1530,8" render="Label" size="150,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">indoor.co2</convert>
+  </widget>
+  <widget alphatest="on" pixmaps="signal_unknown.png,signal_verylow.png,signal_low.png,signal_medium.png,signal_high.png,signal_full.png" pixtype="rf_status" plugin_pixmaps="images" position="317,55" render="NetatmoPixmap" size="48,24" source="session.CurrentService" />
+  <widget alphatest="on" pixmaps="battery_unknown.png,battery_verylow.png,battery_low.png,battery_medium.png,battery_high.png,battery_full.png" pixtype="battery_vp" plugin_pixmaps="images" position="373,55" render="NetatmoPixmap" size="55,24" source="session.CurrentService" />
+  <widget backgroundColor="grey_light" font="Regular;26" foregroundColor="foreground" position="80,55" render="Label" size="321,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">outdoor.module_name</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="537,55" render="Label" size="180,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">$Temperature:</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="727,55" render="Label" size="120,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">outdoor.temperature</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="959,55" render="Label" size="230,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">$Humidity:</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1189,55" render="Label" size="110,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">outdoor.humidity</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1443,55" render="Label" size="210,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">outdoor.rainfall.name</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" position="1633,55" render="Label" size="120,37" source="session.CurrentService" transparent="1">
+    <convert type="Netatmo">outdoor.rainfall.24</convert>
+  </widget>
+  <widget alphatest="on" pixmap="rainfall.png" pixtype="rain" plugin_pixmaps="images" position="1811,30" render="NetatmoPixmap" size="42,35" source="session.CurrentService" />
+</screen>
 </skin>
