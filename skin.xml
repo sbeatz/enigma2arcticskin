@@ -86,7 +86,7 @@
 		<parameter name="FileListMultiName" value="55,1,470,36" />
 		<parameter name="FileListMultiIcon" value="30,8,20,20" />
 		<parameter name="FileListMultiLock" value="0,0,20,20" />
-		<parameter name="FileListFontSize" value="22" />
+		<parameter name="FileListFont" value="Regular,22" />
 		<parameter name="FileListItemHeight" value="36" />
 		<parameter name="HelpMenuListHlp" value="10,4,750,36" />
 		<parameter name="HelpMenuListExtHlp0" value="0,0,400,36" />
