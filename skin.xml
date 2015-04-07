@@ -2992,7 +2992,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowbottom.png" position="0,61" size="1000,7" alphatest="blend" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowbottom.png" position="1000,61" size="920,7" alphatest="blend" />
 		<ePixmap name="" position="100,25" size="1820,20" pixmap="Arctic/pic/volumeoverlay.png" alphatest="blend" zPosition="10" />
-		<widget name="Volume" backgroundColor="accent" pixmap="Arctic/pic/volume.png" position="100,25" size="1820,20" transparent="1" zPosition="5" />
+		<widget name="Volume" backgroundColor="accent"  foregroundColor="accent" position="100,25" size="1820,18" transparent="1" zPosition="5" />
 	</screen>
 	<screen name="VTIMainMenu" position="center,center" size="610,900" title="VTiPanel">
 		<!-- Farbtasten-->
