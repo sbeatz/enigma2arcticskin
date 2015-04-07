@@ -204,7 +204,7 @@
 		<parameter name="TimerListNoIconHOffset" value="10" />
 		<parameter name="TimerListTrimLength" value="60" />
 		<parameter name="TimerListTime" value="00,80,450,20" />
-		<parameter name="TimerListIcon" value="10,34,30,30" />
+		<parameter name="TimerListIcon" value="10,10,30,30" />
 		<parameter name="TimerListState" value="400,80,190,20" />
 		<parameter name="TimerListPngTimer" value="10,45,30,30" />
 		<parameter name="TimerListZapTimer" value="10,45,32,32" />
