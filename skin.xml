@@ -186,8 +186,8 @@
 		<parameter name="TimerListFont1" value="Regular,20" />
 		<parameter name="TimerListFont2" value="Regular,18" />
 		<parameter name="TimerListItemHeight" value="100" />
-		<parameter name="TimerListNoStyleName" value="0,10,800,36" />
-		<parameter name="TimerListNoStyleDesc" value="0,45,800,24" />
+		<parameter name="TimerListNoStyleName" value="0,10,850,36" />
+		<parameter name="TimerListNoStyleDesc" value="0,48,800,24" />
 		<parameter name="TimerListStyle1Name" value="0,10,800,36" />
 		<parameter name="TimerListStyle1Desc" value="160,47,400,20" />
 		<parameter name="TimerListStyle1Desc1" value="0,47,400,20" />
@@ -203,9 +203,9 @@
 		<parameter name="TimerListIconHOffset" value="60" />
 		<parameter name="TimerListNoIconHOffset" value="10" />
 		<parameter name="TimerListTrimLength" value="60" />
-		<parameter name="TimerListTime" value="00,80,450,20" />
+		<parameter name="TimerListTime" value="00,80,600,20" />
 		<parameter name="TimerListIcon" value="10,10,30,30" />
-		<parameter name="TimerListState" value="400,80,190,20" />
+		<parameter name="TimerListState" value="600,80,250,20" />
 		<parameter name="TimerListPngTimer" value="10,45,30,30" />
 		<parameter name="TimerListZapTimer" value="10,45,32,32" />
 		<parameter name="TimerListDisabledTimer" value="10,45,30,30" />
