@@ -1,2 +1,32 @@
 <skinparts>
+  <skinpart 
+    title = "InfoBar Default mit ECM"
+    filename = "skin_Infobar_default_ECM.xml"
+    link = "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_Infobar_default_ECM.xml"
+    imagelink = ""
+    category = "InfoBars"
+    description = "Standard Infobar mit zusaetzlichen EMC Infos"
+    version = "1.0"
+    creator = "hmmmmdada"
+    dateadded = "0" />
+  <skinpart 
+    title = "Channellist Default with Colorkeys"
+    filename = "skin_ChannelSelection_default_mit Farbtasten.xml"
+    link = "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_default_mit Farbtasten.xml"
+    imagelink = ""
+    category = "Kanallisten"
+    description = "Standard Kanalliste mit zusaetzlichen Farbtasten"
+    version = "1.0"
+    creator = "hmmmmdada"
+    dateadded = "0" />
+  <skinpart 
+    title = "SecondInfoBar von mc2"
+    filename = "skin_SecondInfobar_mc2.xml"
+    link = "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfobar_mc2.xml"
+    imagelink = ""
+    category = "InfoBars"
+    description = "SecondInfoBar von mc2"
+    version = "1.0"
+    creator = "mc2"
+    dateadded = "0" />
 </skinparts>
