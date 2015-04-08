@@ -8,6 +8,7 @@
         "category": "InfoBars",
         "description": "Standard Infobar mit zusaetzlichen EMC Infos",
         "version": "1.0",
+        "imagelink": "",
         "creator": "hmmmmdada",
         "dateadded": "0"
       },
@@ -18,6 +19,7 @@
         "category": "Kanallisten",
         "description": "Standard Kanalliste mit zusaetzlichen Farbtasten",
         "version": "1.0",
+        "imagelink": "",
         "creator": "hmmmmdada",
         "dateadded": "0"
       },
@@ -28,6 +30,7 @@
         "category": "InfoBars",
         "description": "SecondInfoBar von mc2",
         "version": "1.0",
+        "imagelink": "",
         "creator": "mc2",
         "dateadded": "0"
       }
