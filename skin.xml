@@ -3629,4 +3629,59 @@ flags = RT_HALIGN_LEFT, text = 4),
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,660" size="226,39" transparent="0" valign="top" zPosition="11" />
 		<widget name="config" position="0,0" size="1100,600" zPosition="2" textOffset="20,7" itemHeight="50" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" transparent="0" />
 </screen>
+<screen name="Netatmo_V2" title=" " position="center,center" size="1280,720">
+  <eLabel position="570,670" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="289,670" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name="" position="870,670" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name=" " position="9,670" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="925,675" size="226,50" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="339,675" size="226,50" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,675" size="226,50" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="637,675" size="226,50" transparent="0" valign="top" zPosition="2" />
+  <ePixmap alphatest="blend" pixmap="/usr/share/enigma2/Arctic/skin_default/buttons/key_menu.png" position="1200,675" size="70,50" />
+  <widget font="Regular;22" name="stations_txt" position="90,70" size="365,35" transparent="1" />
+  <widget font="Regular;22" name="last_refresh" position="60,30" size="530,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.when" position="600,30" size="611,35" transparent="1" />
+  <widget name="stations" position="90,110" size="360,70" zPosition="2" itemHeight="40" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" transparent="1" />
+  <widget font="Regular;22" name="Place" position="645,70" size="150,35" transparent="1" />
+  <widget font="Regular;22" name="place.area" position="790,70" size="411,35" transparent="1" />
+  <widget font="Regular;24" name="indoor.module_name" position="90,210" size="300,35" transparent="1" />
+  <widget font="Regular;22" name="Firmware station" position="690,250" size="150,35" transparent="1" />
+  <widget font="Regular;22" name="station.firmware" position="834,250" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Temperature indoor" position="110,250" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.temperature" position="335,250" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Humidity indoor" position="110,290" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.humidity" position="335,290" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Pressure" position="110,330" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.pressure" position="335,330" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="CO2 indoor" position="110,370" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.co2" position="335,370" size="200,35" transparent="1" />
+  <widget alphatest="blend" name="co2_pixmap" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/co2_1.png" position="540,370" size="30,35" transparent="1" />
+  <widget font="Regular;22" name="Noise" position="110,410" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="indoor.noise" position="335,410" size="200,35" transparent="1" />
+  <widget name="noise_slider" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/slider.png" position="490,420" size="175,10" transparent="1" />
+  <widget font="Regular;22" name="WiFi strength" position="710,290" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="station.wifi_status" position="915,290" size="150,35" transparent="1" />
+  <widget alphatest="blend" name="wifi_pixmap" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/wifi_unknown.png" position="1070,290" size="42,35" transparent="1" />
+  <widget font="Regular;24" name="outdoor.module_name" position="90,475" size="300,35" transparent="1" />
+  <widget font="Regular;22" name="Firmware module" position="690,475" size="150,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.firmware" position="835,475" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Temperature outdoor" position="110,515" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.temperature" position="335,515" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Humidity outdoor" position="110,555" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.humidity" position="335,555" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="Battery" position="110,595" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.battery" position="330,595" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="CO2 outdoor" position="110,635" size="220,35" transparent="1" />
+  <widget alphatest="blend" name="co2_pixmap_module" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/co2_1.png" position="540,635" size="30,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.co2" position="335,635" size="200,35" transparent="1" />
+  <widget alphatest="blend" name="battery_pixmap" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/battery_unknown.png" position="520,595" size="50,24" transparent="1" />
+  <widget font="Regular;22" name="RF strength" position="710,515" size="200,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.rf_status" position="915,515" size="200,35" transparent="1" />
+  <widget alphatest="blend" name="signal_pixmap" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/Netatmo/images/signal_unknown.png" position="1070,515" size="48,35" transparent="1" zPosition="1" />
+  <widget font="Regular;22" name="Rainfall1" position="690,110" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.rainfall.1" position="910,110" size="120,35" transparent="1" />
+  <widget font="Regular;22" name="Rainfall24" position="690,160" size="220,35" transparent="1" />
+  <widget font="Regular;22" name="outdoor.rainfall.24" position="910,160" size="120,35" transparent="1" />
+</screen>
 </skin>
