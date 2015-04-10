@@ -1641,76 +1641,79 @@ self.instance.move(ePoint(0,top))
 		<widget name="ZapHistoryList" position="0,0" size="300,500" zPosition="30" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" itemHeight="40" backgroundColor="lightgrey" />
 		<ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="280,0" size="20,500" transparent="1" zPosition="31" />
 	</screen>
-	<screen name="InfoPanel" position="0,0" size="1920,1080" backgroundColor="transparent">
-		<eLabel name="" position="300,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="0,486" size="1920,600" zPosition="-9" />
-		<eLabel name=" " position="0,1035" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-		<ePixmap alphatest="blend" pixmap="Arctic/pic/msgbox_bg.png" position="0,479" size="1920,600" zPosition="-10" />
-		<widget position="7,496" size="1065,50" source="title" render="Label" font="headline; 24" backgroundColor="background" foregroundColor="foreground" halign="left" valign="center" />
-		<widget source="storagelist" render="Listbox" backgroundColor="background" position="12,775" size="1170,182" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
-			<convert type="TemplatedMultiContent" transparent="0">
+<screen name="InfoPanel" position="center,center" size="1300,850">
+  <eLabel name="" position="300,807" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name="" position="653,334" size="250,33" text="Netzwerk" font="Regular; 20" zPosition="10" valign="top" />
+  <eLabel name=" " position="0,807" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  <eLabel name="" position="10,470" size="250,33" text="Laufwerke" font="Regular; 20" zPosition="10" valign="top" />
+  <eLabel name="" position="10,130" size="250,33" text="Prozesse" font="Regular; 20" zPosition="10" valign="top" />
+  <widget source="storagelist" render="Listbox" backgroundColor="lightgrey" position="10,505" size="1280,290" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="12">
+    <convert type="TemplatedMultiContent" transparent="0">
             {"template": [
-                    MultiContentEntryText(pos = (5, 2), size = (350, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
-                    MultiContentEntryText(pos = (360, 2), size = (375, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
-                    MultiContentEntryText(pos = (740, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2),
-                    MultiContentEntryText(pos = (865, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
-                    MultiContentEntryText(pos = (1020, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 4),
+                    MultiContentEntryText(pos = (5, 2), size = (400, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                    MultiContentEntryText(pos = (405, 2), size = (390, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+                    MultiContentEntryText(pos = (805, 2), size = (100, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2),
+                    MultiContentEntryText(pos = (915, 2), size = (150, 30), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
+                    MultiContentEntryText(pos = (1070, 2), size = (150, 30), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 4),
                 ],
-            "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
-            "itemHeight": 36,
+            "fonts": [gFont("Regular", 18),gFont("Regular", 14)],
+            "itemHeight": 30,
             "selectionEnabled": False
             }
 			</convert>
-		</widget>
-		<widget source="netdev" render="Listbox" backgroundColor="background" position="1277,580" size="575,96" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
-			<convert type="TemplatedMultiContent">
+  </widget>
+  <widget source="netdev" render="Listbox" backgroundColor="lightgrey" position="651,366" size="640,120" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="12">
+    <convert type="TemplatedMultiContent">
                 {"template": [
                         MultiContentEntryText(pos = (5, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
-                        MultiContentEntryText(pos = (130, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
-                        MultiContentEntryText(pos = (285, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                        MultiContentEntryText(pos = (125, 2), size = (190, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (320, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
                     ],
-                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "fonts": [gFont("Regular", 20),gFont("Regular", 16)],
                 "itemHeight": 36,
                 "selectionEnabled": False
                 }
 			</convert>
-		</widget>
-		<widget source="memory" render="Listbox" backgroundColor="background" position="1278,688" size="580,104" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
-			<convert type="TemplatedMultiContent" transparent="0">
+  </widget>
+  <widget source="memory" render="Listbox" backgroundColor="lightgrey" position="650,160" size="640,160" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="11">
+    <convert type="TemplatedMultiContent" transparent="0">
                 {"template": [
                         MultiContentEntryText(pos = (5, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
-                        MultiContentEntryText(pos = (130, 2), size = (120, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
-                        MultiContentEntryText(pos = (255, 2), size = (120, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                        MultiContentEntryText(pos = (130, 2), size = (180, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (315, 2), size = (180, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
                     ],
-                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "fonts": [gFont("Regular", 20),gFont("Regular", 16)],
                 "itemHeight": 36,
                 "selectionEnabled": False
                 }
 			</convert>
-		</widget>
-		<widget source="proclist" render="Listbox" backgroundColor="background" position="600,562" size="580,188" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
-			<convert type="TemplatedMultiContent" transparent="0">
+  </widget>
+  <widget source="proclist" render="Listbox" backgroundColor="lightgrey" position="10,160" size="625,266" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="11">
+    <convert type="TemplatedMultiContent" transparent="0">
                 {"template": [
-                        MultiContentEntryText(pos = (5, 2), size = (100, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
-                        MultiContentEntryText(pos = (110, 2), size = (100, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
-                        MultiContentEntryText(pos = (205, 2), size = (80, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
-                        MultiContentEntryText(pos = (320, 2), size = (60, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
+                        MultiContentEntryText(pos = (5, 2), size = (300, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                        MultiContentEntryText(pos = (310, 2), size = (200, 35), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (515, 2), size = (200, 35), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                        MultiContentEntryText(pos = (720, 2), size = (200, 35), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
                     ],
-                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "fonts": [gFont("Regular", 20),gFont("Regular", 16)],
                 "itemHeight": 36,
                 "selectionEnabled": False
                 }
 			</convert>
-		</widget>
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="348,1040" size="566,39" transparent="0" valign="top" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,1040" size="250,39" transparent="0" valign="top" zPosition="11" />
-		<widget name="fan" position="1279,853" size="575,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-		<widget name="kernel" position="10,603" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-		<widget name="load" position="13,689" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-		<widget name="temp" position="1279,802" size="575,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-		<widget name="uptime" position="11,646" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-		<widget name="vtiversion" position="9,564" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
-	</screen>
+  </widget>
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="348,812" size="566,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,812" size="250,39" transparent="0" valign="top" zPosition="11" />
+  <widget name="fan" position="650,50" size="640,36" font="Regular;20" halign="left" valign="center" backgroundColor="background" />
+  <widget name="kernel" position="10,50" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
+  <widget name="load" position="650,90" size="640,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
+  <widget name="temp" position="650,10" size="640,36" font="Regular;20" halign="left" valign="center" backgroundColor="background" />
+  <widget name="uptime" position="10,90" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
+  <widget name="vtiversion" position="10,10" size="580,36" font="Regular;22" halign="left" valign="center" backgroundColor="background" />
+  
+  
+<eLabel name="" position="650,130" size="250,33" text="Speicher" font="Regular; 20" zPosition="10" valign="top" />
+</screen>
 	<screen name="InputBox" position="center,center" size="700,127" title="Input" backgroundColor="background">
 		<widget name="input" font="Regular;22" position="20,60" size="662,36" transparent="0" />
 		<widget name="text" font="Regular;22" position="20,20" size="662,36" transparent="0" />
@@ -2128,20 +2131,20 @@ flags = RT_HALIGN_LEFT, text = 4),
 	<screen name="NetworkSetup" position="center,center" transparent="0" backgroundColor="background" size="610, 800" title="Network Setup">
 		<widget name="menu" position="0,0" size="610,800" backgroundColor="background" selectionDisabled="1" itemHeight="36" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="12" />
 	</screen>
-	<screen name="NimSelection" position="center,center" transparent="0" backgroundColor="background" size="610, 800" title="Select Tuner">
-		<widget source="nimlist" render="Listbox" backgroundColor="background" position="0,0" size="610,755" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5">
-			<convert type="TemplatedMultiContent">
+<screen name="NimSelection" position="center,center" transparent="0" backgroundColor="background" size="910, 800" title="Select Tuner">
+  <widget source="nimlist" render="Listbox" backgroundColor="background" position="0,0" size="910,755" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5">
+  <convert type="TemplatedMultiContent">
                 {"template":
                     [
-                        MultiContentEntryText(pos = (10, 10), size = (565, 36), flags = RT_HALIGN_LEFT, text = 1),
-                        MultiContentEntryText(pos = (10, 50), size = (515, 60), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2),
+                        MultiContentEntryText(pos = (10, 10), size = (890, 40), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (10, 50), size = (890, 100), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2),
                     ],
-                    "fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+                    "fonts": [gFont("Regular", 22), gFont("Regular", 16)],
                     "itemHeight": 120
                 }
 			</convert>
-		</widget>
-	</screen>
+</widget>
+</screen>
 	<screen name="NimSetup" position="center,center" transparent="0" backgroundColor="background" size="610, 800" title="Reception Settings">
 		<widget name="config" position="0,0" size="610,800" itemHeight="36" backgroundColor="background" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
 	</screen>
