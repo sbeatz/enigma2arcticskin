@@ -79,14 +79,14 @@
 		<parameter name="EPGlistEPGBarIcon" value="10,7,21,21" />
 		<parameter name="EPGlistEPGBarText1" value="40,7,669,36" />
 		<parameter name="EPGlistEPGBarText2" value="10,7,689,36" />
-		<parameter name="EPGlistFont1" value="Regular,22" />
-		<parameter name="EPGlistFont2" value="Regular,16" />
+		<parameter name="EPGlistFont1" value="Regular;22" />
+		<parameter name="EPGlistFont2" value="Regular;16" />
 		<parameter name="FileListName" value="35,1,470,36" />
 		<parameter name="FileListIcon" value="10,8,20,20" />
 		<parameter name="FileListMultiName" value="55,1,470,36" />
 		<parameter name="FileListMultiIcon" value="30,8,20,20" />
 		<parameter name="FileListMultiLock" value="0,0,20,20" />
-		<parameter name="FileListFont" value="Regular,22" />
+		<parameter name="FileListFont" value="Regular;22" />
 		<parameter name="FileListItemHeight" value="36" />
 		<parameter name="HelpMenuListHlp" value="10,4,750,36" />
 		<parameter name="HelpMenuListExtHlp0" value="0,0,400,36" />
@@ -183,8 +183,8 @@
 		<parameter name="SelectionListIcon" value="0,3,30,30" />
 		<parameter name="SelectionListFontSize" value="20" />
 		<parameter name="SelectionListItemHeight" value="36" />
-		<parameter name="TimerListFont1" value="Regular,20" />
-		<parameter name="TimerListFont2" value="Regular,18" />
+		<parameter name="TimerListFont1" value="Regular;20" />
+		<parameter name="TimerListFont2" value="Regular;18" />
 		<parameter name="TimerListItemHeight" value="100" />
 		<parameter name="TimerListNoStyleName" value="0,10,850,36" />
 		<parameter name="TimerListNoStyleDesc" value="0,48,800,24" />
@@ -211,7 +211,7 @@
 		<parameter name="TimerListDisabledTimer" value="10,45,30,30" />
 		<parameter name="TimerListRedTimer" value="490,5,40,40" />
 		<parameter name="TimerListInstantRecord" value="10,45,30,30" />
-		<parameter name="GMultiEPGTimelineFont" value="Regular,18" />
+		<parameter name="GMultiEPGTimelineFont" value="Regular;18" />
 		<parameter name="GMultiEPGTimelineItemHeight" value="25" />
 		<parameter name="GMultiEPGTimelineItemSize" value="100,25" />
 		<parameter name="MultiQuickButtonListPic1" value="10,7,770,25" />
@@ -3684,4 +3684,94 @@ flags = RT_HALIGN_LEFT, text = 4),
   <widget font="Regular;22" name="Rainfall24" position="690,160" size="220,35" transparent="1" />
   <widget font="Regular;22" name="outdoor.rainfall.24" position="910,160" size="120,35" transparent="1" />
 </screen>
+<screen name="FanControl2Plugin" position="567,213" size="900,700" title="Fan Control 2">
+  <widget source="Version" render="Label" position="9,620" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" transparent="1" />
+  <widget name="config" position="0,0" size="900,250" itemHeight="50" separator="450" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
+  
+  <widget source="introduction" render="Label" position="0,285" size="900,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  
+  <widget source="TxtTemp" render="Label" position="59,356" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtZielRPM" render="Label" position="59,399" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtRPM" render="Label" position="59,438" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtVLT" render="Label" position="59,479" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtPWM" render="Label" position="59,517" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="PixTemp" render="Progress" position="375,356" size="375,25" borderWidth="1" />
+  <widget source="PixZielRPM" render="Progress" position="370,479" size="375,25" borderWidth="1" />
+  <widget source="PixRPM" render="Progress" position="370,517" size="375,25" borderWidth="1" />
+  <widget source="PixVLT" render="Progress" position="370,399" size="375,25" borderWidth="1" />
+  <widget source="PixPWM" render="Progress" position="370,555" size="375,25" borderWidth="1" />
+  <widget source="TxtERR" render="Label" position="59,555" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" transparent="1" />
+  <widget source="PixERR" render="Progress" position="370,438" size="375,25" borderWidth="1" />
+  <widget source="T10ERR" render="Label" position="790,539" size="40,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="yellow" render="Label" position="450,658" size="140,40" transparent="0" valign="top" zPosition="2" />
+  <eLabel name=" " position="10,653" size="44,40" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name="" position="205,653" size="44,40" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel position="400,653" size="44,40" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="596,653" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="blue" render="Label" position="646,658" size="140,40" transparent="0" valign="top" zPosition="2" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="green" render="Label" position="255,658" size="140,40" transparent="0" valign="top" zPosition="2" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="red" render="Label" position="60,658" size="140,40" transparent="0" valign="top" zPosition="2" />
+  <ePixmap alphatest="blend" pixmap="Arctic/skin_default/buttons/key_menu.png" position="800,660" size="40,40" />
+  <ePixmap alphatest="blend" pixmap="Arctic/skin_default/buttons/key_info.png" position="850,660" size="40,40" />
+</screen>
+<screen name="FanControl2Monitor" position="564,315" size="800,460" title="Fan Control 2 - Monitor">
+  <widget source="TxtTemp0" render="Label" position="5,60" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp1" render="Label" position="5,100" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp2" render="Label" position="5,140" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp3" render="Label" position="5,180" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp4" render="Label" position="5,219" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp5" render="Label" position="5,260" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp6" render="Label" position="5,300" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtTemp7" render="Label" position="5,340" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtHDD" render="Label" position="5,380" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtFan" render="Label" position="5,420" size="230,35" zPosition="1" font="Regular; 20" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget name="TxtMinTemp" position="240,12" size="70,32" zPosition="1" font="Regular; 13" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtFC2Temp" render="Label" position="500,12" size="70,32" zPosition="1" font="Regular; 16" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget name="TxtMaxTemp" position="712,12" size="70,32" zPosition="1" font="Regular; 20" halign="right" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="ProTemp0" render="Progress" position="240,68" size="550,17" borderWidth="1" />
+  <widget source="ProTemp1" render="Progress" position="240,108" size="550,17" borderWidth="1" />
+  <widget source="ProTemp2" render="Progress" position="240,148" size="550,17" borderWidth="1" />
+  <widget source="ProTemp3" render="Progress" position="240,188" size="550,17" borderWidth="1" />
+  <widget source="ProTemp4" render="Progress" position="240,228" size="550,17" borderWidth="1" />
+  <widget source="ProTemp5" render="Progress" position="240,268" size="550,17" borderWidth="1" />
+  <widget source="ProTemp6" render="Progress" position="240,308" size="550,17" borderWidth="1" />
+  <widget source="ProTemp7" render="Progress" position="240,348" size="550,17" borderWidth="1" />
+  <widget source="ProHDD" render="Progress" position="240,388" size="550,17" borderWidth="1" />
+  <widget source="ProFan" render="Progress" position="240,428" size="550,17" borderWidth="1" />
+</screen>
+<screen name="FanControl2Test" position="center,center" size="830,500" title="Fan Control 2 - Test">
+  <widget source="TextTest1" render="Label" position="5,20" size="820,60" zPosition="10" font="Regular; 24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest2" render="Label" position="5,80" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest3" render="Label" position="5,140" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest4" render="Label" position="5,260" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest5" render="Label" position="5,320" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest6" render="Label" position="5,380" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TextTest7" render="Label" position="5,440" size="820,60" zPosition="10" font="Regular;24" halign="left" valign="center" backgroundColor="background" transparent="1" />
+</screen>
+<screen name="FanControl2SpezialSetup" position="center,center" size="1000,450" title="Fan Control 2 - Setup" transparent="0">
+  <widget backgroundColor="background" zPosition="10" enableWrapAround="1" name="config" position="0,0" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" size="1000,450" transparent="0" />
+</screen>
+<screen name="AdapterSetup" position="510,140" size="900,800" title="Network Setup">
+  <widget source="Adapter" render="Label" position="10,10" size="495,40" font="Regular;24" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget name="config" position="0,55" size="900,350" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
+  <widget source="introduction2" render="Label" position="0,680" size="900,50" font="Regular;24" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="introduction" render="Label" position="10,410" size="430,40" font="Regular;24" halign="center" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="IPtext" render="Label" position="10,455" size="250,40" font="Regular;20" halign="right" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Netmasktext" render="Label" position="10,495" size="250,40" font="Regular;20" halign="right" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Gatewaytext" render="Label" position="10,535" size="250,40" font="Regular;20" halign="right" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS1text" render="Label" position="10,575" size="250,40" font="Regular;20" halign="right" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS2text" render="Label" position="10,615" size="250,40" font="Regular;20" halign="right" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="IP" render="Label" position="270,455" size="400,40" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Mask" render="Label" position="270,495" size="400,40" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Gateway" render="Label" position="270,535" size="400,40" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS1" render="Label" position="270,575" size="400,40" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS2" render="Label" position="270,615" size="400,40" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="47,758" size="226,39" transparent="0" valign="top" zPosition="11" />
+  <widget source="key_blue" render="Label" position="482,758" size="400,39" zPosition="11" font="Regular;20" halign="left" foregroundColor="foreground" valign="top" />
+  <widget name="VKeyIcon" text="Text" position="316,758" size="120,39" zPosition="11" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" valign="top" />
+  <widget name="HelpWindow" position="120,460" size="1,1" transparent="0" alphatest="on" />
+<eLabel name="" position="5,753" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+<eLabel name="" position="274,753" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
+<eLabel name="" position="440,753" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" />
+<eLabel name="" position="0,400" size="900,260" backgroundColor="lightgrey" zPosition="-1" /></screen>
 </skin>
