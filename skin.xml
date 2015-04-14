@@ -185,17 +185,17 @@
 		<parameter name="SelectionListItemHeight" value="36" />
 		<parameter name="TimerListFont1" value="Regular;20" />
 		<parameter name="TimerListFont2" value="Regular;18" />
-		<parameter name="TimerListItemHeight" value="100" />
+		<parameter name="TimerListItemHeight" value="1110" />
 		<parameter name="TimerListNoStyleName" value="0,10,850,36" />
-		<parameter name="TimerListNoStyleDesc" value="0,48,800,24" />
+		<parameter name="TimerListNoStyleDesc" value="0,50,800,24" />
 		<parameter name="TimerListStyle1Name" value="0,10,800,36" />
-		<parameter name="TimerListStyle1Desc" value="160,47,400,20" />
-		<parameter name="TimerListStyle1Desc1" value="0,47,400,20" />
+		<parameter name="TimerListStyle1Desc" value="160,50,400,20" />
+		<parameter name="TimerListStyle1Desc1" value="0,50,400,20" />
 		<parameter name="TimerListStyle2Name" value="0,50,580,30" />
 		<parameter name="TimerListStyle2Desc" value="0,10,580,20" />
 		<parameter name="TimerListStyle4Name" value="0,10,580,30" />
 		<parameter name="TimerListStyle4Desc" value="0,35,580,30" />
-		<parameter name="TimerListStyle4Desc1" value="0,80,580,20" />
+		<parameter name="TimerListStyle4Desc1" value="0,90,580,20" />
 		<parameter name="TimerListStyle4ListStyleHOffset" value="150" />
 		<parameter name="TimerListStateStyle4" value="0,80,150,20" />    
 		<parameter name="TimerListStyle5Name" value="0,10,580,30" />
@@ -203,9 +203,9 @@
 		<parameter name="TimerListIconHOffset" value="60" />
 		<parameter name="TimerListNoIconHOffset" value="10" />
 		<parameter name="TimerListTrimLength" value="60" />
-		<parameter name="TimerListTime" value="00,80,600,20" />
+		<parameter name="TimerListTime" value="00,90,600,20" />
 		<parameter name="TimerListIcon" value="10,10,30,30" />
-		<parameter name="TimerListState" value="600,80,250,20" />
+		<parameter name="TimerListState" value="600,90,250,20" />
 		<parameter name="TimerListPngTimer" value="10,45,30,30" />
 		<parameter name="TimerListZapTimer" value="10,45,32,32" />
 		<parameter name="TimerListDisabledTimer" value="10,45,30,30" />
@@ -1207,94 +1207,8 @@ self.instance.move(ePoint(0,top))
 		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_yellow" render="Label" position="320,262" size="288,39" transparent="0" valign="top" zPosition="2" />
 		<widget name="ServiceList" position="0,50" size="610,200" backgroundColor="background" itemHeight="26" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
 	</screen>
-	<screen backgroundColor="transparent" flags="wfNoBorder" name="EMCMediaCenter" position="0, 0" size="1920, 1080" transparent="0">
-		<!--Uhr-->
-		<eLabel backgroundColor="background" foregroundColor="foreground" name="" position="0,979" size="1920,111" />
-		<eLabel backgroundColor="darkpanel" name="" position="1360,1047" size="2,25" zPosition="10" />
-		<eLabel name="" position="1778,6" size="30,40" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
-		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,972" size="1000,7" />
-		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,972" size="920,7" />
-		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/progressoverlay.png" position="45,1050" size="1200,20" zPosition="20" />
-		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/uhrpanel.png" position="1751,0" size="410,60" zPosition="1" />
-		<widget backgroundColor="background" font="Regular; 34" foregroundColor="foreground" position="45,995" render="Label" size="1603,50" source="session.CurrentService" valign="center" zPosition="1" noWrap="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget backgroundColor="grey_light" foregroundColor="accent" position="46,1051" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
-			<convert type="ServicePosition">Position</convert>
-		</widget>
-		<widget backgroundColor="background" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="1">
-			<convert type="ServicePosition">Remaining,ShowHours</convert>
-		</widget>
-		<widget backgroundColor="background" font="Regular; 16" halign="left" position="1369,1045" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
-			<convert type="ServicePosition">Length,ShowHours</convert>
-		</widget>
-		<widget alphatest="blend" path="audioicon" position="1763,996" render="AudioIcon" size="85,58" source="session.CurrentService" zPosition="1">
-			<convert type="VAudioInfo">AudioIcon</convert>
-		</widget>
-		<widget alphatest="blend" pixmap="Arctic/pic/OverlayTopRecording.png" position="1854,991" render="Pixmap" size="64,64" source="session.RecordState" zPosition="2">
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-		<widget alphatest="blend" pixmap="Arctic/pic/badges/video/576.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">0,799</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget alphatest="blend" pixmap="Arctic/pic/badges/video/720.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">800,1280</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget alphatest="blend" pixmap="Arctic/pic/badges/video/1080.png" position="1673,996" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">1281,1920</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget backgroundColor="background" font="Regular; 24" foregroundColor="foreground" halign="right" position="1802,0" render="Label" size="103,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-	</screen>
-	<screen backgroundColor="background" flags="wfNoBorder" name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" zPosition="0" transparent="0">
-		<eLabel position="274,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
-		<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-		<eLabel name="" position="5,-2" size="100, 100" zPosition="13" font="PVR; 80" text="b" halign="right" valign="top" />
-		<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="666,0" size="1208,709" zPosition="10" />
-		<ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" alphatest="blend" position="641,0" size="7, 1080" transparent="1" zPosition="-10" />
-		<widget OverScan="0" backgroundColor="darkgrey" position="694,28" render="Pig" size="1162,663" source="session.VideoPicture" zPosition="1">
-			<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget font="Regular;22" foregroundColor="foreground" halign="center" position="850,262" render="Label" size="375,0" source="Service" valign="center">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget backgroundColor="background" font="headline; 24" foregroundColor="foreground" halign="left" position="114,28" render="Label" size="526,120" source="Title" transparent="0" zPosition="2" valign="top" />
-		<widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="944,865" render="VRunningText" size="897,178" source="Service" transparent="0" valign="top" halign="left" zPosition="20">
-			<convert type="EMCEventName">ExtendedDescription</convert>
-		</widget>
-		<widget backgroundColor="background" font="light; 24" foregroundColor="foreground" halign="left" noWrap="1" position="944,753" render="Label" size="898,45" source="Service" transparent="0" valign="top" zPosition="35">
-			<convert type="EMCEventName">Name</convert>
-			<convert type="TextToUpper" />
-		</widget>
-		<widget backgroundColor="background" font="light; 24" foregroundColor="foreground" halign="left" noWrap="1" position="944,805" render="Label" size="898,45" source="Service" transparent="0" valign="top" zPosition="35">
-			<convert type="EMCMovieInfo">ShortDescription</convert>
-		</widget>
-		<widget alphatest="blend" name="Cover" position="674,755" size="242,288" zPosition="3" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,1026" size="288,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,1026" size="228,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,966" size="226,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,966" size="288,50" transparent="0" valign="center" zPosition="2" />
-		<widget CoolBarHPos="8" CoolBarPos="760" CoolBarSize="95,12" CoolBarSizeSa="95,12" CoolDateColor="1" itemHeight="36" CoolDatePos="1000" CoolDateWidth="140" CoolFolderSize="720" CoolFont="Regular;21" CoolHighlightColor="0" CoolMoviePos="35" CoolMovieSize="720" CoolProgressPos="760" CoolSelectFont="Regular;20" CoolTitleColor="1" DefaultColor="darkpanel" FinishedColor="#46D93A" foregroundColorSelected="lightpanel" RecordingColor="red" FrontColorSel="lightpanel" UnwatchedColor="darkpanel" WatchingColor="#3486F4" backgroundColor="background" transparent="0" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" name="list" position="0,160" size="641,805" zPosition="3" />
-		<widget backgroundColor="background" font="Regular;21" foregroundColor="foreground" name="wait" position="0,145" size="641,805" transparent="0" zPosition="200" />
-	</screen>
-	<screen backgroundColor="background" name="EnhancedMovieCenterMenu" position="center,center" size="910,800" title="EnhancedMovieCenterMenu" transparent="0">
-		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="5,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-		<widget source="help" render="Label" position="10,500" size="890,200" font="Regular;20" foregroundColor="foreground" zPosition="10" />
-		<widget name="config" position="0,0" size="910,500" itemHeight="50" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="47,750" size="598,50" transparent="0" valign="center" zPosition="11" />
-		<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,700" size="599,50" transparent="0" valign="center" zPosition="11" />
-	</screen>
+
+
 	<screen backgroundColor="background" name="EPGPanel" position="center,center" size="610,800" title="VTI EPGPanel" transparent="0">
 		<eLabel name="" position="284,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name=" " position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
