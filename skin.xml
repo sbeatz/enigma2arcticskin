@@ -1799,6 +1799,9 @@ self.instance.move(ePoint(0,top))
 		<widget backgroundColor="grey_light" foregroundColor="accent" position="46,1051" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="46,1051" size="1198,18" transparent="1" zPosition="8">
+			<convert type="ServicePosition">Gauge</convert>
+  		</widget>
 		<widget backgroundColor="background" foregroundColor="foreground" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1" noWrap="1">
 			<convert type="ServicePosition">Remaining,ShowHours</convert>
 		</widget>
@@ -1918,7 +1921,10 @@ else:
 		</widget>
 		<widget backgroundColor="grey_light" foregroundColor="accent" position="46,1051" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
 			<convert type="ServicePosition">Position</convert>
-		</widget>
+		</widget>		
+		<widget source="session.CurrentService" render="PositionGauge" position="46,1051" size="1198,18" transparent="1" zPosition="8">
+			<convert type="ServicePosition">Gauge</convert>
+  		</widget>
 		<widget backgroundColor="background" font="Regular; 16" halign="right" position="1253,1045" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
 			<convert type="ServicePosition">Remaining,ShowHours</convert>
 		</widget>
