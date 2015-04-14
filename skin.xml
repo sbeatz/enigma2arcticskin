@@ -185,7 +185,7 @@
 		<parameter name="SelectionListItemHeight" value="36" />
 		<parameter name="TimerListFont1" value="Regular;20" />
 		<parameter name="TimerListFont2" value="Regular;18" />
-		<parameter name="TimerListItemHeight" value="1110" />
+		<parameter name="TimerListItemHeight" value="110" />
 		<parameter name="TimerListNoStyleName" value="0,10,850,36" />
 		<parameter name="TimerListNoStyleDesc" value="0,50,800,24" />
 		<parameter name="TimerListStyle1Name" value="0,10,800,36" />
