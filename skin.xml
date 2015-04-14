@@ -1967,11 +1967,6 @@ else:
 	<screen backgroundColor="background" name="MovieContextMenu" position="center,center" size="610, 800" transparent="0">
 		<widget enableWrapAround="1" itemHeight="50" name="menu" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="610,800" zPosition="10" />
 	</screen>
-	<screen backgroundColor="background" name="MovieMenu" position="center,center" size="610,800" title="EMC menu" transparent="0">
-		<widget source="menu" position="0,0" size="610,800" render="Listbox" itemHeight="50" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" zPosition="5">
-			<convert type="StringList" />
-		</widget>
-	</screen>
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0, 0" size="1920, 1080" transparent="0">
 		<!--Uhr-->
 		<eLabel backgroundColor="background" foregroundColor="foreground" name="" position="0,979" size="1920,111" />
