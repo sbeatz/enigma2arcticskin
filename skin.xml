@@ -1026,7 +1026,7 @@ else:
 		<widget backgroundColor="background" font="Bold; 24" foregroundColor="foreground" halign="left" noWrap="1" position="309,983" render="Label" size="621,45" source="session.CurrentService" transparent="0" valign="top" zPosition="35">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="SeekState" position="1571,986" zPosition="20" size="150,36" halign="center" font="Regular;22" valign="center" backgroundColor="background_left" />
+		<widget name="SeekState" position="1571,986" zPosition="20" size="150,36" halign="center" font="Regular;22" valign="center" backgroundColor="background" />
 		<widget name="Timeline" pointer="Arctic/pic/pointer.png:875,1" position="45,1038" size="1600,13" transparent="0" zPosition="30" />
 		<widget name="Video" backgroundColor="darkgrey" position="411,0" size="1509,980" zPosition="-5" />
 	</screen>
