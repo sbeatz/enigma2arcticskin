@@ -48,7 +48,7 @@
 		<parameter name="ServicelistServiceEventProgressbar" value="0,0,50,5" />
 		<parameter name="ServicelistServiceNumber100" value="30,30,50,40" />
 		<parameter name="ServicelistServiceNumber" value="50,10,50,50" />
-		<parameter name="ServicelistRecordServicePixmap100" value="0,25,30,30" />
+		<parameter name="ServicelistRecordServicePixmap100" value="35,0,65,65" />
 		<parameter name="ServicelistRecordServicePixmap" value="-20,7,30,30" />
 		<parameter name="ServicelistServiceName100" value="30,15,1900,40" />
 		<parameter name="ServicelistServiceName" value="0,0,1900,3" />
