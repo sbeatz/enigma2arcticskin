@@ -1,0 +1,6 @@
+<skin>
+<screen backgroundColor="transparent" flags="wfNoBorder" name="PVRState" position="860,464" size="182,182" zPosition="99">
+  <ePixmap alphatest="blend" pixmap="Arctic/pic/PVRState.png" position="0,0" size="125,125" zPosition="8" />
+  <widget zPosition="9" foregroundColor="foreground" backgroundColor="background" font="PVR;50" halign="center" valign="center" name="state" position="19,38" size="87,49" />
+</screen>
+</skin>

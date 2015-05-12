@@ -1,0 +1,24 @@
+<skin>
+  <screen name="SplitScreen" position="0,0" zPosition="-8" size="1920,1080" flags="wfNoBorder" backgroundColor="background">
+    <widget name="video1" position="0,0" size="960,600" backgroundColor="transparent" />
+    <widget source="MasterService" render="Label" position="1070,100" size="700,40" font="Regular; 25" backgroundColor="background"  foregroundColor="foreground" halign="center">
+      <convert type="ServiceName" />
+    </widget>
+    <widget source="MasterService" render="Label" position="1070,150" size="700,50" font="Regular; 30" backgroundColor="background"  foregroundColor="foreground" halign="center">
+      <convert type="EventName" />
+    </widget>
+    <widget source="MasterService" render="Picon" position="1310,200" zPosition="1" size="220,132"  alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget name="video2" position="960,480" size="960,600" backgroundColor="transparent" />
+    <widget source="SlaveService" render="Label" position="100,700" size="700,40" font="Regular;25" backgroundColor="background"  foregroundColor="foreground" halign="center">
+      <convert type="ServiceName" />
+    </widget>
+    <widget source="SlaveService" render="Label" position="100,750" size="700,50" font="Regular; 30" backgroundColor="background"  foregroundColor="foreground" halign="center">
+      <convert type="EventName" />
+    </widget>
+    <widget source="SlaveService" render="Picon" position="345,800" zPosition="1" size="220,132"  alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+  </screen>
+</skin>

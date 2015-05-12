@@ -1,0 +1,48 @@
+<skin>
+<screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0, 0" size="1920, 1080" transparent="0">
+  <!--Uhr-->
+  <eLabel backgroundColor="background" foregroundColor="foreground" name="" position="0,939" size="1920,151" />
+  <eLabel backgroundColor="darkpanel" name="" position="1360,1027" size="2,25" zPosition="10" />
+  <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,932" size="1000,7" />
+  <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,932" size="920,7" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/progressoverlay.png" position="45,1030" size="1200,20" zPosition="20" />
+  <widget backgroundColor="background" font="Regular; 34" foregroundColor="foreground" position="45,980" render="Label" size="1333,47" source="session.CurrentService" valign="center" zPosition="1" noWrap="1">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="grey_light" foregroundColor="accent" position="46,1031" render="Progress" size="1198,18" source="session.CurrentService" zPosition="2">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 16" halign="right" position="1253,1025" render="Label" size="100,30" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <convert type="ServicePosition">Remaining,ShowHours</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 16" halign="left" position="1369,1025" render="Label" size="100,30" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
+    <convert type="ServicePosition">Length,ShowHours</convert>
+  </widget>
+  <widget alphatest="blend" path="audioicon" position="1645,981" render="AudioIcon" size="85,58" source="session.CurrentService" zPosition="1" transparent="1">
+    <convert type="VAudioInfo">AudioIcon</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="Arctic/pic/OverlayTopRecording.png" position="1475,981" render="Pixmap" size="64,64" source="session.RecordState" zPosition="2">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/576.png" position="1548,981" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">0,799</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/720.png" position="1548,981" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">800,1280</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/1080.png" position="1548,981" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="1">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">1281,1920</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="background" font="Bold; 38" foregroundColor="foreground" halign="right" position="1750,973" render="Label" size="150,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Cover" position="1689,651" size="178,268" zPosition="50" backgroundColor="darkgrey" alphatest="blend" transparent="1" />
+  <ePixmap alphatest="blend" zPosition="1" pixmap="Arctic/pic/shadow-focus.png" position="1650,640" size="258,290" />
+</screen>
+</skin>

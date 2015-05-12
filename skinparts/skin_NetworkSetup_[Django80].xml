@@ -1,0 +1,27 @@
+<skin>
+<screen name="AdapterSetup" position="310,center" size="1200,900" title="Network Setup">
+  <widget source="Adapter" render="Label" position="10,10" size="1180,40" font="Regular;24" foregroundColor="foreground" backgroundColor="background" transparent="1" halign="center" />
+  <widget name="config" position="0,55" size="1200,350" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" backgroundColor="accent" foregroundColor="white" />
+  <widget source="introduction2" render="Label" position="0,760" size="1200,70" font="Regular;24" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="introduction" render="Label" position="0,407" size="1200,45" font="Regular;24" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="IPtext" render="Label" position="10,460" size="350,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Netmasktext" render="Label" position="10,515" size="350,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="Gatewaytext" render="Label" position="10,570" size="350,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS1text" render="Label" position="10,625" size="350,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="DNS2text" render="Label" position="10,680" size="350,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="IP" render="Label" position="370,460" size="820,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="Mask" render="Label" position="370,515" size="820,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="Gateway" render="Label" position="370,570" size="820,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget source="DNS1" render="Label" position="370,625" size="820,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+  <widget source="DNS2" render="Label" position="370,680" size="820,55" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="lightgrey" transparent="0" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="80,850" size="226,39" transparent="0" valign="top" zPosition="11" />
+  <widget source="key_blue" render="Label" position="center,850" size="400,39" zPosition="11" font="Regular;20" halign="left" foregroundColor="foreground" valign="top" />
+  <widget name="VKeyIcon" text="Text" position="420,850" size="120,39" zPosition="11" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" valign="top" />
+  <widget name="HelpWindow" position="120,460" size="1,1" transparent="0" alphatest="on" />
+  <eLabel name="" position="30,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  <eLabel name="" position="370,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
+  <eLabel name="" position="710,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" />
+  <eLabel name="" position="0,455" size="1200,295" backgroundColor="background" zPosition="-1" />
+</screen>
+
+</skin>

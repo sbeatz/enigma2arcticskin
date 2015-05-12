@@ -1,0 +1,79 @@
+<skin>
+<screen name="MovieSelection" position="0,0" flags="wfNoBorder" transparent="0" backgroundColor="background" size="1920,1080">
+  <eLabel position="588,1025" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="lightgrey" halign="left" />
+  <eLabel name="" position="0,-15" size="1154,138" backgroundColor="accent" zPosition="1" />
+  <eLabel name="" position="306,1025" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightgrey" />
+  <eLabel name="" position="857,1025" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel name="" position="10,0" size="100, 100" zPosition="13" font="PVR; 80" text="b" halign="right" valign="top" backgroundColor="accent" foregroundColor="white" />
+  <eLabel name="" position="0,0" size="1154,1080" backgroundColor="lightgrey" />
+  <eLabel name=" " position="25,1025" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="50" />
+  <widget font="Regular;22" foregroundColor="foreground" halign="center" position="850,262" render="Label" size="375,0" source="Service" valign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" position="114,28" render="Label" size="850,90" source="Title" transparent="0" zPosition="2" valign="center" />
+  <widget backgroundColor="background" font="Regular; 20" foregroundColor="foreground" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1179,595" render="VRunningText" size="720,405" source="Service" transparent="1" valign="top" halign="left" zPosition="20">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="background" font="Bold; 36" foregroundColor="foreground" halign="left" noWrap="1" position="1179,455" render="Label" size="720,65" source="Service" transparent="1" valign="top" zPosition="35">
+  <convert type="EventName" />
+  <convert type="TextToUpper" />
+</widget>
+  <widget backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" position="1179,530" render="Label" size="540,45" source="Service" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName">Description</convert>
+  </widget>
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="900,1020" size="200,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="351,1020" size="200,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="68,1020" size="200,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="631,1020" size="200,50" transparent="0" valign="center" zPosition="2" />
+  <widget backgroundColor="background" itemHeight="60" name="list" position="0,123" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="4" size="1154,885" transparent="1" zPosition="3" />
+  <widget font="Regular;22" halign="center" name="waitingtext" position="2,125" size="1140,880" valign="center" zPosition="40" backgroundColor="white" />
+  <widget source="Service" render="Cover" position="1407,27" size="266,402" zPosition="50" backgroundColor="darkgrey" alphatest="blend" transparent="1" />
+  <ePixmap name="" position="1387,9" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTL.png" />
+  <ePixmap name="" position="1412,8" size="257,20" pixmap="Arctic/pic/CoverOverlayT.png" alphatest="blend" />
+  <ePixmap name="" position="1669,9" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTR.png" />
+  <ePixmap name="" position="1388,422" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBL.png" />
+  <ePixmap name="" position="1412,427" size="257,20" pixmap="Arctic/pic/CoverOverlayB.png" alphatest="blend" />
+  <ePixmap name="" position="1669,422" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBR.png" />
+  <ePixmap name="" position="1387,33" size="20,389" alphatest="blend" pixmap="Arctic/pic/CoverOverlayL.png" />
+  <ePixmap name="" position="1673,33" size="20,389" alphatest="blend" pixmap="Arctic/pic/CoverOverlayR.png" />
+  <widget backgroundColor="accent" font="headlineUnscaled; 50" foregroundColor="white" halign="right" position="971,19" render="Label" size="150,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="darkpanel" font="Regular; 14" foregroundColor="white" halign="center" noWrap="1" position="1434,1028" render="Label" size="110,32" source="session.CurrentService" valign="center" zPosition="10">
+    <convert type="VtiTempFan">TempInfo</convert>
+    <convert type="Textreplace">TEMP:</convert>
+  </widget>
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/ibfield.png" position="1223,1028" size="120,32" zPosition="10" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/ibfield.png" position="1429,1028" size="120,32" zPosition="2" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/hdd.png" position="1183,1028" size="40,31" transparent="1" zPosition="3" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/temp.png" position="1387,1029" size="40,31" zPosition="3" />
+  <widget backgroundColor="darkpanel" font="Regular; 14" foregroundColor="white" halign="center" noWrap="1" position="1228,1028" render="Label" size="110,32" source="session.CurrentService" valign="center" zPosition="11">
+    <convert type="ArcticHDDSpaceInfo" />
+  </widget>
+  <eLabel size="1135,1" position="0,1010" backgroundColor="darkpanel" zPosition="10" />
+  <widget backgroundColor="darkpanel" font="Regular; 14" foregroundColor="white" halign="center" noWrap="1" position="1600,1028" render="Label" size="120,32" source="Service" valign="center" transparent="1" zPosition="11">
+    <convert type="MovieInfo">FileSize</convert>
+  </widget>
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/ibfield.png" position="1600,1028" size="120,32" zPosition="10" />
+  <widget backgroundColor="darkpanel" font="Regular; 14" foregroundColor="white" halign="center" noWrap="1" position="1780,1028" render="Label" size="120,32" source="Service" valign="center" transparent="1" zPosition="11">
+    <convert type="ServiceTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/ibfield.png" position="1780,1028" size="120,32" zPosition="10" />
+  <widget alphatest="blend" position="1735,520" render="Picon" size="163,65" source="Service" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+
+<ePixmap name="" position="1715,500" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTL.png" />
+<ePixmap name="" position="1739,500" size="155,20" pixmap="Arctic/pic/CoverOverlayT.png" alphatest="blend" />
+<ePixmap name="" position="1892,500" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTR.png" />
+<ePixmap name="" position="1715,580" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBL.png" />
+<ePixmap name="" position="1739,585" size="155,20" pixmap="Arctic/pic/CoverOverlayB.png" alphatest="blend" />
+<ePixmap name="" position="1892,581" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBR.png" />
+<ePixmap name="" position="1715,524" size="20,60" alphatest="blend" pixmap="Arctic/pic/CoverOverlayL.png" />
+<ePixmap name="" position="1897,524" size="20,60" alphatest="blend" pixmap="Arctic/pic/CoverOverlayR.png" />
+
+<eLabel size="750,1" position="1160,1010" backgroundColor="darkpanel" zPosition="10" />
+</screen>
+</skin>

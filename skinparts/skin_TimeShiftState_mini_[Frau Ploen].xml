@@ -1,0 +1,16 @@
+<skin>
+<screen name="TimeshiftState" position="592,442" zPosition="2" size="735,195" backgroundColor="background" transparent="0" title="Timeshift State">
+  <widget name="state" position="265,9" size="200,60" font="Bold; 44" halign="center" backgroundColor="background" transparent="0" valign="top" />
+  <eLabel text="Timeshift aktiv" position="0,70" size="735,60" zPosition="-1" font="Regular; 28" halign="center" valign="center" transparent="0" backgroundColor="background" />
+  <widget source="session.CurrentService" render="Label" position="8,140" size="120,40" font="Regular; 24" halign="right" backgroundColor="background">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="607,140" size="120,40" font="Regular; 24" halign="left" backgroundColor="background">
+    <convert type="ServicePosition">Length</convert>
+  </widget>
+  <widget backgroundColor="grey_light" foregroundColor="accent" source="session.CurrentService" render="Progress" position="142,157" size="450,7" zPosition="5" transparent="0">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <eLabel name="new eLabel" position="142,159" size="450,3" backgroundColor="accent" foregroundColor="accent" zPosition="1" />
+</screen>
+</skin>
