@@ -1,0 +1,46 @@
+<skin>
+   <parameters>
+       <parameter name="EPGlistFont1" value="Regular;26" />
+       <parameter name="EPGlistText1" value="0,10,80,40" />
+    	<parameter name="EPGlistText2" value="90,10,220,40" />
+	<parameter name="EPGlistRecImage" value="320,20,21,21" />
+    	<parameter name="EPGlistRecText" value="350,10,900,40" />
+    	<parameter name="EPGlistNonRecText" value="320,10,925,40" />
+   </parameters>
+   <screen backgroundColor="lightpanel" flags="wfNoBorder" name="EPGSelection" position="0,0" size="1920, 1080" title="EPG Selection" transparent="0" zPosition="0">
+  <eLabel position="546,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="lightgrey" halign="left" />
+  <eLabel name="" position="0, 0" size="1154,123" backgroundColor="listselback" zPosition="1" />
+  <eLabel backgroundColor="lightgrey" name="" position="0,0" size="1154,1080" />
+  <eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightgrey" />
+  <eLabel name="" position="817,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="listselback" valign="top" halign="right" foregroundColor="white" />
+  <eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/dark/pic/PIGPanelsmalldark.png" position="1159,0" size="759,445" zPosition="10" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="31" />
+  <widget font="Regular;22" foregroundColor="darkpanel" halign="center" position="850,262" render="VRunningText" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=2,always=0,startdelay=3000" size="375,0" source="Event" valign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="listselback" font="headline; 24" foregroundColor="white" halign="left" noWrap="1" position="114,30" render="Label" size="1008,51" source="Title" transparent="0" zPosition="2" />
+  <widget backgroundColor="lightpanel" font="Regular; 22" foregroundColor="darkpanel" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1178,570" render="VRunningText" size="720,498" source="Event" transparent="1" halign="left" valign="top" zPosition="20">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="listselback" font="Bold; 24" position="114,64" render="Label" size="1009,38" source="Service" transparent="1" zPosition="10" valign="top" foregroundColor="white">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget OverScan="0" backgroundColor="darkgrey" position="1159,0" render="Pig" size="759,445" source="session.VideoPicture" zPosition="0">
+    <convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="lightpanel" font="Bold; 22" foregroundColor="darkpanel" halign="left" noWrap="1" position="1178,455" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=2,always=0,startdelay=3000" render="VRunningText" size="720,45" source="Event" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="lightpanel" font="Bold; 22" foregroundColor="darkpanel" halign="left" noWrap="1" position="1178,505" options="movetype=running,startpoint=0,direction=left,steptime=90,repeat=2,always=0,startdelay=3000" render="VRunningText" size="720,45" source="Event" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName">Description</convert>
+  </widget>
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_blue" position="860,1038" size="288,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_green" position="320,1038" size="228,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_red" position="47,1038" size="226,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="darkpanel" halign="left" name="key_yellow" position="592,1038" size="215,39" transparent="0" valign="top" zPosition="11" />
+  <widget itemHeight="60" name="list" position="0,123" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="1154,900" transparent="1" zPosition="3" />
+</screen>
+</skin>

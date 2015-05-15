@@ -1,0 +1,44 @@
+<skin>
+<screen name="MessageBox" position="center,center" size="900,10" title="Message">
+  <widget font="Regular;23" name="text" position="130,30" size="750,0" transparent="0" />
+  <widget alphatest="blend" name="ErrorPixmap" pixmap="Arctic/pic/disclaimer.png" position="30,30" size="84,84" />
+  <widget alphatest="blend" name="QuestionPixmap" pixmap="Arctic/pic/question.png" position="30,30" size="84,84" />
+  <widget alphatest="blend" name="InfoPixmap" pixmap="Arctic/pic/info.png" position="30,30" size="84,84" />
+  <widget itemHeight="50" name="list" position="20,95" size="920,320" transparent="0" />
+  <applet type="onLayoutFinish">
+# this should be factored out into some helper code, but currently demonstrates applets.
+from enigma import eSize, ePoint
+
+orgwidth = self.instance.size().width()
+orgpos = self.instance.position()
+textsize = self["text"].getSize()
+
+# y size still must be fixed in font stuff...
+textsize = (textsize[0] + 80, textsize[1] + 80)
+offset = 40
+if self.type == self.TYPE_YESNO:
+	offset = 130
+wsizex = textsize[0] + 130
+wsizey = textsize[1] + offset
+if (600 &gt;wsizex):
+	wsizex = 900
+wsize = (wsizex, wsizey)
+
+
+# resize
+self.instance.resize(eSize(*wsize))
+
+# resize label
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+listsize = (wsizex - 20, 30 + offset)
+self["list"].instance.move(ePoint(10, textsize[1]))
+self["list"].instance.resize(eSize(*listsize))
+
+# center window
+newwidth = wsize[0]
+self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, (1080-wsizey)/2))
+		</applet>
+</screen>
+</skin>

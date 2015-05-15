@@ -1,0 +1,20 @@
+<skin>
+	<fonts>
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="Regular" scale="140" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="Bold" scale="140" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="headline" scale="140" />
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="light" scale="140" />
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="RegularUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="BoldUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Bold.ttf" name="headlineUnscaled" scale="100" />
+		<font filename="Arctic/fonts/Asap-Regular.ttf" name="lightUnscaled" scale="100" />
+		<font filename="Arctic/fonts/RobotoCondensed-Bold.ttf" name="VMCBold" scale="140" />
+		<font filename="Arctic/fonts/Roboto-Regular.ttf" name="VMCRegular" scale="140" />
+		<font filename="Arctic/fonts/Roboto-Light.ttf" name="VMCLight" scale="140" />
+		<font filename="Arctic/fonts/meteocons.ttf" name="Wetter" scale="140" />
+		<font filename="Arctic/fonts/PVR_State.ttf" name="PVR" scale="140" />
+		<font filename="lcd.ttf" name="LCD" scale="100" />
+		<font filename="tuxtxt.ttf" name="Console" scale="100" />
+<font filename="Arctic/fonts/VMCIcons.ttf" name="VMCIcons" scale="140" />
+	</fonts>
+</skin>

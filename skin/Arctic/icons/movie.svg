@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="48px" viewBox="0 0 60 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>movie</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons-AV" sketch:type="MSLayerGroup" transform="translate(-126.000000, -45.000000)" fill="#2C2D2B">
+            <g id="movie" transform="translate(126.000000, 45.000000)" sketch:type="MSShapeGroup">
+                <path d="M48,0 L54,12 L45,12 L39,0 L33,0 L39,12 L30,12 L24,0 L18,0 L24,12 L15,12 L9,0 L6,0 C2.7,0 0,2.7 0,6 L0,42 C0,45.3 2.7,48 6,48 L54,48 C57.3,48 60,45.3 60,42 L60,0 L48,0 L48,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

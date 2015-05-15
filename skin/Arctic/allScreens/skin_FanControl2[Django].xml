@@ -1,0 +1,24 @@
+<skin>
+<screen name="FanControl2Plugin" position="567,213" size="800,650" title="Fan Control 2">
+<widget source="Version" render="Label" position="9,619" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" transparent="1" />
+<widget name="config" position="0,61" size="800,250" itemHeight="50" textOffset="20,7" scrollbarMode="showOnDemand" backgroundColor="accent" foregroundColor="white" />
+<ePixmap position="20,328" size="685,25" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+<widget source="introduction" render="Label" position="9,330" size="685,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+<ePixmap position="20,359" size="685,3" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+<widget source="TxtTemp" render="Label" position="9,381" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+<widget source="TxtZielRPM" render="Label" position="9,424" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+<widget source="TxtRPM" render="Label" position="9,463" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+<widget source="TxtVLT" render="Label" position="9,504" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+<widget source="TxtPWM" render="Label" position="9,542" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="background" transparent="1" />
+<widget source="PixTemp" render="Progress" position="320,381" size="375,25" borderWidth="1" />
+<widget source="PixZielRPM" render="Progress" position="320,504" size="375,25" borderWidth="1" />
+<widget source="PixRPM" render="Progress" position="320,542" size="375,25" borderWidth="1" />
+<widget source="PixVLT" render="Progress" position="320,424" size="375,25" borderWidth="1" />
+<widget source="PixPWM" render="Progress" position="320,580" size="375,25" borderWidth="1" />
+<widget source="TxtERR" render="Label" position="9,580" size="300,25" zPosition="1" font="Regular;17" halign="right" valign="center" transparent="1" />
+<widget source="PixERR" render="Progress" position="320,463" size="375,25" borderWidth="1" />
+<widget source="T10ERR" render="Label" position="740,564" size="40,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="background" transparent="1" />
+<widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" source="yellow" render="Label" position="450,8" size="140,40" transparent="0" valign="center" zPosition="2" />
+<eLabel name=" " position="10,8" size="44,40" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" /><eLabel name="" position="205,8" size="44,40" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightgrey" /><eLabel position="400,8" size="44,40" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="lightgrey" halign="left" /><eLabel name="" position="596,8" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" /><widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" source="blue" render="Label" position="646,8" size="140,40" transparent="0" valign="center" zPosition="11" /><widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" source="green"  render="Label" position="255,8" size="140,40" transparent="0" valign="center" zPosition="11" /><widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" source="red" render="Label" position="60,8" size="140,40" transparent="0" valign="center" zPosition="11" /><ePixmap alphatest="blend" pixmap="/usr/share/enigma2/Arctic/skin_default/buttons/key_menu.png" position="723,600" size="70,50" />
+</screen>
+</skin>

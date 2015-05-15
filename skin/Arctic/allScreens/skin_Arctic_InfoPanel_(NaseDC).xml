@@ -1,0 +1,74 @@
+<skin>
+<screen name="InfoPanel" title=" " position="0,49" size="1920,1030" backgroundColor="background">
+  <eLabel name="" position="300,985" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name=" " position="15,985" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_green" render="Label" position="348,990" size="230,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="key_red" render="Label" position="60,990" size="230,39" transparent="0" valign="top" zPosition="11" />
+  <widget source="storagelist" render="Listbox" backgroundColor="background" position="20,615" size="1340,350" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" itemHeight="50">
+    <convert type="TemplatedMultiContent" transparent="0">
+            {"template": [
+                    MultiContentEntryText(pos = (5, 2), size = (450, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                    MultiContentEntryText(pos = (460, 2), size = (375, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+                    MultiContentEntryText(pos = (840, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2),
+                    MultiContentEntryText(pos = (965, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
+                    MultiContentEntryText(pos = (1160, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 4),
+                ],
+            "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+            "itemHeight": 36,
+            "selectionEnabled": False
+            }
+	</convert>
+  </widget>
+  <widget source="netdev" render="Listbox" backgroundColor="background" position="1400,805" size="500,110" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
+    <convert type="TemplatedMultiContent">
+                {"template": [
+                        MultiContentEntryText(pos = (5, 2), size = (90, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                        MultiContentEntryText(pos = (100, 2), size = (180, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (285, 2), size = (150, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                    ],
+                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "itemHeight": 36,
+                "selectionEnabled": False
+                }
+	</convert>
+  </widget>
+  <widget source="memory" render="Listbox" backgroundColor="background" position="1400,615" size="500,150" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1">
+    <convert type="TemplatedMultiContent" transparent="0">
+                {"template": [
+                        MultiContentEntryText(pos = (5, 2), size = (120, 36), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                        MultiContentEntryText(pos = (150, 2), size = (120, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (275, 2), size = (120, 36), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                    ],
+                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "itemHeight": 36,
+                "selectionEnabled": False
+                }
+	</convert>
+  </widget>
+  <widget source="proclist" render="Listbox" backgroundColor="background" position="25,320" size="600,260" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" enableWrapAround="1" itemHeight="50">
+    <convert type="TemplatedMultiContent" transparent="0">
+                {"template": [
+                        MultiContentEntryText(pos = (5, 2), size = (200, 24), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                        MultiContentEntryText(pos = (210, 2), size = (100, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 1),
+                        MultiContentEntryText(pos = (325, 2), size = (100, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 2),
+                        MultiContentEntryText(pos = (445, 2), size = (80, 24), font=0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 3),
+                    ],
+                "fonts": [gFont("Regular", 22),gFont("Regular", 16)],
+                "itemHeight": 36,
+                "selectionEnabled": False
+                }
+	</convert>
+  </widget>
+  <widget name="fan" position="660,380" size="350,40" font="Bold; 22" halign="center" valign="center" backgroundColor="background" />
+  <widget name="kernel" position="20,110" size="780,40" font="Regular; 32" halign="left" valign="center" backgroundColor="background" foregroundColor="button_blue" />
+  <widget name="load" position="20,230" size="780,40" font="Regular; 32" halign="left" valign="center" backgroundColor="background" />
+  <widget name="temp" position="660,318" size="350,40" font="Bold; 22" halign="center" valign="center" backgroundColor="background" />
+  <widget name="uptime" position="20,170" size="780,40" font="Regular; 32" halign="left" valign="center" backgroundColor="background" />
+  <widget name="vtiversion" position="20,50" size="780,40" font="Bold; 32" halign="left" valign="center" backgroundColor="background" foregroundColor="button_blue" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanelsmall.png" position="1120,50" size="759,445" zPosition="-10" />
+  <widget OverScan="0" backgroundColor="darkgrey" position="1120,50" render="Pig" size="759,445" source="session.VideoPicture" zPosition="-20">
+    <convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+</screen>
+</skin>
