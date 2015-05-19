@@ -581,7 +581,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
         self["config"].l.setList(self.list)
 
     def onlineUpdate(self):
-        CheckUpdate(self.session).checkForUpdate()
+        CheckUpdate(self.session, self).checkForUpdate()
 
     def restartGUI(self, answer):
         if answer:
