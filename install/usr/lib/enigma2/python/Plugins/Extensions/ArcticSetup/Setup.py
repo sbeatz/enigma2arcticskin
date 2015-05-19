@@ -54,9 +54,10 @@ def DownloadListBoxImage(q):
         q.task_done()
 
 class CheckUpdate():
-    def __init__(self, session):
+    def __init__(self, session,parent):
         self.session = session
         self.container = None
+        self.parent = parent
 
     def checkForUpdate(self):
         ipkversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','r').read()
@@ -65,7 +66,8 @@ class CheckUpdate():
         self.ipkonlineversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').readline()
         self.ipkonlineversion = int(self.ipkonlineversionstring.replace('.',''))
         if self.ipkonlineversion > self.ipkversion:
-            self.session.openWithCallback(self.doipkUpdate, MessageBox, _("Es gibt ein Update des Arctic Setup auf Version " + self.ipkonlineversionstring + " - Wollen Sie es jetzt installieren?"), MessageBox.TYPE_YESNO)
+            versioninfo = str(urllib.urlopen('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/ipk/versioninfo').read())
+            self.session.openWithCallback(self.doipkUpdate, MessageBox, _("Es gibt ein Update des Arctic Setup auf Version " + self.ipkonlineversionstring + "\nWollen Sie es jetzt installieren?\n\nChangelog:\n" + versioninfo), MessageBox.TYPE_YESNO)
 
         versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
         self.version = int(versionstring.replace('.',''))
@@ -73,7 +75,8 @@ class CheckUpdate():
         self.onlineversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion','r').read()
         self.onlineversion = int(self.onlineversionstring.replace('.',''))
         if self.onlineversion > self.version:
-            self.session.openWithCallback(self.doUpdate, MessageBox, _("Es gibt ein Update des Arctic Skin auf Version " + self.onlineversionstring + " - Wollen Sie es jetzt installieren?"), MessageBox.TYPE_YESNO)
+            versioninfo = str(urllib.urlopen('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/versioninfo').read())
+            self.session.openWithCallback(self.doUpdate, MessageBox, _("Es gibt ein Update des Arctic Skin auf Version " + self.onlineversionstring + " - Wollen Sie es jetzt installieren?\n\nChangelog:\n" + versioninfo), MessageBox.TYPE_YESNO)
     def finishedUpdate(self,retval):
         self.container.kill()
         file = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','w')
@@ -81,12 +84,12 @@ class CheckUpdate():
         file.close()
         self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
     def log(self,string):
-	    print string
+	    self.parent['updateinfo'].setText(string)
     def doipkUpdate(self, answer):
         if answer:
+            self.parent['updateinfo'].show()
             filename = str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()).strip()
             filename = 'enigma2-plugin-skin-arctic_' + filename + '_all.ipk'
-            print "FILENAME: " + str(filename)
             urllib.urlretrieve("https://github.com/sbeatz/enigma2arcticskin/blob/master/ipk/" + filename + "?raw=true",'/tmp/' + filename)
             self.container = eConsoleAppContainer()
             self.container.appClosed.append(self.finishedUpdate)
@@ -96,17 +99,13 @@ class CheckUpdate():
             
     def doUpdate(self, answer):
         if answer:
-            urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin2.xml','/usr/share/enigma2/Arctic/skin_tmp.xml')
-            update = open('/usr/share/enigma2/Arctic/skin_tmp.xml','r').read()
-            print update
+            update = str(urllib.urlopen('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin2.xml').read())
             if update.startswith("<skin>") and update.strip().endswith("</skin>"):
-                print "Update erfolgreich"
                 if str(config.plugins.ArcticSetup.button.value) == "1":
                     update = update.replace('text="a"','text="I"')         
                 file = open('/usr/share/enigma2/Arctic/skin.xml','w')
                 file.write(str(update))
                 file.close()
-
                 file = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','w')
                 file.write(str(self.onlineversion))
                 file.close()
@@ -549,14 +548,16 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
         self.ipkversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','r').read()
         self.ipkversion = int(self.ipkversionstring.replace('.',''))
         self.version = int(self.versionstring.replace('.',''))
-        self.title = _("Arctic Skin Setup - Skin Version " + config.plugins.ArcticSetup.VersionString.value)        
+        self.title = _("Arctic Skin Setup - Skin Version " + config.plugins.ArcticSetup.VersionString.value)  
+        self['updateinfo'] = Label()
+        self['updateinfo'].hide()      
         ConfigListScreen.__init__(self, self.list, session)
         self.createSetup()
         self.onShown.append(self.checkUpdate)
 
     def checkUpdate(self):
         self.onShown.remove(self.checkUpdate)
-        CheckUpdate(self.session).checkForUpdate()
+        CheckUpdate(self.session).checkForUpdate(self)
 
     def keySelect(self):
         ptime = config.plugins.ArcticSetup.primetime.value
