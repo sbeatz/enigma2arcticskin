@@ -2936,8 +2936,8 @@ self["symbols"] = Label()
 		<widget name="timer1" position="16,200" size="577,250" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" backgroundColor="background" scrollbarMode="showOnDemand" zPosition="5" />
 		<widget name="timer2" position="14,470" size="578,205" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" backgroundColor="background" scrollbarMode="showOnDemand" zPosition="5" />
 	</screen>
-	<screen backgroundColor="background" name="TimerSelection" title="TimerSelection" position="center,center" size="610,800" transparent="0">
-		<widget backgroundColor="background" enableWrapAround="1" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="610,800" zPosition="1" />
+	<screen backgroundColor="background" name="TimerSelection" title="TimerSelection" position="center,center" size="910,800" transparent="0">
+		<widget backgroundColor="background" enableWrapAround="1" name="timerlist" position="0,0" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="910,800" zPosition="1" />
 	</screen>
 	<screen name="TMDBPosterScreen" position="0,0" size="367,1080" title="TMDb Poster">
 		<eLabel backgroundColor="background" name="" position="0,0" size="360,1080" />
