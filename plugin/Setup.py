@@ -7,7 +7,7 @@ from Components.GUIComponent import GUIComponent
 from os import path as os_path, listdir as os_listdir, chdir as os_chdir, getcwd as os_getcwd,  symlink
 from Screens.Screen import Screen
 import os
-from enigma import addFont, eListboxPythonMultiContent, eConsoleAppContainer, eBackgroundFileEraser, eListbox, ePixmap, gFont, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_HALIGN_CENTER, loadPNG, RT_WRAP, eServiceReference, getDesktop, loadPic, loadJPG, RT_VALIGN_CENTER, gPixmapPtr, ePicLoad, eTimer, ePoint, eSize, iPlayableService, eServiceCenter, ePythonMessagePump, iServiceInformation, eEPGCache, eRect, BT_SCALE, BT_FIXRATIO
+from enigma import addFont, eListboxPythonMultiContent, eConsoleAppContainer, eBackgroundFileEraser, eListbox, eLabel, ePixmap, gFont, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_HALIGN_CENTER, loadPNG, RT_WRAP, eServiceReference, getDesktop, loadPic, loadJPG, RT_VALIGN_CENTER, RT_VALIGN_TOP,gPixmapPtr, ePicLoad, eTimer, ePoint, eSize, iPlayableService, eServiceCenter, ePythonMessagePump, iServiceInformation, eEPGCache, eRect, BT_SCALE, BT_FIXRATIO
 import Screens.Standby
 from Screens.MessageBox import MessageBox
 from Components.ActionMap import ActionMap
@@ -15,6 +15,7 @@ from Components.Console import Console
 import shutil
 import xml.etree.cElementTree
 import xml
+from Components.Label import Label
 from Components.ConfigList import ConfigListScreen
 from Components.config import getConfigListEntry, config,ConfigNothing, ConfigDirectory, NoSave, ConfigClock
 import urllib
@@ -55,8 +56,17 @@ def DownloadListBoxImage(q):
 class CheckUpdate():
     def __init__(self, session):
         self.session = session
+        self.container = None
 
     def checkForUpdate(self):
+        ipkversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','r').read()
+        self.ipkversion = int(ipkversionstring.replace('.',''))
+        urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/ipk/version','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion')
+        self.ipkonlineversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').readline()
+        self.ipkonlineversion = int(self.ipkonlineversionstring.replace('.',''))
+        if self.ipkonlineversion > self.ipkversion:
+            self.session.openWithCallback(self.doipkUpdate, MessageBox, _("Es gibt ein Update des Arctic Setup auf Version " + self.ipkonlineversionstring + " - Wollen Sie es jetzt installieren?"), MessageBox.TYPE_YESNO)
+
         versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
         self.version = int(versionstring.replace('.',''))
         urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/version','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion')
@@ -64,7 +74,26 @@ class CheckUpdate():
         self.onlineversion = int(self.onlineversionstring.replace('.',''))
         if self.onlineversion > self.version:
             self.session.openWithCallback(self.doUpdate, MessageBox, _("Es gibt ein Update des Arctic Skin auf Version " + self.onlineversionstring + " - Wollen Sie es jetzt installieren?"), MessageBox.TYPE_YESNO)
+    def finishedUpdate(self,retval):
+        self.container.kill()
+        file = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','w')
+        file.write(str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()))
+        file.close()
+        self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
+    def log(self,string):
+	    print string
+    def doipkUpdate(self, answer):
+        if answer:
+            filename = str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()).strip()
+            filename = 'enigma2-plugin-skin-arctic_' + filename + '_all.ipk'
+            print "FILENAME: " + str(filename)
+            urllib.urlretrieve("https://github.com/sbeatz/enigma2arcticskin/blob/master/ipk/" + filename + "?raw=true",'/tmp/' + filename)
+            self.container = eConsoleAppContainer()
+            self.container.appClosed.append(self.finishedUpdate)
+            self.container.stdoutAvail.append(self.log)
+            self.container.execute("opkg update ; opkg install --force-overwrite --force-depends /tmp/" + filename)
 
+            
     def doUpdate(self, answer):
         if answer:
             urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin.xml','/usr/share/enigma2/Arctic/skin_tmp.xml')
@@ -150,7 +179,8 @@ class SkinpartList(GUIComponent, object):
         self.scale = AVSwitch().getFramebufferScale()
         self.l = eListboxPythonMultiContent()
         self.l.setFont(0, gFont('Regular', 22))
-        self.l.setFont(1, gFont('Regular', 16))
+        self.l.setFont(1, gFont('Regular', 18))
+        self.l.setFont(2, gFont('VMCIcons', 18))
         self.l.setBuildFunc(self.buildSkinpartEntry)
         self.l.setItemHeight(50)
         self.onSelectionChanged = []
@@ -202,7 +232,7 @@ class SkinpartList(GUIComponent, object):
             res.append((eListboxPythonMultiContent.TYPE_TEXT,
                         410,
                         0,
-                        width - 420,
+                        width - 450,
                         50,
                         0,
                         RT_HALIGN_LEFT | RT_VALIGN_CENTER,
@@ -211,17 +241,17 @@ class SkinpartList(GUIComponent, object):
             res.append((eListboxPythonMultiContent.TYPE_TEXT,
                         410,
                         60,
-                        width - 420,
-                        50,
-                        0,
-                        RT_HALIGN_LEFT | RT_VALIGN_CENTER,
+                        width - 450,
+                        100,
+                        1,
+                        RT_HALIGN_LEFT | RT_VALIGN_TOP | RT_WRAP,
                         str(data.description)
                         ))
             res.append((eListboxPythonMultiContent.TYPE_TEXT,
                         410,
                         110,
-                        width - 420,
-                        40,
+                        width - 450,
+                        45,
                         1,
                         RT_HALIGN_LEFT | RT_VALIGN_CENTER,
                         "Version: " + str(data.version)
@@ -235,6 +265,27 @@ class SkinpartList(GUIComponent, object):
                         RT_HALIGN_LEFT | RT_VALIGN_CENTER,
                         "Erstellt von: " + str(data.creator)
                         ))
+            if data.updateavailable == True:
+                res.append((eListboxPythonMultiContent.TYPE_TEXT,
+                width - 30,
+                10,
+                30,
+                30,
+                2,
+                RT_HALIGN_LEFT | RT_VALIGN_CENTER,
+                "W"
+                ))
+            if data.isinstalled == False:
+                res.append((eListboxPythonMultiContent.TYPE_TEXT,
+                width - 30,
+                10,
+                30,
+                30,
+                2,
+                RT_HALIGN_LEFT | RT_VALIGN_CENTER,
+                "T"
+                ))
+                
             res.append(MultiContentEntryPixmapAlphaTest(pos = (5,5),size = (400, 200),png = ptr,backcolor = None,backcolor_sel = None,options = BT_SCALE))           
         return res
 
@@ -321,18 +372,26 @@ class SkinpartList(GUIComponent, object):
         return self.list
 
 class SkinpartsBrowser(Screen):
-    skin = '''<screen name="SkinpartsBrowser" position="center,center" size="1200,600" title="Arctic Skinparts">
-			 <widget name="SkinpartsList" position="0,0" size="1200,600" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="/usr/share/enigma2/Arctic/pic/scrollbarbg.png" />
-
+    skin = '''<screen name="SkinpartsBrowser" position="center,center" size="1200,900" title="Arctic Skinparts">
+			 <widget name="SkinpartsList" position="0,0" size="1200,840" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="/usr/share/enigma2/Arctic/pic/scrollbarbg.png" />
+			 <widget name="message" size="150,50" backgroundColor="foreground" foregroundColor="background" font="Regular;20" position="525,275" zPosition="10"/>
+			 <eLabel name="" position="10,857" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
+            <eLabel backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="" text="Alle Skinparts aktualisieren" position="52,862" size="400,39" transparent="0" valign="top" zPosition="11" />
 
 </screen>'''
     def __init__(self, session):    
         self.session = session
+        self.skinparts = {}
         Screen.__init__(self, session)
         self.title = _("Arctic Skin Parts") 
         self.categorylist = []
+        self.us = []
+        self['message'] = Label()
+        self['message'].setText('Lade Skinpart...')
+        self['message'].hide()
         self.listmode = 0
         self.catindex = 0
+        
         self["actions"] = ActionMap(['OkCancelActions',
                                      'ColorActions',
                                      'InfobarActions',
@@ -346,8 +405,19 @@ class SkinpartsBrowser(Screen):
                                     {
                                         "ok": self.keySelect,
                                         "cancel": self.Cancel,
+                                        "green": self.keyGreen,
                                         }, -2)
         self["SkinpartsList"] = SkinpartList()
+        for file in os.listdir("/usr/share/enigma2/Arctic/allScreens/"):        
+            if file.endswith(".xml") and file.startswith('skin_'):
+                rep = open(os.path.join("/usr/share/enigma2/Arctic/allScreens/",file),'r').readline().strip()
+                if rep.startswith('<!--'):
+                    rep = rep.replace('<!--','')
+                    rep = rep.replace('-->','')
+                    rep = rep.strip()
+                    self.skinparts[str(file)] = str(rep)
+                else:
+                    self.skinparts[str(file)] = "1.0"
         self.onShown.append(self.getOnlineParts)
 
     def getOnlineParts(self):
@@ -363,7 +433,16 @@ class SkinpartsBrowser(Screen):
                 print "Category:" +  str(s['category'])
                 skincategories[str(s['category'])] = Skinpart(title = str(s['category']), type = 0)        
             for s in skinparts:
-                sp = Skinpart(str(s['title']),str(s['filename']),str(s['link']),str(s['imagelink']),str(s['category']),str(s['description']),str(s['version']),str(s['creator']),1,s['dateadded'], index = len(skincategories[str(s['category'])].items))
+                updateavailable = False
+                if self.skinparts.has_key(str(s['filename'])): 
+                    isinstalled = True
+                    if self.skinparts[str(s['filename'])] != str(s['version']):
+                        updateavailable = True
+                        self.us.append(Skinpart(str(s['title']),str(s['filename']),str(s['link']),str(s['imagelink']),str(s['category']),str(s['description']),str(s['version']),str(s['creator']),1,s['dateadded'], index = len(skincategories[str(s['category'])].items), isinstalled = isinstalled, updateavailable = updateavailable))
+
+                else: 
+                    isinstalled = False
+                sp = Skinpart(str(s['title']),str(s['filename']),str(s['link']),str(s['imagelink']),str(s['category']),str(s['description']),str(s['version']),str(s['creator']),1,s['dateadded'], index = len(skincategories[str(s['category'])].items), isinstalled = isinstalled, updateavailable = updateavailable)
                 skincategories[str(s['category'])].items.append((sp,))        
             for key in sorted(skincategories.iterkeys()):
                 self.categorylist.append((skincategories[key],))
@@ -379,11 +458,21 @@ class SkinpartsBrowser(Screen):
             self.listmode = 1
             self["SkinpartsList"].moveToIndex(0)
         else:
-            from PIL import Image
+            self['message'].show()
             item = self["SkinpartsList"].getCurrentSelection()[0]
+            from PIL import Image
+            
             url = item.link
             target = "/usr/share/enigma2/Arctic/allScreens/" + item.filename
             urllib.urlretrieve (url, target)
+            f = open(target,'r').read()
+            f = '<!--' + str(item.version) + '-->\n' + f
+            s = open(target,'w')
+            s.write(f)
+            s.close()
+            item.updateavailable = False
+            item.isinstalled = True
+            self["SkinpartsList"].updateListObject(item.index)
             url = item.imagelink
             target = "/usr/share/enigma2/Arctic/preview/" + item.filename.replace(".xml", ".jpg").replace("skin_","preview_skin_")
             urllib.urlretrieve (url, target)
@@ -391,7 +480,43 @@ class SkinpartsBrowser(Screen):
             img = img.resize((400, 225))
             img.save(str(target.replace('.jpg', '.png')))
             os.remove(target)
-
+            self['message'].hide()
+    def keyGreen(self):
+        self['message'].setText("Skinparts werden aktualisiert")
+        self['message'].show()
+        for item in self.us:
+            from PIL import Image
+            url = item.link
+            target = "/usr/share/enigma2/Arctic/allScreens/" + item.filename
+            urllib.urlretrieve (url, target)
+            f = open(target,'r').read()
+            f = '<!--' + str(item.version) + '-->\n' + f
+            f = f.replace('badges/video/', '')
+            f = f.replace('path="audioicon"', 'path="pic/audioicon"')
+            f = f.replace('PIGPanelsmalldark', 'PIGPanel')
+            f = f.replace('DArctic', 'Arctic')
+            f = f.replace('lightpanel', 'background')
+            f = f.replace('lightgrey', 'background_medium')
+            f = f.replace('PIGPanelsmall', 'PIGPanel')
+            f = f.replace('scrollbarWidth="5"', 'scrollbarWidth="7"')
+            f = f.replace('scrollbarWidth="4"', 'scrollbarWidth="7"')
+            f = f.replace('backgroundColor="listselback"', 'backgroundColor="accent"')
+            s = open(target,'w')
+            
+            s.write(f)
+            s.close()
+            item.updateavailable = False
+            item.isinstalled = True
+            self["SkinpartsList"].updateListObject(item.index)
+            url = item.imagelink
+            target = "/usr/share/enigma2/Arctic/preview/" + item.filename.replace(".xml", ".jpg").replace("skin_","preview_skin_")
+            urllib.urlretrieve (url, target)
+            img = Image.open(target).convert('RGBA')
+            img = img.resize((400, 225))
+            img.save(str(target.replace('.jpg', '.png')))
+            os.remove(target)
+        self['message'].hide()
+            
 
     def Cancel(self):
         if self.listmode == 0:
@@ -430,6 +555,8 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
         self.buttonstyle = config.plugins.ArcticSetup.button.value
         self.colorstyle =  config.plugins.ArcticSetup.colorstyle.value
         self.versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
+        self.ipkversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','r').read()
+        self.ipkversion = int(self.ipkversionstring.replace('.',''))
         self.version = int(self.versionstring.replace('.',''))
         self.title = _("Arctic Skin Setup - Skin Version " + config.plugins.ArcticSetup.VersionString.value)        
         ConfigListScreen.__init__(self, self.list, session)
@@ -447,13 +574,13 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
             self.onlineUpdate()
 
 
+        
 
 
 
     def createSetup(self):
 
         self.Update = getConfigListEntry(_("Skin Update"), NoSave(ConfigNothing()))
-        self.list.append(getConfigListEntry(_("Farbstil"),config.plugins.ArcticSetup.colorstyle, None))
         self.list.append(getConfigListEntry(_("Buttonstil"), config.plugins.ArcticSetup.button, None))
         self.list.append(getConfigListEntry(_("Primetime"),config.plugins.ArcticSetup.primetime, None))
         self.list.append(self.Update)
@@ -494,22 +621,22 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
                     f = open(os.path.join(root,file),'w')
                     f.write(u)
                     f.close()             
-            if config.plugins.ArcticSetup.colorstyle.value == "0":
-                print "Linking light"
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/light/*.* /usr/share/enigma2/Arctic/pic')
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic')
+            #if config.plugins.ArcticSetup.colorstyle.value == "0":
+            #    print "Linking light"
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/*.* /usr/share/enigma2/Arctic/pic')
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic')
                 #symlink('/usr/share/enigma2/Arctic/light/*.*', '/usr/share/enigma2/Arctic/pic')
                 #symlink('/usr/share/enigma2/Arctic/light/audioicon', '/usr/share/enigma2/Arctic/pic')
-            elif config.plugins.ArcticSetup.colorstyle.value == "1":
-                print "Linking dark"
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/*.* /usr/share/enigma2/Arctic/pic')
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/audioicon /usr/share/enigma2/Arctic/pic')                
+            #elif config.plugins.ArcticSetup.colorstyle.value == "1":
+            #    print "Linking dark"
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/*.* /usr/share/enigma2/Arctic/pic')
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/audioicon /usr/share/enigma2/Arctic/pic')                
                 #symlink('/usr/share/enigma2/Arctic/dark/*.*', '/usr/share/enigma2/Arctic/pic')
                 #symlink('/usr/share/enigma2/Arctic/dark/audioicon', '/usr/share/enigma2/Arctic/pic')               
-            elif config.plugins.ArcticSetup.colorstyle.value == "2":
-                print "Linking  black"
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/black/*.* /usr/share/enigma2/Arctic/pic')
-                os.popen('ln -sfn /usr/share/enigma2/Arctic/black/audioicon /usr/share/enigma2/Arctic/pic')                
+            #elif config.plugins.ArcticSetup.colorstyle.value == "2":
+            #    print "Linking  black"
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/*.* /usr/share/enigma2/Arctic/pic')
+            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/audioicon /usr/share/enigma2/Arctic/pic')                
                 #symlink('/usr/share/enigma2/Arctic/black/*.*', '/usr/share/enigma2/Arctic/pic')
                 #symlink('/usr/share/enigma2/Arctic/black/audioicon', '/usr/share/enigma2/Arctic/pic')
         #try:
@@ -636,7 +763,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
             file = open('/usr/share/enigma2/Arctic/skin.xml','w')
             file.write(str(update))
             file.close()
-	if self.buttonstyle != config.plugins.ArcticSetup.button.value or self.colorstyle !=  config.plugins.ArcticSetup.colorstyle.value:
+	if self.buttonstyle != config.plugins.ArcticSetup.button.value:
             self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
 
         else:                        

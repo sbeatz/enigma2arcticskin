@@ -1,9 +1,11 @@
+<!--Dark-->
 <skin>
+<!--Colors-->
     <colors>
     <color name="accent" value="#000385b5" />
     <color name="accentlight" value="#2051a5e8" />
     <color name="aawhite" value="#aaffffff" />
-    <color name="background" value="#002c2d2b" />
+    <color name="background" value="#00333333" />
     <color name="transpBlack" value="#ffffffff"/>
     <color name="background_dark" value="#00212121" />
     <color name="background_medium" value="#003f3f3f" />
@@ -37,7 +39,7 @@
   </colors>
   <!--  WindowStyles -->
     <windowstyle id="0" type="skinned">
-    <title font="Regular;30" offset="1015,722" />
+    <title font="Regular;30" offset="20,15" />
     <color color="background" name="Background" />
     <color color="foreground" name="LabelForeground" />
     <color color="background" name="ListboxBackground" />
@@ -48,17 +50,17 @@
     <color color="foreground" name="ListboxMarkedForeground" />
     <color color="accent" name="ListboxMarkedAndSelectedBackground" />
     <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
-    <color name="WindowTitleForeground" color="#000385b5" />
+    <color name="WindowTitleForeground" color="accent" />
     <color name="WindowTitleBackground" color="background" />
     <borderset name="bsWindow">
-      <pixmap filename="Arctic/dark/windowstyles/tl2.png" pos="bpTopLeft" />
-      <pixmap filename="Arctic/dark/windowstyles/t2.png" pos="bpTop" />
-      <pixmap filename="Arctic/dark/windowstyles/tr2.png" pos="bpTopRight" />
-      <pixmap filename="Arctic/dark/windowstyles/bl2.png" pos="bpBottomLeft" />
-      <pixmap filename="Arctic/dark/windowstyles/b2.png" pos="bpBottom" />
-      <pixmap filename="Arctic/dark/windowstyles/br2.png" pos="bpBottomRight" />
-      <pixmap filename="Arctic/dark/windowstyles/l2.png" pos="bpLeft" />
-      <pixmap filename="Arctic/dark/windowstyles/r2.png" pos="bpRight" />
+      <pixmap filename="Arctic/windowstyles/tl_333333.png" pos="bpTopLeft" />
+      <pixmap filename="Arctic/windowstyles/t_333333.png" pos="bpTop" />
+      <pixmap filename="Arctic/windowstyles/tr_333333.png" pos="bpTopRight" />
+      <pixmap filename="Arctic/windowstyles/bl_333333.png" pos="bpBottomLeft" />
+      <pixmap filename="Arctic/windowstyles/b_333333.png" pos="bpBottom" />
+      <pixmap filename="Arctic/windowstyles/br_333333.png" pos="bpBottomRight" />
+      <pixmap filename="Arctic/windowstyles/l.png" pos="bpLeft" />
+      <pixmap filename="Arctic/windowstyles/r.png" pos="bpRight" />
     </borderset>
   </windowstyle>
   <!--  Display -->
@@ -74,4 +76,5 @@
     <color color="accent" name="ListboxMarkedAndSelectedBackground" />
     <color color="white" name="ListboxMarkedAndSelectedForeground" />
   </windowstyle>
+
 </skin>

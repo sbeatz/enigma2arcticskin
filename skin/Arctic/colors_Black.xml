@@ -1,4 +1,6 @@
+<!--Black-->
 <skin>
+<!--Colors-->
     <colors>
     <color name="accent" value="#000385b5" />
     <color name="accentlight" value="#2051a5e8" />
