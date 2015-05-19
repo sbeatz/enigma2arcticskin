@@ -35,17 +35,17 @@
     <convert type="EventTime">Duration</convert>
     <convert type="ClockToText">InMinutes</convert>
   </widget>
-  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/sdtv.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
+  <widget alphatest="blend" pixmap="Arctic/pic/sdtv.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
     <convert type="ServiceInfo">VideoWidth</convert>
     <convert type="ValueRange">0,1279</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/720.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
+  <widget alphatest="blend" pixmap="Arctic/pic/720.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
     <convert type="ServiceInfo">VideoHeight</convert>
     <convert type="ValueRange">720,1000</convert>
     <convert type="ConditionalShowHide" />
   </widget>
-  <widget alphatest="blend" pixmap="Arctic/pic/badges/video/1080.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
+  <widget alphatest="blend" pixmap="Arctic/pic/1080.png" position="1730,1025" render="Pixmap" size="85,58" source="session.CurrentService" zPosition="3">
     <convert type="ServiceInfo">VideoHeight</convert>
     <convert type="ValueRange">1001,1080</convert>
     <convert type="ConditionalShowHide" />
