@@ -1,0 +1,12 @@
+Package: enigma2-plugin-skin-arctic
+Version: 2.5
+Description: Arctic Skin for VTI
+Section: skin
+Priority: optional
+Maintainer: hmmmdada
+Architecture: all
+Depends:
+Conflicts: 
+License: None
+Source: GIT
+OE: enigma2-plugins

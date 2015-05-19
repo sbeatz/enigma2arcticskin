@@ -1,0 +1,14 @@
+#!/bin/sh
+echo „Creating Symlinks for first usage“
+ln -sfn /usr/share/enigma2/Arctic/light/*.* /usr/share/enigma2/Arctic/pic
+ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic
+ln -sfn /usr/share/enigma2/Arctic/light/skin_default/*.* /usr/share/enigma2/Arctic/skin_default
+rm -f /usr/share/enigma2/Arctic/mySkin_off/*.xml
+rm -f /usr/share/enigma2/Arctic/skin_user_colors.xml
+
+echo "********************************************************"
+echo "*  Arctic installed                               *"
+echo "*                                                      *"
+echo "*  Restart the Engima2 GUI to activate the plugin      *"
+echo "********************************************************"
+exit 0
