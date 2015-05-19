@@ -69,7 +69,7 @@ class CheckUpdate():
 
         versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
         self.version = int(versionstring.replace('.',''))
-        urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/version','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion')
+        urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/version2','/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion')
         self.onlineversionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/onlineversion','r').read()
         self.onlineversion = int(self.onlineversionstring.replace('.',''))
         if self.onlineversion > self.version:
@@ -96,32 +96,13 @@ class CheckUpdate():
             
     def doUpdate(self, answer):
         if answer:
-            urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin.xml','/usr/share/enigma2/Arctic/skin_tmp.xml')
+            urllib.urlretrieve('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin2.xml','/usr/share/enigma2/Arctic/skin_tmp.xml')
             update = open('/usr/share/enigma2/Arctic/skin_tmp.xml','r').read()
             print update
             if update.startswith("<skin>") and update.strip().endswith("</skin>"):
                 print "Update erfolgreich"
                 if str(config.plugins.ArcticSetup.button.value) == "1":
-                    update = update.replace('text="a"','text="I"')
-                    for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
-                        files = [file for file in files if file.endswith(".xml")]
-                        for file in files:
-                            rep = open(os.path.join(root,file),'r').read()
-                            rep = rep.replace('text="a"','text="I"')
-                            f = open(os.path.join(root,file),'w')
-                            f.write(u)
-                            f.close()
-
-                else:
-                    for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
-                        files = [file for file in files if file.endswith(".xml")]
-                        for file in files:
-                            rep = open(os.path.join(root,file),'r').read()
-                            u = rep.replace('text="I"','text="a"')
-                            f = open(os.path.join(root,file),'w')
-                            f.write(u)
-                            f.close()                    
-
+                    update = update.replace('text="a"','text="I"')         
                 file = open('/usr/share/enigma2/Arctic/skin.xml','w')
                 file.write(str(update))
                 file.close()

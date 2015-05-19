@@ -1641,9 +1641,24 @@ self.instance.move(ePoint(0,top))
   <eLabel name="" position="1670,50" size="30,60" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
 
   <eLabel backgroundColor="background" foregroundColor="foreground" name="" position="0,918" size="1920,170" zPosition="-1" />
-  <eLabel valign="top" text="L" halign="left" font="VMCIcons; 16" position="1770,925" size="30,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
-  <eLabel text="&#xb7;" position="1590,925" font="VMCIcons; 16" valign="top" size="30,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
-  <eLabel text="Z" position="1510,925" font="VMCIcons; 16" valign="top" size="31,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
+    <eLabel valign="top" text="L" halign="left" font="VMCIcons; 16" position="1770,925" size="30,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
+  <eLabel text="&#xb7;" position="1565,925" font="VMCIcons; 16" valign="top" size="30,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
+  <eLabel text="Z" position="1485,925" font="VMCIcons; 16" valign="top" size="31,35" transparent="0" zPosition="30" foregroundColor="grey_light" />
+  <widget position="1515,925" render="Label" size="55,35" source="session.CurrentService" zPosition="3" font="Regular; 14" valign="top" foregroundColor="grey_light">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget position="1595,925" render="Label" size="172,35" font="Regular; 14" source="session.CurrentService" halign="left" valign="top" zPosition="10" foregroundColor="grey_light">
+    <convert type="ArcticAudioInfo">AudioCodec</convert>
+    <convert type="TextToUpper" />
+  </widget>
+  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1800,925" render="Label" size="74,32" source="session.CurrentService" valign="top" zPosition="11">
+    <convert type="ArcticHDDSpaceInfo" />
+    <convert type="TextToUpper" />
+  </widget>
+  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1973,960" render="Label" size="149,35" source="session.CurrentService" valign="top" zPosition="10">
+    <convert type="VtiTempFan">TempInfo</convert>
+    <convert type="Textreplace">TEMP:</convert>
+  </widget> 
   <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,913" size="1000,7" alphatest="blend" />
   <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,913" size="920,7" alphatest="blend" />
   <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/hdd.png" position="1747,937" size="0,0" transparent="0" zPosition="3" />
@@ -1677,9 +1692,7 @@ self.instance.move(ePoint(0,top))
     <convert type="ClockToText">InMinutes</convert>
 <convert type="TextAddBefore"> / </convert>
   </widget>
-  <widget position="1540,925" render="Label" size="85,35" source="session.CurrentService" zPosition="3" font="Regular; 14" valign="top" foregroundColor="grey_light">
-    <convert type="ServiceInfo">VideoHeight</convert>
-  </widget>
+
   <widget alphatest="blend" pixmap="Arctic/pic/rec.png" position="1855,1047" render="Pixmap" size="20,20" source="session.RecordState" zPosition="2">
     <convert type="ConditionalShowHide">Blink</convert>
   </widget>
@@ -1694,18 +1707,7 @@ self.instance.move(ePoint(0,top))
   <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" noWrap="1" position="590,1040" render="Label" size="1006,38" source="session.Event_Next" transparent="0" valign="top" zPosition="1">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget position="1620,925" render="Label" size="200,35" font="Regular; 14" source="session.CurrentService" halign="left" valign="top" zPosition="10" foregroundColor="grey_light">
-    <convert type="ArcticAudioInfo">AudioCodec</convert>
-	<convert type="TextToUpper"/>
-  </widget>
-  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1790,925" render="Label" size="85,32" source="session.CurrentService" valign="top" zPosition="11">
-    <convert type="ArcticHDDSpaceInfo" />
-<convert type="TextToUpper"/>
-  </widget>
-  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1828,960" render="Label" size="149,35" source="session.CurrentService" valign="top" zPosition="10">
-    <convert type="VtiTempFan">TempInfo</convert>
-    <convert type="Textreplace">TEMP:</convert>
-  </widget>
+
   <widget backgroundColor="transparent" font="Wetter; 1" foregroundColor="transparent" halign="center" position="33,45" render="VWeatherUpdater" size="10,60" source="global.CurrentTime" valign="center" zPosition="10" />
   <widget backgroundColor="background" font="Regular; 24" foregroundColor="foreground" halign="center" noWrap="1" position="1520,50" render="Label" size="80,60" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
     <convert type="VWeather">currentWeatherTemp</convert>
@@ -2649,13 +2651,27 @@ self["symbols"] = Label()
   <eLabel name="" position="1670,50" size="30,60" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
 
   <eLabel backgroundColor="background" foregroundColor="foreground" name="" position="0,918" size="1920,170" zPosition="-1" />
-  <eLabel valign="top" text="L" halign="left" font="VMCIcons; 16" position="1770,925" size="30,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
-  <eLabel text="&#xb7;" position="1590,925" font="VMCIcons; 16" valign="top" size="30,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
-  <eLabel text="Z" position="1510,925" font="VMCIcons; 16" valign="top" size="31,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
+     <eLabel valign="top" text="L" halign="left" font="VMCIcons; 16" position="1770,925" size="30,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
+  <eLabel text="&#xb7;" position="1565,925" font="VMCIcons; 16" valign="top" size="30,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
+  <eLabel text="Z" position="1485,925" font="VMCIcons; 16" valign="top" size="31,35" transparent="0" zPosition="5" foregroundColor="grey_light" />
+  <widget position="1515,925" render="Label" size="55,35" source="session.CurrentService" zPosition="3" font="Regular; 14" valign="top" foregroundColor="grey_light">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <widget position="1595,925" render="Label" size="172,35" font="Regular; 14" source="session.CurrentService" halign="left" valign="top" zPosition="10" foregroundColor="grey_light">
+    <convert type="ArcticAudioInfo">AudioCodec</convert>
+    <convert type="TextToUpper" />
+  </widget>
+  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1800,925" render="Label" size="74,32" source="session.CurrentService" valign="top" zPosition="11">
+    <convert type="ArcticHDDSpaceInfo" />
+    <convert type="TextToUpper" />
+  </widget>
+  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1973,960" render="Label" size="149,35" source="session.CurrentService" valign="top" zPosition="10">
+    <convert type="VtiTempFan">TempInfo</convert>
+    <convert type="Textreplace">TEMP:</convert>
+  </widget> 
   <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,913" size="1000,7" alphatest="blend" />
   <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,913" size="920,7" alphatest="blend" />
-  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/hdd.png" position="1747,937" size="0,0" transparent="0" zPosition="3" />
-  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/temp.png" position="1747,976" size="0,0" zPosition="3" />
+
   <widget alphatest="blend" position="0,920" render="Picon" size="400,160" source="session.CurrentService" transparent="1" zPosition="1">
     <convert type="ServiceName">Reference</convert>
   </widget>
@@ -2673,7 +2689,7 @@ self["symbols"] = Label()
   <widget backgroundColor="background" font="Bold; 28" foregroundColor="foreground" halign="left" noWrap="1" position="408,957" render="Label" size="1476,40" source="session.Event_Now" transparent="0" valign="center" zPosition="4">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget backgroundColor="grey_light" foregroundColor="accent" position="400,1028" render="Progress" size="1476,8" source="session.Event_Now" zPosition="30">
+  <widget backgroundColor="grey_light" foregroundColor="accent" position="400,1028" render="Progress" size="1476,8" source="session.Event_Now" zPosition="5">
     <convert type="EventTime">Progress</convert>
   </widget>
   <widget backgroundColor="background" font="Regular; 18" foregroundColor="foreground" halign="right" position="1687,996" render="Label" size="93,35" source="session.Event_Now" transparent="0" valign="top" zPosition="1" noWrap="1">
@@ -2685,9 +2701,7 @@ self["symbols"] = Label()
     <convert type="ClockToText">InMinutes</convert>
 <convert type="TextAddBefore"> / </convert>
   </widget>
-  <widget position="1540,925" render="Label" size="85,35" source="session.CurrentService" zPosition="3" font="Regular; 14" valign="top" foregroundColor="grey_light">
-    <convert type="ServiceInfo">VideoHeight</convert>
-  </widget>
+  
   <widget alphatest="blend" pixmap="Arctic/pic/rec.png" position="1855,1047" render="Pixmap" size="20,20" source="session.RecordState" zPosition="2">
     <convert type="ConditionalShowHide">Blink</convert>
   </widget>
@@ -2702,18 +2716,7 @@ self["symbols"] = Label()
   <widget backgroundColor="background" font="Regular; 22" foregroundColor="foreground" halign="left" noWrap="1" position="590,1040" render="Label" size="1006,38" source="session.Event_Next" transparent="0" valign="top" zPosition="1">
     <convert type="EventName">Name</convert>
   </widget>
-  <widget position="1620,925" render="Label" size="200,35" font="Regular; 14" source="session.CurrentService" halign="left" valign="top" zPosition="10" foregroundColor="grey_light">
-    <convert type="ArcticAudioInfo">AudioCodec</convert>
-	<convert type="TextToUpper"/>
-  </widget>
-  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1790,925" render="Label" size="85,32" source="session.CurrentService" valign="top" zPosition="11">
-    <convert type="ArcticHDDSpaceInfo" />
-<convert type="TextToUpper"/>
-  </widget>
-  <widget backgroundColor="background" font="Regular; 14" foregroundColor="grey_light" halign="right" noWrap="1" position="1828,960" render="Label" size="149,35" source="session.CurrentService" valign="top" zPosition="10">
-    <convert type="VtiTempFan">TempInfo</convert>
-    <convert type="Textreplace">TEMP:</convert>
-  </widget>
+
   <widget backgroundColor="transparent" font="Wetter; 1" foregroundColor="transparent" halign="center" position="33,45" render="VWeatherUpdater" size="10,60" source="global.CurrentTime" valign="center" zPosition="10" />
   <widget backgroundColor="background" font="Regular; 24" foregroundColor="foreground" halign="center" noWrap="1" position="1520,50" render="Label" size="80,60" source="session.CurrentService" transparent="0" valign="center" zPosition="10">
     <convert type="VWeather">currentWeatherTemp</convert>
@@ -2725,13 +2728,13 @@ self["symbols"] = Label()
 		<widget backgroundColor="#00DDDDDD" font="Regular;24" foregroundColor="#00333333" halign="left" valign="top" position="220,244" render="VRunningText" options="movetype=running,startpoint=0,direction=left,steptime=120,repeat=2,always=0,startdelay=3000,nowrap" size="720,40" source="session.Event_Now" zPosition="22">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget backgroundColor="#00DDDDDD" font="Regular;22" foregroundColor="#00333333" halign="left" valign="top" position="220,294" size="700,500" render="VRunningText" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=2,always=0,startdelay=3000,wrap" source="session.Event_Now" zPosition="22">
+		<widget backgroundColor="#00DDDDDD" font="Regular;22" foregroundColor="#00333333" halign="left" valign="top" position="220,294" size="700,620" render="VRunningText" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=2,always=0,startdelay=3000,wrap" source="session.Event_Now" zPosition="22">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget backgroundColor="#00DDDDDD" font="Regular;24" foregroundColor="#00333333" halign="left" valign="top" position="980,244" render="VRunningText" options="movetype=running,startpoint=0,direction=left,steptime=120,repeat=2,always=0,startdelay=3000,nowrap" size="700,40" source="session.Event_Next" zPosition="22">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget backgroundColor="#00DDDDDD" font="Regular;22" foregroundColor="#00333333" halign="left" valign="top" position="980,294" size="700,500" render="VRunningText" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=2,always=0,startdelay=3000,wrap" source="session.Event_Next" zPosition="22">
+		<widget backgroundColor="#00DDDDDD" font="Regular;22" foregroundColor="#00333333" halign="left" valign="top" position="980,294" size="700,620" render="VRunningText" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=2,always=0,startdelay=3000,wrap" source="session.Event_Next" zPosition="22">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 	</screen>
