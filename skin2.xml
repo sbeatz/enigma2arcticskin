@@ -1330,10 +1330,12 @@ self.instance.move(ePoint(0,top))
 		<eLabel size="1,250" position="981,760" backgroundColor="darkpanel" zPosition="1" />
 		<eLabel name="" position="300,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 		<eLabel name="" position="901,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
-		<eLabel name="" position="1778,6" size="30,40" zPosition="13" font="PVR; 24" text="e" halign="right" valign="center" />
+		
 		<eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
-		<ePixmap alphatest="blend" pixmap="Arctic/pic/msgbox_bg.png" position="0,670" size="1920,410" zPosition="-10" />
-		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/uhrpanel.png" position="1751,0" size="410,60" zPosition="1" />
+		<eLabel position="0,670" size="1920,410" zPosition="-10" />
+		
+		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,663" size="1000,7" alphatest="blend" />
+		<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,663" size="920,7" alphatest="blend" />
 		<widget font="headline;24" foregroundColor="foreground" position="250,680" render="Label" size="960,50" valign="center" backgroundColor="background" source="Service" zPosition="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
