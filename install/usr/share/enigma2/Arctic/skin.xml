@@ -234,8 +234,8 @@
     <color name="transpBlack" value="#ffffffff"/>
     <color name="background_dark" value="#00AAAAAA" />
     <color name="background_medium" value="#00CCCCCC" />
-    <color name="black" value="#ff000000" />
-    <color name="blue" value="#ff7acafe" />
+    <color name="black" value="#00000000" />
+    <color name="blue" value="#007acafe" />
     <color name="darkgrey" value="#ff2c2c2c" />
     <color name="darkgrey2" value="#ff666769" />
     <color name="darkpanel" value="#002c2d2b" />
@@ -253,7 +253,7 @@
     <color name="red" value="#00ce4421" />
     <color name="transparent" value="#ff111111" />
     <color name="white" value="#00ffffff" />
-    <color name="yellow" value="#00e6dd2b" />
+    <color name="yellow" value="#00FFB60A" />
     <color name="yellow_light" value="#00d0dda8" />
     <color name="button_blue" value="#200064c7" />
     <color name="button_green" value="#00389416" />
