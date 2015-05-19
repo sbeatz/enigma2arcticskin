@@ -557,7 +557,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
 
     def checkUpdate(self):
         self.onShown.remove(self.checkUpdate)
-        CheckUpdate(self.session).checkForUpdate(self)
+        CheckUpdate(self.session,self).checkForUpdate()
 
     def keySelect(self):
         ptime = config.plugins.ArcticSetup.primetime.value
