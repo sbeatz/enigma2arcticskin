@@ -654,7 +654,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="592,1038" size="215,39" transparent="0" valign="top" zPosition="11" />
 		<eLabel position="546,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background_medium" halign="left" />
 		<eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background_medium" />
-		<eLabel name="" position="817,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+		<eLabel name="" position="817,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 		<eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 		
 
@@ -696,9 +696,9 @@ if isDash == True:
     width = maxlength 
 else:
     if isTitle == True:
-        width = maxlength + 50
+        width = maxlength + 5
     else:
-        width = maxlength + 50 
+        width = maxlength + 5 
 if (610 &gt;width):
     width = 610
 if (18 &gt;c):
