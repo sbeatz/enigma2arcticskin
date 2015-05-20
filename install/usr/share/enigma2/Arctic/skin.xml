@@ -550,7 +550,7 @@ MultiContentEntryPixmapAlphaTest(pos = (520, 6), size = (48, 48), png = 3),
 		<eLabel position="274,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 
 		<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
 
 		<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 		<ePixmap name="" pixmap="Arctic/pic/dropshadowright.png" position="911, 0" size="7, 1080" transparent="1" />
@@ -800,7 +800,7 @@ else:
 		<eLabel backgroundColor="background" font="headline; 24" foregroundColor="foreground" name="" noWrap="1" position="1440,720" size="390,39" text="&#xC4;hnliche Sendungen" transparent="1" valign="top" zPosition="35" />
 		<eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="background" valign="top" halign="right" />
 		<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
 		<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="666,0" size="1208,709" zPosition="-100" />
 		<ePixmap name="" pixmap="Arctic/pic/channellistshadow.png" alphatest="blend" position="641,0" size="13,1080" transparent="1" zPosition="-10" />
@@ -910,7 +910,7 @@ else:
 	<screen name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide" backgroundColor="background" flags="wfNoBorder">
 		<eLabel position="274,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
-		<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+		<eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
 		<eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="background" valign="top" halign="right" />
 		<eLabel name=" " position="5,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="666,0" size="1208,709" zPosition="10" />
@@ -1292,7 +1292,7 @@ self.instance.move(ePoint(0,top))
 		<eLabel backgroundColor="background_medium" name="" position="0,0" size="1154,1080" />
 <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/titleshadow.png" position="0,124" size="1154,20" zPosition="100" />
 		<eLabel name="" position="274,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background_medium" />
-		<eLabel name="" position="817,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+		<eLabel name="" position="817,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 		<eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="accent" valign="top" halign="right" foregroundColor="white" />
 		<eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="1159,0" size="759,445" zPosition="10" />
