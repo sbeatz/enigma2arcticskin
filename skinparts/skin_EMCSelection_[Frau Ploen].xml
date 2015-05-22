@@ -1,20 +1,20 @@
 <skin>
 <screen backgroundColor="background" flags="wfNoBorder" name="EMCSelection" position="0,0" size="1920,1080" title="Enhanced Movie Center" zPosition="0" transparent="0">
-  <eLabel name="" position="574,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
-  <eLabel name="" position="5,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
-  <eLabel name="" position="859,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel name="" position="574,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+  <eLabel name="" position="5,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+  <eLabel name="" position="859,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
   <eLabel name="" position="10,0" size="100, 100" zPosition="13" font="PVR; 80" text="b" halign="right" valign="top" backgroundColor="accent" foregroundColor="white" />
-  <eLabel name="" position="291,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel name="" position="291,1022" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
   <widget font="Regular;22" foregroundColor="foreground" halign="center" position="850,262" render="Label" size="375,0" source="Service" valign="center">
     <convert type="EventName">Name</convert>
   </widget>
   <widget backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" position="125,25" render="Label" size="830,90" source="Title" transparent="0" zPosition="2" valign="center" />
-  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="906,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
-  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="339,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
-  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
-  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="622,1017" size="225,50" transparent="0" valign="center" zPosition="2" />
-  <widget CoolBarHPos="8" CoolBarPos="760" CoolBarSize="95,12" CoolBarSizeSa="95,12" CoolDateColor="1" itemHeight="36" CoolDatePos="1000" CoolDateWidth="140" CoolFolderSize="720" CoolFont="Regular;21" CoolHighlightColor="0" CoolMoviePos="35" CoolMovieSize="720" CoolProgressPos="760" CoolSelectFont="Regular;20" CoolTitleColor="1" DefaultColor="darkpanel" FinishedColor="#46D93A" foregroundColorSelected="lightpanel" RecordingColor="red" FrontColorSel="lightpanel" UnwatchedColor="darkpanel" WatchingColor="#3486F4" backgroundColor="lightgrey" transparent="0" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" name="list" position="0,160" size="1150,825" zPosition="3" />
-  <widget font="Regular;22" halign="center" name="wait" position="1,122" size="1150,850" valign="center" zPosition="40" backgroundColor="lightgrey" />
+  <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="906,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="339,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="52,1017" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="622,1017" size="225,50" transparent="0" valign="center" zPosition="2" />
+  <widget CoolBarHPos="8" CoolBarPos="760" CoolBarSize="95,12" CoolBarSizeSa="95,12" CoolDateColor="1" itemHeight="36" CoolDatePos="1000" CoolDateWidth="140" CoolFolderSize="720" CoolFont="Regular;21" CoolHighlightColor="0" CoolMoviePos="35" CoolMovieSize="720" CoolProgressPos="760" CoolSelectFont="Regular;20" CoolTitleColor="1" DefaultColor="foreground" FinishedColor="#46D93A" foregroundColorSelected="background" RecordingColor="red" FrontColorSel="lightpanel" UnwatchedColor="foreground" WatchingColor="#3486F4" backgroundColor="background_medium" transparent="0" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" name="list" position="0,160" size="1150,825" zPosition="3" />
+  <widget font="Regular;22" halign="center" name="wait" position="1,122" size="1150,850" valign="center" zPosition="40" backgroundColor="background_medium" />
   <widget source="Service" render="Picon" position="1210,20" zPosition="10" size="300,180" transparent="1" alphatest="blend">
     <convert type="MovieInfo">Reference</convert>
   </widget>
