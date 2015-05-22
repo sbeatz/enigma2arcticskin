@@ -753,17 +753,17 @@ else:
 		  <eLabel name="" position="0,0" size="100, 100" zPosition="2" font="PVR; 80" text="l" backgroundColor="accent" valign="top" halign="right" foregroundColor="white" />
 		  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="white" position="103,26" size="300,47" text="Live TV" transparent="0" valign="top" zPosition="4" />
 		  <widget source="Title" render="Label" position="103,63" size="440,47" backgroundColor="accent" foregroundColor="white" font="headline; 24" zPosition="20" transparent="0" />
-	
+
 			<widget name="list" position="0,123" size="1154,900" itemHeight="80" zPosition="10" foregroundColor="foreground" backgroundColor="background_medium"
 	 transparent="0" CoolFont="Regular;22" CoolPico="60" CoolPicoHPos="5" CoolServiceFont="Regular;18"
 	 CoolServiceSize="1900" CoolServicePos="10" CoolServiceHPos="5" CoolServiceColor="foreground" CoolEventFont="Bold;22" CoolEventSize="1000" CoolDurationColor="foreground"
 	 CoolEventPos="10" CoolEventHPos="40" CoolEventColor="foreground" CoolMarkerPicPos="2" CoolMarkerPicHPos="2" CoolMarkerPos="140" CoolMarkerHPos="1" CoolBar="1" CoolBarPos="0" CoolBarHPos="67"
 	 CoolBarColor="white" CoolBarHigh="5" CoolTime="0" CoolTimePos="1900" CoolTimeHPos="3" CoolTimeSize="230" CoolDurationPos="9000" CoolDurationSize="40" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="white" CoolFontColSel="background" />
-	
+
 	<eLabel backgroundColor="background_medium" name="" position="1154,820" size="772,295" zPosition="10" />
-	
-	
-	
+
+
+
 	<widget position="1154,495" render="Progress" size="766,10" source="Event" backgroundColor="grey_light" foregroundColor="accent" zPosition="3">
 		  <convert type="EventTime">Progress</convert>
 		</widget>
@@ -778,15 +778,15 @@ else:
 			<widget source="Event" render="Label" position="1180,445" size="518,50" backgroundColor="background" font="Bold; 24" foregroundColor="foreground" halign="left" noWrap="1" transparent="1" valign="top" zPosition="35">
 				<convert type="EventName">Name</convert>
 			</widget>
-	
+
 			<widget source="Event" render="VRunningText" position="1180,515" size="723,260" backgroundColor="background" font="Regular;20" foregroundColor="foreground" halign="left" options=" movetype=running,startpoint=0,direction=top,steptime=125,repeat=2,always=0,startdelay=10000,wrap" transparent="1" zPosition="20">
 				<convert type="EventName">ExtendedDescription</convert>
 			</widget>
-	
+
 			<eLabel name="" text="N&#xE4;chste Sendungen" position="1180,830" size="390,39" noWrap="1" backgroundColor="background_medium" font="headline; 24" foregroundColor="foreground" transparent="1" valign="top" zPosition="35" />
 			<widget source="Service" render="CoolNextEvent" zPosition="30" position="1180,880" size="722,200" font="Regular;19" backgroundColor="background_medium" foregroundColor="foreground" />
-	
-	
+
+
 	<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="860,1038" size="288,39" transparent="0" valign="top" zPosition="11" />
 		<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="320,1038" size="228,39" transparent="0" valign="top" zPosition="11" />
 		<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1038" size="226,39" transparent="0" valign="top" zPosition="11" />
@@ -796,26 +796,26 @@ else:
 		<eLabel name="" position="817,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 		<eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
 	</screen>
-	
+
 		<!-- Cool Single Guide -->
 		<screen backgroundColor="background" name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide" flags="wfNoBorder">
 			<eLabel name="" position="0,0" size="1154,75" backgroundColor="accent" zPosition="3" />
 			<eLabel name="" position="0,10" size="70,55" font="PVR; 60" text="l" backgroundColor="accent" valign="center" halign="center" foregroundColor="lightpanel" zPosition="4" />
-	
+
 			<widget source="Title" render="Label" position="75,18" size="300,47" backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" noWrap="1" transparent="0" zPosition="10" valign="top" />
 			<widget source="Service" render="Label" position="380,18" size="770,47" backgroundColor="accent" font="headline; 24" transparent="0" zPosition="10" valign="top" foregroundColor="white">
 				<convert type="ServiceName">Name</convert>
 			</widget>
-	
-			<widget name="list" position="0,80" zPosition="3" size="1144,864" itemHeight="36" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/cooltimeline.png" CoolFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDaySize="50" CoolDayColor="foreground" CoolTimePos="70" CoolTimeSize="70" CoolTimeColor="foreground" CoolEventPos="150" CoolEventColor="foreground" CoolEventSize="970" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="background" foregroundColor="foreground" backgroundColor="background" transparent="0" />
-	
+
+			<widget name="list" position="0,80" zPosition="3" size="1144,864" itemHeight="36" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" CoolFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDaySize="50" CoolDayColor="foreground" CoolTimePos="70" CoolTimeSize="70" CoolTimeColor="foreground" CoolEventPos="150" CoolEventColor="foreground" CoolEventSize="970" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="background" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+
 			<ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="31" />
 			<ePixmap name="" pixmap="Arctic/pic/PIGPanel.png" position="1165,10" size="759,445" zPosition="-100" alphatest="blend" />
 			<widget source="session.VideoPicture" render="Pig" position="1165,10" size="759,445" OverScan="0" backgroundColor="darkgrey" zPosition="-501">
 				<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
 				<convert type="ConditionalShowHide" />
 			</widget>
-	
+
 			<widget source="Event" render="Label" position="1165,460" size="755,45" backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" transparent="0" valign="center" zPosition="35">
 				<convert type="EventName">Name</convert>
 			</widget>
@@ -837,7 +837,7 @@ else:
 			<widget source="Event" render="VRunningText" position="1165,610" size="755,460" backgroundColor="background" font="Regular; 22" foregroundColor="foreground" options="movetype=running,startpoint=0,direction=top,steptime=120,repeat=2,always=0,startdelay=10000,wrap" transparent="0" halign="left" valign="top" zPosition="20">
 				<convert type="EventName">ExtendedDescription</convert>
 			</widget>
-	
+
 			<eLabel name="" position="274,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 			<eLabel name="" position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
 			<eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
@@ -847,20 +847,20 @@ else:
 			<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,966" size="226,50" transparent="0" valign="center" zPosition="11" />
 			<widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,966" size="288,50" transparent="0" valign="center" zPosition="2" />
 		</screen>
-	
+
 		<!-- Cool Easy Guide-->
 		<screen backgroundColor="background" name="CoolEasyGuide" position="0, 0" size="1920, 1080" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1920,75" backgroundColor="accent" zPosition="3" />
 		  <eLabel name="" position="0,10" size="70,55" zPosition="4" font="PVR; 60" text="l" backgroundColor="accent" valign="center" halign="center" foregroundColor="white" />
 		  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="white" position="75,18" size="300,47" text="Cool Easy Guide" transparent="0" valign="top" zPosition="4" />
 		  <widget source="Title" render="Label" position="380,18" size="1500,47" backgroundColor="accent" foregroundColor="white" font="headline; 24" zPosition="20" transparent="0" />
-	
+
 	  	  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" scale="1" position="5,76" size="384,220" zPosition="-100" />
 		  <widget OverScan="0" backgroundColor="darkgrey" position="5,76" render="Pig" size="384,220" source="session.VideoPicture" zPosition="-501">
 			<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide" />
 		  </widget>
-	
+
 		  <widget source="Event" render="Label" position="400,76" zPosition="2" size="1137,45" font="Bold;24" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">Name</convert>
 		  </widget>
@@ -875,12 +875,12 @@ else:
 		  <widget source="Event" render="VRunningText" position="400,141" size="1500,159" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=2,always=1,startdelay=10000,wrap" zPosition="2" font="Regular;20" foregroundColor="foreground" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">ExtendedDescription</convert>
 		  </widget>
-	
-		  <widget name="list" itemHeight="34" position="5,331" size="1910,683" transparent="1" zPosition="25" backgroundColor="background" foregroundColor="foreground" CoolCurrentCol="accentlight" CoolBarColor="accent" CoolBarHPos="7" CoolBarHigh="18" CoolBarPos="330" CoolBarSize="150" CoolDurationPos="1800" CoolDurationColor="foreground" CoolDurationSize="105" CoolEventColor="foreground" CoolEventFont="Regular;22" CoolEventHPos="0" CoolEventPos="490" CoolEventSize="1290" CoolFont="Regular;18" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="foreground" CoolServiceFont="Regular;20" CoolServiceHPos="2" CoolServicePos="5" CoolServiceSize="305" CoolTimeHPos="2" CoolTimePos="330" CoolTimeSize="150" />
-	
+
+		  <widget name="list" itemHeight="34" position="5,331" size="1910,683" transparent="1" zPosition="25" backgroundColor="background" foregroundColor="foreground" CoolBarColor="accent" CoolBarHPos="7" CoolBarHigh="18" CoolBarPos="330" CoolBarSize="150" CoolDurationPos="1800" CoolDurationColor="foreground" CoolDurationSize="105" CoolEventColor="foreground" CoolEventFont="Regular;22" CoolEventHPos="0" CoolEventPos="490" CoolEventSize="1290" CoolFont="Regular;18" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="foreground" CoolServiceFont="Regular;20" CoolServiceHPos="2" CoolServicePos="5" CoolServiceSize="305" CoolTimeHPos="2" CoolTimePos="330" CoolTimeSize="150" />
+
 		  <ePixmap name="" position="0,1014" size="1000,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
 		  <ePixmap name="" position="1000,1014" size="920,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
-	
+
 		  <widget render="Label" source="global.CurrentTime" position="1500,1026" size="410,50" backgroundColor="background" font="Bold; 20" foregroundColor="foreground" halign="right" transparent="1" valign="center" zPosition="12">
 			<convert type="ClockToText">Format:%A %d.%m. %H:%M</convert>
 		  </widget>
@@ -895,7 +895,7 @@ else:
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="643,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool Multi Guide-->
 	<screen backgroundColor="background" name="CoolMultiGuide" position="0, 0" size="1920, 1080" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1920,75" backgroundColor="accent" zPosition="3" />
@@ -908,7 +908,7 @@ else:
 			<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide" />
 		  </widget>
-	
+
 		  <widget source="Event" render="Label" position="400,76" zPosition="2" size="1137,45" font="Bold;24" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">Name</convert>
 		  </widget>
@@ -923,18 +923,18 @@ else:
 		  <widget source="Event" render="VRunningText" position="401,120" size="1500,159" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=2,always=1,startdelay=10000,wrap" zPosition="3" font="Regular;20" foregroundColor="foreground" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">ExtendedDescription</convert>
 		  </widget>
-	
+
 		  <widget backgroundColor="background" name="timeline_text" position="0,300" size="1920,30" zPosition="20" transparent="0" />
 		  <widget name="list" position="0,331" size="1920,692" transparent="0" zPosition="5" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" CoolBackColor="#00605f5e" CoolPiconBackCol="background" CoolNowCol="accent" coolbordercolL="lightpanel" coolbordercolR="lightpanel" CoolBorderColL="lightpanel" CoolBorderColR="lightpanel" CoolCurrentCol="#007895bc" />
-	
+
 		  <widget name="timeline_now" position="0,331" size="2,692" alphatest="on" zPosition="21" pixmap="Arctic/pic/cooltimeline.png" />
-	
+
 		  <ePixmap name="" position="1000,983" size="920,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
-	
+
 		  <widget render="Label" source="global.CurrentTime" position="1500,1026" size="410,50" backgroundColor="background" font="Bold; 20" foregroundColor="foreground" halign="right" transparent="1" valign="center" zPosition="12">
 			<convert type="ClockToText">Format:%A %d.%m. %H:%M</convert>
 		  </widget>
-	
+
 		  <eLabel position="0,1026" size="1920,54" backgroundColor="lightgrey" zPosition="9" />
 		  <eLabel name=" " position="5,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" transparent="1" />
 		  <eLabel name="" position="300,1033" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" transparent="1" />
@@ -945,7 +945,7 @@ else:
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="643,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool Nice Guide -->
 		<screen backgroundColor="background" name="CoolNiceGuide" position="0, 0" size="1920, 1080" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1920,75" backgroundColor="accent" zPosition="3" />
@@ -953,13 +953,13 @@ else:
 		  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="foreground" position="75,18" size="300,47" text="Cool Nice Guide" transparent="0" valign="top" zPosition="4" />
 		  <widget source="Title" render="Label" position="380,18" size="1500,47" backgroundColor="accent" foregroundColor="foreground" font="headline; 24" zPosition="20" transparent="0" />
 	<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/titleshadow.png" position="0,74" size="1920,20" zPosition="2" />
-	
+
 	  	  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" scale="1" position="5,76" size="384,220" zPosition="-100" />
 		  <widget OverScan="0" backgroundColor="darkgrey" position="5,76" render="Pig" size="384,220" source="session.VideoPicture" zPosition="-501">
 			<convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
 			<convert type="ConditionalShowHide" />
 		  </widget>
-	
+
 		  <widget source="Event" render="Label" position="400,76" zPosition="2" size="1137,45" font="Bold;24" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">Name</convert>
 		  </widget>
@@ -974,12 +974,12 @@ else:
 		  <widget source="Event" render="VRunningText"  position="401,120" size="1500,159" options="movetype=running,startpoint=0,direction=top,steptime=125,repeat=2,always=1,startdelay=10000,wrap" zPosition="2" font="Regular;20" foregroundColor="foreground" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">ExtendedDescription</convert>
 		  </widget>
-	
+
 		  <widget backgroundColor="background" name="timeline_text" position="0,300" size="1920,30" zPosition="20" transparent="0" />
 		  <widget name="list" position="0,331" size="1920,692" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" transparent="0" zPosition="5" CoolBackColor="#00605f5e" CoolPiconBackCol="background" CoolNowCol="accent" coolbordercolL="lightpanel" coolbordercolR="lightpanel" CoolBorderColL="lightpanel" CoolBorderColR="lightpanel" CoolCurrentCol="#007895bc" />
 		  <widget name="timeline_now" position="0,331" size="2,692" alphatest="on" zPosition="21" pixmap="Arctic/pic/cooltimeline.png" />
-	
-	
+
+
 		  <widget render="Label" source="global.CurrentTime" position="1500,1026" size="410,50" backgroundColor="background" font="Bold; 20" foregroundColor="foreground" halign="right" transparent="1" valign="center" zPosition="12">
 			<convert type="ClockToText">Format:%A %d.%m. %H:%M</convert>
 		  </widget>
@@ -994,7 +994,7 @@ else:
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="643,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool Tiny Guide -->
 		<screen backgroundColor="background" name="CoolTinyGuide" position="0, 0" size="1920, 1080" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1920,75" backgroundColor="accent" zPosition="3" />
@@ -1002,15 +1002,15 @@ else:
 		  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="foreground" position="75,18" size="300,47" text="Cool Tiny Guide" transparent="0" valign="top" zPosition="4" />
 		  <widget source="Title" render="Label" position="380,18" size="1500,47" backgroundColor="accent" foregroundColor="foreground" font="headline; 24" zPosition="20" transparent="0" />
 	<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/titleshadow.png" position="0,74" size="1920,20" zPosition="2" />
-	
+
 	 	  <widget name="timeline_text" backgroundColor="background" position="0,76" size="1920,30" zPosition="20" transparent="0" />
-	
+
 		  <widget name="list" position="0,107" size="1920,652" transparent="0" zPosition="5" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" CoolBackColor="#00605f5e" CoolPiconBackCol="background" CoolNowCol="accent" coolbordercolL="lightpanel" coolbordercolR="lightpanel" CoolBorderColL="lightpanel" CoolBorderColR="lightpanel" CoolCurrentCol="#007895bc" />
-	
+
 		  <widget name="timeline_now" position="0,107" size="2,652" alphatest="on" zPosition="21" pixmap="Arctic/pic/cooltimeline.png" />
 		  <ePixmap name="" position="0,759" size="1000,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
 		  <ePixmap name="" position="1000,759" size="920,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
-	
+
 		  <widget source="Event" render="Label" position="20,770" zPosition="2" size="1137,45" font="Bold;24" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">Name</convert>
 		  </widget>
@@ -1039,7 +1039,7 @@ else:
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="643,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool TV Guide -->
 		<screen backgroundColor="background" name="CoolTVGuide" position="0, 0" size="1920, 1080" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1920,75" backgroundColor="accent" zPosition="3" />
@@ -1047,13 +1047,13 @@ else:
 		  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="foreground" position="75,18" size="300,47" text="Cool TV Guide" transparent="0" valign="top" zPosition="4" />
 		  <widget source="Title" render="Label" position="380,18" size="1500,47" backgroundColor="accent" foregroundColor="foreground" font="headline; 24" zPosition="20" transparent="0" />
 	<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/titleshadow.png" position="0,74" size="1920,20" zPosition="2" />
-	
+
 		  <widget name="list" position="0,107" size="1920,652" transparent="0" zPosition="5" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" CoolBackColor="#00605f5e" CoolPiconBackCol="background" CoolNowCol="accent" coolbordercolL="lightpanel" coolbordercolR="lightpanel" CoolBorderColL="lightpanel" CoolBorderColR="lightpanel" CoolCurrentCol="#007895bc" />
 		  <widget name="timeline_now" position="0,107" size="2,652" alphatest="on" zPosition="21" pixmap="Arctic/pic/cooltimeline.png" />
 		  <widget backgroundColor="background" name="timeline_text" position="0,76" size="1920,30" zPosition="20" transparent="0" />
 		  <ePixmap name="" position="0,759" size="1000,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
 		  <ePixmap name="" position="1000,759" size="920,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
-	
+
 		  <widget source="Event" render="Label" position="20,770" zPosition="2" size="1137,45" font="Bold;24" backgroundColor="background" transparent="0" valign="top">
 			<convert type="EventName">Name</convert>
 		  </widget>
@@ -1082,36 +1082,36 @@ else:
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="47,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		  <widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="643,1026" size="250,50" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool Info Guide -->
 		<screen backgroundColor="background" name="CoolInfoGuide" position="center,center" size="1450,885" title="Cool Info Guide">
-	
+
 			<widget source="Event" render="VRunningText" position="12,15" size="1428,50" backgroundColor="background" font="Bold; 28" foregroundColor="foreground" halign="left" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" transparent="1" zPosition="3">
 				<convert type="EventName">Name</convert>
 			</widget>
 			<widget name="CoolShort" position="12,65" size="1100,50" backgroundColor="background" font="Regular;20" foregroundColor="foreground" transparent="1" zPosition="3" />
-	
+
 			<widget name="CoolEvent" position="1115,65" size="175,30" backgroundColor="background" CoolFont="Regular;20" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolTimeColor="foreground" CoolTimePos="0" CoolTimeSize="200" CoolDayPos="300" CoolEventSize="0" CoolDaySize="0" CoolBackColorSel="background" CoolFontColSel="foreground" scrollbarMode="showNever" itemHeight="30" transparent="1" zPosition="5" />
-	
+
 			<widget source="Event" render="Label" position="1290,65" size="150,30" backgroundColor="background" font="Regular;20" halign="right" transparent="1" zPosition="10" valign="center">
 				<convert type="EventTime">Remaining</convert>
 				<convert type="RemainingToText">InMinutes</convert>
 			</widget>
-	
+
 			<!-->
 			CoolBackColorSel="accent" 
 			<widget source="Event" render="Label" position="12,15" size="300,45" backgroundColor="background" font="Bold; 28" halign="left" transparent="1" zPosition="10" valign="center" >
 				<convert type="EventTime">StartTime</convert>
 				<convert type="ClockToText">Format: %d.%m, %H:%M</convert>
 			</widget>
-	
+
 			<widget source="Service" render="Label" position="325,15" size="800,45" backgroundColor="background" font="Bold; 28" halign="center" transparent="1" zPosition="10" valign="center" >
 				<convert type="ServiceName">Name</convert>
 			</widget>
-	
+
 			< -->
 			<widget name="CoolDescription" position="12,140" size="1425,690" backgroundColor="background" font="Regular; 24" foregroundColor="foreground" transparent="1" zPosition="20" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/cooltimeline.png" scrollbarSliderBorderWidth="0" halign="left" />
-	
+
 			<eLabel name="" position="97,847" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" transparent="1" />
 			<eLabel name="" position="383,847" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" transparent="1" />
 			<eLabel name="" position="667,847" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" halign="left" transparent="1" />
@@ -1121,11 +1121,11 @@ else:
 			<widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="719,847" size="288,39" transparent="1" valign="center" zPosition="11" />
 			<widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="1064,847" size="288,39" transparent="1" valign="center" zPosition="11" />
 		</screen>
-	
+
 		<!-- Cool Search -->
 		<screen backgroundColor="background" name="CoolSearch" position="0,0" size="1920,1080" title="Cool Search" zPosition="0" transparent="0" flags="wfNoBorder">
 		  <eLabel name="" position="0, 0" size="1154,1080" backgroundColor="background_medium" />
-	
+
 		<ePixmap alphatest="blend" name="" pixmap="Arctic/pic/titleshadow.png" position="0,99" size="1154,20" zPosition="2" />	  
 	<eLabel backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" name="" position="115,35" size="250,50" text="Cool Search" valign="center" zPosition="9" />
 		  <eLabel name="" position="0,0" size="100,100" zPosition="4" font="PVR; 80" text="l" backgroundColor="accent" valign="top" halign="right" foregroundColor="white" />
@@ -1152,8 +1152,8 @@ else:
 			<convert type="ClockToText">Format:- %H:%M</convert>
 		  </widget>
 		  <widget name="list" position="0,100" size="1154,900" CoolBackColor="background_medium" CoolDateColor="foreground" CoolDateHPos="10" CoolDatePos="70" CoolDateSize="70" CoolDayColor="foreground" CoolDayHPos="10" CoolDayPos="0" CoolDaySize="50" CoolEventColor="foreground" CoolEventFont="Regular;22" CoolEventHPos="10" CoolEventPos="500" CoolEventSize="700" CoolFont="Regular;22" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolRecEventBackColor="background_medium" CoolServiceColor="foreground" CoolServiceFont="Regular;22" CoolServiceHPos="10" CoolServicePos="230" CoolServiceSize="280" CoolTimeColor="foreground" CoolTimeHPos="10" CoolTimePos="150" CoolTimeSize="70" backgroundColor="background_medium" itemHeight="60" transparent="0" zPosition="1" />
-	
-	
+
+
 			<eLabel backgroundColor="background_medium" name=" " position="0,1030" size="50,50" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="center" transparent="0" />
 			<eLabel backgroundColor="background_medium" name="" position="275,1030" size="50,50" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="center" transparent="0" />
 			<eLabel backgroundColor="background_medium" name="" position="550,1030" size="50,50" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" halign="center" transparent="0" />
@@ -1163,10 +1163,10 @@ else:
 			<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="600,1030" size="225,50" transparent="0" valign="center" zPosition="11" />
 			<widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="875,1030" size="278,50" transparent="0" valign="center" zPosition="11" />
 		</screen>	
-	
+
 		<!-- Cool Setup -->
 		<screen name="CoolTVGuideSetup" title="Cool EPG Setup" backgroundColor="background" position="center,center" size="910,800">
-	
+
 			<!--widget font="Regular;22" position="10,600" render="Label" size="890,100" source="help" /-->
 			<eLabel position="5,751" size="900,2" backgroundColor="darkpanel" zPosition="12" />
 			<eLabel position="0,756" size="910,50" backgroundColor="lightgrey" zPosition="9" />
@@ -1178,10 +1178,10 @@ else:
 			<widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="247,762" size="157,39" transparent="1" valign="top" zPosition="11" />
 			<widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="447,762" size="157,39" transparent="1" valign="top" zPosition="11" />
 			<widget font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="647,762" size="157,39" transparent="1" valign="top" zPosition="11" />
-	
+
 			<widget name="config" position="5,5" size="900,720" itemHeight="40" textOffset="20,2" zPosition="5" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarSliderBorderWidth="0" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
 		</screen>
-	
+
 		<screen backgroundColor="background" name="CronManager" position="center,center" size="610,800" title="CronManager" transparent="0">
 		<eLabel position="274,707" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
 		<eLabel name="" position="5,757" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />

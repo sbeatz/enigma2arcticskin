@@ -807,7 +807,7 @@ else:
 				<convert type="ServiceName">Name</convert>
 			</widget>
 
-			<widget name="list" position="0,80" zPosition="3" size="1144,864" itemHeight="36" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="8" scrollbarBackgroundPicture="Arctic/pic/cooltimeline.png" CoolFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDaySize="50" CoolDayColor="foreground" CoolTimePos="70" CoolTimeSize="70" CoolTimeColor="foreground" CoolEventPos="150" CoolEventColor="foreground" CoolEventSize="970" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="background" foregroundColor="foreground" backgroundColor="background" transparent="0" />
+			<widget name="list" position="0,80" zPosition="3" size="1144,864" itemHeight="36" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" CoolFont="Regular;22" CoolEventFont="Regular;22" CoolDayPos="0" CoolDaySize="50" CoolDayColor="foreground" CoolTimePos="70" CoolTimeSize="70" CoolTimeColor="foreground" CoolEventPos="150" CoolEventColor="foreground" CoolEventSize="970" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="background" foregroundColor="foreground" backgroundColor="background" transparent="0" />
 
 			<ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="31" />
 			<ePixmap name="" pixmap="Arctic/pic/PIGPanel.png" position="1165,10" size="759,445" zPosition="-100" alphatest="blend" />
@@ -876,7 +876,7 @@ else:
 			<convert type="EventName">ExtendedDescription</convert>
 		  </widget>
 
-		  <widget name="list" itemHeight="34" position="5,331" size="1910,683" transparent="1" zPosition="25" backgroundColor="background" foregroundColor="foreground" CoolCurrentCol="accentlight" CoolBarColor="accent" CoolBarHPos="7" CoolBarHigh="18" CoolBarPos="330" CoolBarSize="150" CoolDurationPos="1800" CoolDurationColor="foreground" CoolDurationSize="105" CoolEventColor="foreground" CoolEventFont="Regular;22" CoolEventHPos="0" CoolEventPos="490" CoolEventSize="1290" CoolFont="Regular;18" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="foreground" CoolServiceFont="Regular;20" CoolServiceHPos="2" CoolServicePos="5" CoolServiceSize="305" CoolTimeHPos="2" CoolTimePos="330" CoolTimeSize="150" />
+		  <widget name="list" itemHeight="34" position="5,331" size="1910,683" transparent="1" zPosition="25" backgroundColor="background" foregroundColor="foreground" CoolBarColor="accent" CoolBarHPos="7" CoolBarHigh="18" CoolBarPos="330" CoolBarSize="150" CoolDurationPos="1800" CoolDurationColor="foreground" CoolDurationSize="105" CoolEventColor="foreground" CoolEventFont="Regular;22" CoolEventHPos="0" CoolEventPos="490" CoolEventSize="1290" CoolFont="Regular;18" CoolRecAlarmCol="yellow" CoolRecColor="red" CoolServiceColor="foreground" CoolServiceFont="Regular;20" CoolServiceHPos="2" CoolServicePos="5" CoolServiceSize="305" CoolTimeHPos="2" CoolTimePos="330" CoolTimeSize="150" />
 
 		  <ePixmap name="" position="0,1014" size="1000,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />
 		  <ePixmap name="" position="1000,1014" size="920,7" pixmap="Arctic/pic/dropshadowbottom.png" alphatest="blend" />

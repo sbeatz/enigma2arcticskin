@@ -5,6 +5,9 @@ ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic
 ln -sfn /usr/share/enigma2/Arctic/light/skin_default/*.* /usr/share/enigma2/Arctic/skin_default
 rm -f /usr/share/enigma2/Arctic/mySkin_off/*.xml
 rm -f /usr/share/enigma2/Arctic/skin_user_colors.xml
+rm /control
+rm /postinst
+rm /preinst
 
 echo "********************************************************"
 echo "*  Arctic installed                               *"
