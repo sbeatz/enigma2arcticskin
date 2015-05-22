@@ -376,6 +376,7 @@
 <eLabel name="" position="5,407" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
 <eLabel backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" text="Skinpart Browser" position="47,412" size="226,39" transparent="0" valign="top" zPosition="11" />
 		<widget backgroundColor="background" zPosition="10" textOffset="20,7" itemHeight="50" enableWrapAround="1" name="config" position="0,0" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" size="900,350" transparent="0" />
+		<widget name="updateinfo" position="0,0" size="900,450" zPosition="100"/>
 	</screen>
 	<screen name="AtileHD_Config" position="center,center" size="1180,600" title="AtileHD Setup">
 		<eLabel position="274,507" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />

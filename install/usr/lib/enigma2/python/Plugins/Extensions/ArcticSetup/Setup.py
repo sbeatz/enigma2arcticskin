@@ -82,11 +82,14 @@ class CheckUpdate():
         file = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkversion','w')
         file.write(str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()))
         file.close()
+        self.parent.updaterunning =  False
+        self.parent['updateinfo'].hide()
         self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
     def log(self,string):
-	    self.parent['updateinfo'].setText(string)
+        self.parent['updateinfo'].setText(string)
     def doipkUpdate(self, answer):
         if answer:
+            self.parent.updaterunning =  True
             self.parent['updateinfo'].show()
             filename = str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()).strip()
             filename = 'enigma2-plugin-skin-arctic_' + filename + '_all.ipk'
@@ -96,7 +99,7 @@ class CheckUpdate():
             self.container.stdoutAvail.append(self.log)
             self.container.execute("opkg update ; opkg install --force-overwrite --force-depends /tmp/" + filename)
 
-            
+
     def doUpdate(self, answer):
         if answer:
             update = str(urllib.urlopen('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin2.xml').read())
@@ -247,25 +250,25 @@ class SkinpartList(GUIComponent, object):
                         ))
             if data.updateavailable == True:
                 res.append((eListboxPythonMultiContent.TYPE_TEXT,
-                width - 30,
-                10,
-                30,
-                30,
-                2,
-                RT_HALIGN_LEFT | RT_VALIGN_CENTER,
-                "W"
-                ))
+                            width - 30,
+                            10,
+                            30,
+                            30,
+                            2,
+                            RT_HALIGN_LEFT | RT_VALIGN_CENTER,
+                            "W"
+                            ))
             if data.isinstalled == False:
                 res.append((eListboxPythonMultiContent.TYPE_TEXT,
-                width - 30,
-                10,
-                30,
-                30,
-                2,
-                RT_HALIGN_LEFT | RT_VALIGN_CENTER,
-                "T"
-                ))
-                
+                            width - 30,
+                            10,
+                            30,
+                            30,
+                            2,
+                            RT_HALIGN_LEFT | RT_VALIGN_CENTER,
+                            "T"
+                            ))
+
             res.append(MultiContentEntryPixmapAlphaTest(pos = (5,5),size = (400, 200),png = ptr,backcolor = None,backcolor_sel = None,options = BT_SCALE))           
         return res
 
@@ -371,7 +374,7 @@ class SkinpartsBrowser(Screen):
         self['message'].hide()
         self.listmode = 0
         self.catindex = 0
-        
+
         self["actions"] = ActionMap(['OkCancelActions',
                                      'ColorActions',
                                      'InfobarActions',
@@ -441,7 +444,7 @@ class SkinpartsBrowser(Screen):
             self['message'].show()
             item = self["SkinpartsList"].getCurrentSelection()[0]
             from PIL import Image
-            
+
             url = item.link
             target = "/usr/share/enigma2/Arctic/allScreens/" + item.filename
             urllib.urlretrieve (url, target)
@@ -492,7 +495,7 @@ class SkinpartsBrowser(Screen):
             f = f.replace('scrollbarWidth="4"', 'scrollbarWidth="7"')
             f = f.replace('backgroundColor="listselback"', 'backgroundColor="accent"')
             s = open(target,'w')
-            
+
             s.write(f)
             s.close()
             item.updateavailable = False
@@ -506,7 +509,7 @@ class SkinpartsBrowser(Screen):
             img.save(str(target.replace('.jpg', '.png')))
             os.remove(target)
         self['message'].hide()
-            
+
 
     def Cancel(self):
         if self.listmode == 0:
@@ -542,6 +545,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
                                         'red': self.Cancel,
                                         }, -1)
         self.list = [ ]
+        self.updaterunning =  False
         self.buttonstyle = config.plugins.ArcticSetup.button.value
         self.colorstyle =  config.plugins.ArcticSetup.colorstyle.value
         self.versionstring = open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/version','r').read()
@@ -560,13 +564,14 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
         CheckUpdate(self.session,self).checkForUpdate()
 
     def keySelect(self):
-        ptime = config.plugins.ArcticSetup.primetime.value
-        cur = self["config"].getCurrent()
-        if cur == self.Update:
-            self.onlineUpdate()
+        if self.updaterunning ==  False:
+            ptime = config.plugins.ArcticSetup.primetime.value
+            cur = self["config"].getCurrent()
+            if cur == self.Update:
+                self.onlineUpdate()
 
 
-        
+
 
 
 
@@ -591,181 +596,182 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
 
 
     def Cancel(self):
-        #config.plugins.ArcticSetup.save()
-        for x in self["config"].list:
-            try:
-                x[1].save()  
-            except:
-                pass
-        if self.colorstyle !=  config.plugins.ArcticSetup.colorstyle.value:
-            update = open('/usr/share/enigma2/Arctic/skin.xml','r').read()
-            update = update.replace('badges/video/', '')
-            update = update.replace('path="audioicon"', 'path="pic/audioicon"')
-            file = open('/usr/share/enigma2/Arctic/skin.xml','w')
-            file.write(str(update))
-            file.close()            
-            for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
-                files = [file for file in files if file.endswith((".xml"))]
-                for file in files:
-                    rep = open(os.path.join(root,file),'r').read()
-                    u = rep.replace('badges/video/', '')
-                    u = u.replace('path="audioicon"', 'path="pic/audioicon"')
-                    f = open(os.path.join(root,file),'w')
-                    f.write(u)
-                    f.close()             
-            #if config.plugins.ArcticSetup.colorstyle.value == "0":
-            #    print "Linking light"
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/*.* /usr/share/enigma2/Arctic/pic')
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic')
-                #symlink('/usr/share/enigma2/Arctic/light/*.*', '/usr/share/enigma2/Arctic/pic')
-                #symlink('/usr/share/enigma2/Arctic/light/audioicon', '/usr/share/enigma2/Arctic/pic')
-            #elif config.plugins.ArcticSetup.colorstyle.value == "1":
-            #    print "Linking dark"
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/*.* /usr/share/enigma2/Arctic/pic')
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/audioicon /usr/share/enigma2/Arctic/pic')                
-                #symlink('/usr/share/enigma2/Arctic/dark/*.*', '/usr/share/enigma2/Arctic/pic')
-                #symlink('/usr/share/enigma2/Arctic/dark/audioicon', '/usr/share/enigma2/Arctic/pic')               
-            #elif config.plugins.ArcticSetup.colorstyle.value == "2":
-            #    print "Linking  black"
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/*.* /usr/share/enigma2/Arctic/pic')
-            #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/audioicon /usr/share/enigma2/Arctic/pic')                
-                #symlink('/usr/share/enigma2/Arctic/black/*.*', '/usr/share/enigma2/Arctic/pic')
-                #symlink('/usr/share/enigma2/Arctic/black/audioicon', '/usr/share/enigma2/Arctic/pic')
-        #try:
-		#			from enigma import eWindowStyleManager, eWindowStyleSkinned, eSize, eListboxPythonStringContent, eListboxPythonConfigContent
-#
-#					from skin import parseSize, parseFont, parseColor
-#					try:
-#						from skin import parseValue
-#					except:
-#						pass
-#				
-#					stylemgr = eWindowStyleManager.getInstance()
-#					desktop = getDesktop(0)
-#					styleskinned = eWindowStyleSkinned()
-#
-#				
-#			
-#					skin_path = resolveFilename(SCOPE_CURRENT_SKIN) + "skin_user_colors.xml"
-#					if not fileExists(skin_path):
-#						print("DEFAULT SKIN USED")
-#						skin_path = resolveFilename(SCOPE_CURRENT_SKIN) + "skin.xml"
-#					else: print("skin_user_colors.xml USED")
-#					file_path = resolveFilename(SCOPE_SKIN)
-#				
-#					conf = xml.etree.cElementTree.parse(skin_path)
-#					for x in conf.getroot():
-#						if x.tag == "colors":
-#							skin.colorNames = dict()
-#							skin.colorNamesHuman = dict()		
-#							colors =  x
-#							for y in colors:
-#								print str(y)
-#								
-#								name =  y.get("name")
-#								color = y.get("value")
-#								print("Parsing Color: " + str(name))
-#								print("Parsing Value: " + str(color))
-#								if name and color:
-#										skin.colorNames[name] = parseColor(color)
-#										if color[0] != '#':
-#											for key in skin.colorNames:
-#												if key == color:
-#													skin.colorNamesHuman[name] = skin.colorNamesHuman[key]
-#													break
-#										else:
-#											humancolor = color[1:]
-#											if len(humancolor) >= 6:
-#												skin.colorNamesHuman[name] = int(humancolor,16)
-#								else:
-#										print ("need color and name, got %s %s" % (name, color))							
-#									
-#								
-#		
-#						elif x.tag == "windowstyle" and x.get("id") == "0":
-#							font = gFont("Regular", 20)
-#							offset = eSize(20, 5)
-#							windowstyle = x
-#							for x in windowstyle:
-#								if x.tag == "title":
-#									font = parseFont(x.get("font"), ((1,1),(1,1)))
-#									offset = parseSize(x.get("offset"), ((1,1),(1,1)))
-#								elif x.tag == "color":
-#									colorType = x.get("name")
-#									color = parseColor(x.get("color"))
-#									try:
-#										styleskinned.setColor(eWindowStyleSkinned.__dict__["col" + colorType], color)
-#									except:
-#										pass
-#								elif x.tag == "borderset":
-#									bsName = str(x.get("name"))
-#									borderset =  x
-#									for x in borderset:
-#										if x.tag == "pixmap":
-#											bpName = x.get("pos")
-#											styleskinned.setPixmap(eWindowStyleSkinned.__dict__[bsName], eWindowStyleSkinned.__dict__[bpName], LoadPixmap(file_path + x.get("filename"), desktop))
-#									print("BORDERSET CHANGED")
-#							styleskinned.setTitleFont(font)
-#							styleskinned.setTitleOffset(offset)
-#						
-#				
-#	
-#					pngcache =  []
-#					#skin.dom_skins = []
-#					for x in skin.pngcache:
-#						print("RELOADING IMAGE: " + str(x[0]))
-#						ptr = loadPixmap(x[0], desktop)
-#						pngcache.append((x[0],ptr))
-#					skin.pngcache = pngcache
-#					#skin.load_modular_files()
-#					#skin.loadSkin('Arctic/skin.xml')
-#					stylemgr.setStyle(0, styleskinned)
-#					self.session.infobar = None
-#					IB = Screens.InfoBar.InfoBar(self.session)
-#					#self.session.open(IB)
-#					self.session.infobar = IB
- #       except Exception, ex:
-#					print("FEHLER BEIM SETZEN DES NEUEN STYLES: " + str(ex))            
-#
-
-        if self.buttonstyle != config.plugins.ArcticSetup.button.value:
-            update = open('/usr/share/enigma2/Arctic/skin.xml','r').read()
-            if config.plugins.ArcticSetup.button.value == "1":
-                update = update.replace('text="a"','text="I"')
+        if self.updaterunning ==  False:
+            for x in self["config"].list:
+                try:
+                    x[1].save()  
+                except:
+                    pass
+            if self.colorstyle !=  config.plugins.ArcticSetup.colorstyle.value:
+                update = open('/usr/share/enigma2/Arctic/skin.xml','r').read()
+                update = update.replace('badges/video/', '')
+                update = update.replace('path="audioicon"', 'path="pic/audioicon"')
+                file = open('/usr/share/enigma2/Arctic/skin.xml','w')
+                file.write(str(update))
+                file.close()            
                 for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
                     files = [file for file in files if file.endswith((".xml"))]
                     for file in files:
                         rep = open(os.path.join(root,file),'r').read()
-                        u = rep.replace('text="a"','text="I"')
+                        u = rep.replace('badges/video/', '')
+                        u = u.replace('path="audioicon"', 'path="pic/audioicon"')
                         f = open(os.path.join(root,file),'w')
                         f.write(u)
-                        f.close()
-
-            else:                
-                update = update.replace('text="a"','text="I"')
-                for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
-                    files = [file for file in files if file.endswith((".xml"))]
-                    for file in files:
-                        rep = open(os.path.join(root,file),'r').read()
-                        u = rep.replace('text="I"','text="a"')
-                        f = open(os.path.join(root,file),'w')
-                        f.write(u)
-                        f.close()
-
-            file = open('/usr/share/enigma2/Arctic/skin.xml','w')
-            file.write(str(update))
-            file.close()
-	if self.buttonstyle != config.plugins.ArcticSetup.button.value:
-            self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
-
-        else:                        
-            self.session.open(MessageBox, "Die Einstellungen wurden gesichert...", MessageBox.TYPE_INFO, timeout = 3)
-            ConfigListScreen.cancelConfirm(self, True)
+                        f.close()             
+                #if config.plugins.ArcticSetup.colorstyle.value == "0":
+                #    print "Linking light"
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/*.* /usr/share/enigma2/Arctic/pic')
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/light/audioicon /usr/share/enigma2/Arctic/pic')
+                    #symlink('/usr/share/enigma2/Arctic/light/*.*', '/usr/share/enigma2/Arctic/pic')
+                    #symlink('/usr/share/enigma2/Arctic/light/audioicon', '/usr/share/enigma2/Arctic/pic')
+                #elif config.plugins.ArcticSetup.colorstyle.value == "1":
+                #    print "Linking dark"
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/*.* /usr/share/enigma2/Arctic/pic')
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/dark/audioicon /usr/share/enigma2/Arctic/pic')                
+                    #symlink('/usr/share/enigma2/Arctic/dark/*.*', '/usr/share/enigma2/Arctic/pic')
+                    #symlink('/usr/share/enigma2/Arctic/dark/audioicon', '/usr/share/enigma2/Arctic/pic')               
+                #elif config.plugins.ArcticSetup.colorstyle.value == "2":
+                #    print "Linking  black"
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/*.* /usr/share/enigma2/Arctic/pic')
+                #    os.popen('ln -sfn /usr/share/enigma2/Arctic/black/audioicon /usr/share/enigma2/Arctic/pic')                
+                    #symlink('/usr/share/enigma2/Arctic/black/*.*', '/usr/share/enigma2/Arctic/pic')
+                    #symlink('/usr/share/enigma2/Arctic/black/audioicon', '/usr/share/enigma2/Arctic/pic')
+            #try:
+                    #			from enigma import eWindowStyleManager, eWindowStyleSkinned, eSize, eListboxPythonStringContent, eListboxPythonConfigContent
+    #
+    #					from skin import parseSize, parseFont, parseColor
+    #					try:
+    #						from skin import parseValue
+    #					except:
+    #						pass
+    #				
+    #					stylemgr = eWindowStyleManager.getInstance()
+    #					desktop = getDesktop(0)
+    #					styleskinned = eWindowStyleSkinned()
+    #
+    #				
+    #			
+    #					skin_path = resolveFilename(SCOPE_CURRENT_SKIN) + "skin_user_colors.xml"
+    #					if not fileExists(skin_path):
+    #						print("DEFAULT SKIN USED")
+    #						skin_path = resolveFilename(SCOPE_CURRENT_SKIN) + "skin.xml"
+    #					else: print("skin_user_colors.xml USED")
+    #					file_path = resolveFilename(SCOPE_SKIN)
+    #				
+    #					conf = xml.etree.cElementTree.parse(skin_path)
+    #					for x in conf.getroot():
+    #						if x.tag == "colors":
+    #							skin.colorNames = dict()
+    #							skin.colorNamesHuman = dict()		
+    #							colors =  x
+    #							for y in colors:
+    #								print str(y)
+    #								
+    #								name =  y.get("name")
+    #								color = y.get("value")
+    #								print("Parsing Color: " + str(name))
+    #								print("Parsing Value: " + str(color))
+    #								if name and color:
+    #										skin.colorNames[name] = parseColor(color)
+    #										if color[0] != '#':
+    #											for key in skin.colorNames:
+    #												if key == color:
+    #													skin.colorNamesHuman[name] = skin.colorNamesHuman[key]
+    #													break
+    #										else:
+    #											humancolor = color[1:]
+    #											if len(humancolor) >= 6:
+    #												skin.colorNamesHuman[name] = int(humancolor,16)
+    #								else:
+    #										print ("need color and name, got %s %s" % (name, color))							
+    #									
+    #								
+    #		
+    #						elif x.tag == "windowstyle" and x.get("id") == "0":
+    #							font = gFont("Regular", 20)
+    #							offset = eSize(20, 5)
+    #							windowstyle = x
+    #							for x in windowstyle:
+    #								if x.tag == "title":
+    #									font = parseFont(x.get("font"), ((1,1),(1,1)))
+    #									offset = parseSize(x.get("offset"), ((1,1),(1,1)))
+    #								elif x.tag == "color":
+    #									colorType = x.get("name")
+    #									color = parseColor(x.get("color"))
+    #									try:
+    #										styleskinned.setColor(eWindowStyleSkinned.__dict__["col" + colorType], color)
+    #									except:
+    #										pass
+    #								elif x.tag == "borderset":
+    #									bsName = str(x.get("name"))
+    #									borderset =  x
+    #									for x in borderset:
+    #										if x.tag == "pixmap":
+    #											bpName = x.get("pos")
+    #											styleskinned.setPixmap(eWindowStyleSkinned.__dict__[bsName], eWindowStyleSkinned.__dict__[bpName], LoadPixmap(file_path + x.get("filename"), desktop))
+    #									print("BORDERSET CHANGED")
+    #							styleskinned.setTitleFont(font)
+    #							styleskinned.setTitleOffset(offset)
+    #						
+    #				
+    #	
+    #					pngcache =  []
+    #					#skin.dom_skins = []
+    #					for x in skin.pngcache:
+    #						print("RELOADING IMAGE: " + str(x[0]))
+    #						ptr = loadPixmap(x[0], desktop)
+    #						pngcache.append((x[0],ptr))
+    #					skin.pngcache = pngcache
+    #					#skin.load_modular_files()
+    #					#skin.loadSkin('Arctic/skin.xml')
+    #					stylemgr.setStyle(0, styleskinned)
+    #					self.session.infobar = None
+    #					IB = Screens.InfoBar.InfoBar(self.session)
+    #					#self.session.open(IB)
+    #					self.session.infobar = IB
+        #       except Exception, ex:
+    #					print("FEHLER BEIM SETZEN DES NEUEN STYLES: " + str(ex))            
+    #
+    
+            if self.buttonstyle != config.plugins.ArcticSetup.button.value:
+                update = open('/usr/share/enigma2/Arctic/skin.xml','r').read()
+                if config.plugins.ArcticSetup.button.value == "1":
+                    update = update.replace('text="a"','text="I"')
+                    for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
+                        files = [file for file in files if file.endswith((".xml"))]
+                        for file in files:
+                            rep = open(os.path.join(root,file),'r').read()
+                            u = rep.replace('text="a"','text="I"')
+                            f = open(os.path.join(root,file),'w')
+                            f.write(u)
+                            f.close()
+    
+                else:                
+                    update = update.replace('text="a"','text="I"')
+                    for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
+                        files = [file for file in files if file.endswith((".xml"))]
+                        for file in files:
+                            rep = open(os.path.join(root,file),'r').read()
+                            u = rep.replace('text="I"','text="a"')
+                            f = open(os.path.join(root,file),'w')
+                            f.write(u)
+                            f.close()
+    
+                file = open('/usr/share/enigma2/Arctic/skin.xml','w')
+                file.write(str(update))
+                file.close()
+            if self.buttonstyle != config.plugins.ArcticSetup.button.value:
+                self.session.openWithCallback(self.restartGUI, MessageBox, _("Arctic wurde erfolgreich aktualisiert!\nWollen Sie jetzt die Enigma2 GUI neu starten?"), MessageBox.TYPE_YESNO)
+    
+            else:                        
+                self.session.open(MessageBox, "Die Einstellungen wurden gesichert...", MessageBox.TYPE_INFO, timeout = 3)
+                ConfigListScreen.cancelConfirm(self, True)
 
 
 
 
     def keyGreen(self):
-        self.session.openWithCallback(self.skinpartsClosed, SkinpartsBrowser)
+        if self.updaterunning ==  False:
+            self.session.openWithCallback(self.skinpartsClosed, SkinpartsBrowser)
     def skinpartsClosed(self):
         pass
