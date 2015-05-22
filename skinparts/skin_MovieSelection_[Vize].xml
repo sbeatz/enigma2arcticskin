@@ -1,0 +1,55 @@
+<skin>
+
+<parameters>
+  <parameter name="MovieListMinimalVTILength" value="1020,12,100,36" />
+</parameters>
+
+<screen name="MovieSelection" position="center,center" flags="wfNoBorder" transparent="0" backgroundColor="background" size="1920,1080">
+  <eLabel name="" position="540,1029" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="lightgrey" halign="left" />
+  <eLabel name="" position="0,0" size="1154,123" backgroundColor="accent" zPosition="1" />
+  <eLabel name="" position="275,1029" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="lightgrey" />
+  <eLabel name="" position="805,1029" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel name="" position="0,0" size="100, 100" zPosition="13" font="PVR; 80" text="b" halign="right" valign="top" backgroundColor="accent" foregroundColor="white" />
+  <eLabel name="" position="0, 0" size="1154,1080" backgroundColor="lightgrey" />
+  <eLabel name=" " position="10,1029" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="lightgrey" />
+  <eLabel size="1135,1" position="10,1005" backgroundColor="darkpanel" zPosition="10" />
+  <eLabel size="750,1" position="1160,1005" backgroundColor="darkpanel" zPosition="10" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanelsmall.png" position="1159,0" size="759,445" zPosition="10" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="50" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/hdd.png" position="1183,1028" size="40,31" transparent="0" zPosition="3" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/ibfield.png" position="1223,1028" size="120,32" zPosition="10" />
+  <widget OverScan="0" backgroundColor="darkgrey" position="1159,0" render="Pig" size="759,445" source="session.VideoPicture" zPosition="-501">
+    <convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget font="Regular;22" foregroundColor="foreground" halign="center" position="850,262" render="Label" size="375,0" source="Service" valign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" position="120,25" render="Label" size="850,90" source="Title" transparent="0" zPosition="2" valign="center" />
+  <widget backgroundColor="background" font="Regular; 20" foregroundColor="foreground" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=8000,wrap" position="1179,550" render="VRunningText" size="720,418" source="Service" transparent="1" valign="top" halign="left" zPosition="20">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" position="1179,450" render="Label" size="720,45" source="Service" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName" />
+    <convert type="TextToUpper" />
+  </widget>
+  <widget backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" position="1179,500" render="Label" size="720,45" source="Service" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName">Description</convert>
+  </widget>
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="850,1015" size="200,60" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="320,1015" size="200,60" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="55,1015" size="200,60" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="lightgrey" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="585,1015" size="200,60" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background" itemHeight="60" name="list" position="0,123" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="0" size="1154,840" transparent="1" zPosition="3" />
+  <widget font="Regular;22" halign="center" name="waitingtext" position="0,122" size="1154,840" valign="center" zPosition="40" backgroundColor="lightgrey" />
+  <widget backgroundColor="accent" font="headlineUnscaled; 50" foregroundColor="white" halign="center" position="971,10" render="Label" size="150,80" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="accent" font="Bold; 16" foregroundColor="white" halign="center" position="971,90" render="Label" size="150,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+    <convert type="ClockToText">Format:%d. %b. %Y</convert>
+  </widget>
+  <widget backgroundColor="darkpanel" font="Regular; 16" foregroundColor="white" halign="center" noWrap="1" position="1228,1028" render="Label" size="110,32" source="session.CurrentService" valign="center" zPosition="11">
+    <convert type="ArcticHDDSpaceInfo" />
+  </widget>
+</screen>
+</skin>

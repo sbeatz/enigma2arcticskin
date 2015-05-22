@@ -3839,4 +3839,49 @@ self["symbols"] = Label()
   <eLabel name="" position="354,360" size="44,40" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
   <eLabel name="" position="927,360" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
 </screen>
+<screen name="SplitScreen" position="0,0" zPosition="-1" size="1920,1080" flags="wfNoBorder" backgroundColor="background">
+  <widget name="zap_focus" position="0,0" zPosition="10" halign="center" valign="center" backgroundColor="transparent" size="1920,1080" font="Regular;40" />
+
+  <widget name="video1" position="0,270" size="960,540" backgroundColor="transparent" />
+  <widget source="MasterService" render="Label" position="210,210" size="540,50" font="Regular;24" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center">
+	<convert type="ServiceName" />
+  </widget>
+  <widget source="MasterService" render="Label" position="210,820" size="540,100" font="Regular;24" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center">
+	<convert type="EventName" />
+  </widget>
+  <widget source="MasterService" render="Picon" position="280,30" zPosition="1" size="400,160" transparent="1" alphatest="blend">
+	<convert type="ServiceName">Reference</convert>
+  </widget>
+<ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="0,263" size="1000,7" alphatest="blend" zPosition="10" />
+  <ePixmap name="" pixmap="Arctic/pic/dropshadowtop.png" position="1000,263" size="920,7" alphatest="blend" zPosition="10" />
+<ePixmap name="" pixmap="Arctic/pic/dropshadowbottom.png" position="0,810" size="1000,7" alphatest="blend" zPosition="10" />
+  <ePixmap name="" pixmap="Arctic/pic/dropshadowbottom.png" position="1000,810" size="920,7" alphatest="blend" zPosition="10" />
+<ePixmap name="" position="260,10" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTL.png" zPosition="10" />
+<ePixmap name="" position="284,10" size="395,20" pixmap="Arctic/pic/CoverOverlayT.png" alphatest="blend" zPosition="10" />
+<ePixmap name="" position="676,10" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTR.png" zPosition="10" />
+<ePixmap name="" position="260, 185" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBL.png" zPosition="10" />
+<ePixmap name="" position="284,190" size="391,20" pixmap="Arctic/pic/CoverOverlayB.png" alphatest="blend" zPosition="10" />
+<ePixmap name="" position="675,185" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBR.png" zPosition="10" />
+<ePixmap name="" position="260,34" size="20,151" alphatest="blend" pixmap="Arctic/pic/CoverOverlayL.png" zPosition="10" />
+<ePixmap name="" position="680,34" size="20,151" alphatest="blend" pixmap="Arctic/pic/CoverOverlayR.png" zPosition="10" />
+  <widget name="video2" position="960,270" size="960,540" backgroundColor="transparent" />
+  <widget source="SlaveService" render="Label" position="1170,210" size="540,50" font="Regular;24" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center">
+	<convert type="ServiceName" />
+  </widget>
+  <widget source="SlaveService" render="Label" position="1170,820" size="540,100" font="Regular;24" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center">
+	<convert type="EventName" />
+  </widget>
+  <widget source="SlaveService" render="Picon" position="1240,30" zPosition="1" size="400,160" transparent="1" alphatest="blend">
+	<convert type="ServiceName">Reference</convert>
+  </widget>
+<ePixmap name="" position="1220, 10" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTL.png" zPosition="10" />
+<ePixmap name="" position="1244, 10" size="395,20" pixmap="Arctic/pic/CoverOverlayT.png" alphatest="blend" zPosition="10" />
+<ePixmap name="" position="1636, 10" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTR.png" zPosition="10" />
+<ePixmap name="" position="1220, 185" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBL.png" zPosition="10" />
+<ePixmap name="" position="1244, 190" size="391,20" pixmap="Arctic/pic/CoverOverlayB.png" alphatest="blend" zPosition="10" />
+<ePixmap name="" position="1635, 185" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBR.png" zPosition="10" />
+<ePixmap name="" position="1220,34" size="20,151" alphatest="blend" pixmap="Arctic/pic/CoverOverlayL.png" zPosition="10" />
+<ePixmap name="" position="1640,34" size="20,151" alphatest="blend" pixmap="Arctic/pic/CoverOverlayR.png" zPosition="10" />
+
+</screen>
 </skin>

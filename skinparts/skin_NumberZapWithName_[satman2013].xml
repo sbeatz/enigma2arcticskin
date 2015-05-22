@@ -1,0 +1,10 @@
+<skin>
+<screen name="NumberZapWithName" position="745,334" size="429,340" title="Kanal" backgroundColor="background">
+  <widget source="Service" render="Picon" position="14,10" size="400,160" zPosition="5" alphatest="blend" backgroundColor="background">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget name="servicebouquet" position="5,298" size="420,36" font="Regular;24" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" noWrap="1" />
+  <widget name="servicename" position="5,252" size="420,36" font="Regular;24" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" noWrap="1" />
+  <widget name="servicenumber" position="5,180" size="420,62" halign="center" valign="center" font="Regular; 40" foregroundColor="foreground" backgroundColor="background" />
+</screen>
+</skin>
