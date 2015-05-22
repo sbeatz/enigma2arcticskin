@@ -4,7 +4,7 @@
             {
                 "category": "AUDIOSELECTION", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_AudioSelection_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_AudioSelection_[Django80].jpg", 
@@ -15,7 +15,7 @@
             {
                 "category": "CHANNELSELECTION", 
                 "creator": "danyh75", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_ChannelSelection_[danyh75].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[danyh75].jpg", 
@@ -26,8 +26,8 @@
             {
                 "category": "CHANNELSELECTION", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
-                "description": "N/A", 
+                "dateadded": 1432299735, 
+                "description": "Channelselection basierend auf der Version von mc2", 
                 "filename": "skin_ChannelSelection_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[Django80].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[Django80].xml", 
@@ -37,7 +37,7 @@
             {
                 "category": "CHANNELSELECTION", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_ChannelSelection_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[satman2013].jpg", 
@@ -48,8 +48,8 @@
             {
                 "category": "CHANNELSELECTION", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "ChannelSelection V1.0 by Vize\r\n\r\n- mit Datum/Uhrzeit\r\n- mit Farbtasten\r\n- N\u00e4chste Sendungen auf drei reduziert", 
+                "dateadded": 1432299735, 
+                "description": "ChannelSelection V1.0 by Vize\r \r - mit Datum/Uhrzeit\r - mit Farbtasten\r - N\u00e4chste Sendungen auf drei reduziert", 
                 "filename": "skin_ChannelSelection_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_[Vize].xml", 
@@ -59,7 +59,7 @@
             {
                 "category": "CHANNELSELECTION", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_ChannelSelection_bold_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ChannelSelection_bold_[satman2013].jpg", 
@@ -70,7 +70,7 @@
             {
                 "category": "DATEIMANAGERVTI", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_DateimanagerVTi_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_DateimanagerVTi_[Django80].jpg", 
@@ -81,7 +81,7 @@
             {
                 "category": "EMCMEDIACENTER", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_EMCMediaCenter_Cover_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EMCMediaCenter_Cover_[Frau Ploen].jpg", 
@@ -92,7 +92,7 @@
             {
                 "category": "EMCSELECTION", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_EMCSelection_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EMCSelection_[Frau Ploen].jpg", 
@@ -103,7 +103,7 @@
             {
                 "category": "EMCSELECTION", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_EMCSelection_MiniTV_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EMCSelection_MiniTV_[Frau Ploen].jpg", 
@@ -114,7 +114,7 @@
             {
                 "category": "EVENTVIEW", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_EventView_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EventView_[satman2013].jpg", 
@@ -125,8 +125,8 @@
             {
                 "category": "EVENTVIEW", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "EventView V1.0 by Vize\r\n\r\n- mit Farbtasten\r\n- gr\u00f6\u00dferes Fenster (1200x880)", 
+                "dateadded": 1432299735, 
+                "description": "EventView V1.0 by Vize\r \r - mit Farbtasten\r - gr\u00f6\u00dferes Fenster (1200x880)", 
                 "filename": "skin_EventView_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EventView_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_EventView_[Vize].xml", 
@@ -136,7 +136,7 @@
             {
                 "category": "FANCONTROL2", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_FanControl2_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_FanControl2_[Django80].jpg", 
@@ -147,7 +147,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_[satman2013].jpg", 
@@ -158,7 +158,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "VinceVega", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "Uhr vergr\u00f6\u00dfert, HDD freier Speicher und Temperatur entfernt.", 
                 "filename": "skin_InfoBar_[VinceVega].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_[VinceVega].jpg", 
@@ -169,8 +169,8 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "InfoBar V1.0 by Vize\r\n\r\n- mit Kanalnummer\r\n- mit Datum\r\n- Uhrzeit gr\u00f6\u00dfer\r\n- diverse kleinere Anpassungen", 
+                "dateadded": 1432299735, 
+                "description": "InfoBar V1.0 by Vize\r \r - mit Kanalnummer\r - mit Datum\r - Uhrzeit gr\u00f6\u00dfer\r - diverse kleinere Anpassungen", 
                 "filename": "skin_InfoBar_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_[Vize].xml", 
@@ -180,7 +180,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "danyh75", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_ECM_[danyh75].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_ECM_[danyh75].jpg", 
@@ -191,7 +191,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_high_400x240_ECM_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_high_400x240_ECM_[Frau Ploen].jpg", 
@@ -202,7 +202,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_high_Next_Events_400x240_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_high_Next_Events_400x240_[Frau Ploen].jpg", 
@@ -213,7 +213,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_Old_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_Old_[Django80].jpg", 
@@ -224,7 +224,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_RT_high_channelnr_400x170_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_RT_high_channelnr_400x170_[Frau Ploen].jpg", 
@@ -235,7 +235,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_InfoBar_XPicon_220x132_Shadow_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_XPicon_220x132_Shadow_[Frau Ploen].jpg", 
@@ -246,7 +246,7 @@
             {
                 "category": "INFOBAR", 
                 "creator": "VinceVega", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "XPicons (220x132), Uhr vergr\u00f6\u00dfert, HDD freier Speicher und Temperatur entfernt.", 
                 "filename": "skin_InfoBar_XPicon_[VinceVega].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoBar_XPicon_[VinceVega].jpg", 
@@ -257,8 +257,8 @@
             {
                 "category": "INFOPANEL", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
-                "description": "N/A", 
+                "dateadded": 1432299735, 
+                "description": "InfoPanel basierend auf der Version von NaseDC", 
                 "filename": "skin_InfoPanel_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoPanel_[Django80].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_InfoPanel_[Django80].xml", 
@@ -268,7 +268,7 @@
             {
                 "category": "MOVIEPLAYER", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_MoviePlayer_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MoviePlayer_[Django80].jpg", 
@@ -279,7 +279,7 @@
             {
                 "category": "MOVIEPLAYER", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_MoviePlayer_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MoviePlayer_[satman2013].jpg", 
@@ -290,7 +290,7 @@
             {
                 "category": "MOVIEPLAYER", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_MoviePlayer_MitCover_gross[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MoviePlayer_MitCover_gross[Django80].jpg", 
@@ -301,7 +301,7 @@
             {
                 "category": "MOVIESELECTION", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_MovieSelection_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[Django80].jpg", 
@@ -312,8 +312,8 @@
             {
                 "category": "MOVIESELECTION", 
                 "creator": "NEIPE", 
-                "dateadded": 1432299413, 
-                "description": "MOVIESELECTION_ NEIPE\r\neine bereinigte MovieSelection f\u00fcr den DArctic, es wurden alle icons usw entfernt.\r\nRechts ist ein Riesencover , links die Filmnamen.\r\nEinzeilige Ansicht auswahlen und die Zusatzinfos wie gew\u00fcnscht deaktivieren.", 
+                "dateadded": 1432299735, 
+                "description": "MOVIESELECTION_ NEIPE\r eine bereinigte MovieSelection f\u00fcr den DArctic, es wurden alle icons usw entfernt.\r Rechts ist ein Riesencover , links die Filmnamen.\r Einzeilige Ansicht auswahlen und die Zusatzinfos wie gew\u00fcnscht deaktivieren.", 
                 "filename": "skin_MovieSelection_[NEIPE].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[NEIPE].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[NEIPE].xml", 
@@ -323,7 +323,7 @@
             {
                 "category": "MOVIESELECTION", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_MovieSelection_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[satman2013].jpg", 
@@ -334,8 +334,8 @@
             {
                 "category": "MOVIESELECTION", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "MovieSelection V1.0 by Vize\r\n\r\n- mit Datum/Uhrzeit\r\n- mit Farbtasten\r\n- mit Festplattenplatz\r\n- Fix f\u00fcr abgeschnittene Anzeige der Filml\u00e4nge (nur f\u00fcr einzeilige Listenansicht VTi)", 
+                "dateadded": 1432299735, 
+                "description": "MovieSelection V1.0 by Vize\r \r - mit Datum/Uhrzeit\r - mit Farbtasten\r - mit Festplattenplatz\r - Fix f\u00fcr abgeschnittene Anzeige der Filml\u00e4nge (nur f\u00fcr einzeilige Listenansicht VTi)", 
                 "filename": "skin_MovieSelection_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_MovieSelection_[Vize].xml", 
@@ -345,7 +345,7 @@
             {
                 "category": "NETWORKSETUP", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NetworkSetup_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NetworkSetup_[Django80].jpg", 
@@ -356,7 +356,7 @@
             {
                 "category": "NETWORKSETUP", 
                 "creator": "Django", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NetworkSetup_[Django].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NetworkSetup_[Django].jpg", 
@@ -367,7 +367,7 @@
             {
                 "category": "NUMBERZAPWITHNAME", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NumberZapWithName_400x170_Shadow_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NumberZapWithName_400x170_Shadow_[Frau Ploen].jpg", 
@@ -378,7 +378,7 @@
             {
                 "category": "NUMBERZAPWITHNAME", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NumberZapWithName_400x240_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NumberZapWithName_400x240_[Frau Ploen].jpg", 
@@ -389,7 +389,7 @@
             {
                 "category": "NUMBERZAPWITHNAME", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NumberZapWithName_400x240_Shadow_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NumberZapWithName_400x240_Shadow_[Frau Ploen].jpg", 
@@ -400,7 +400,7 @@
             {
                 "category": "NUMBERZAPWITHNAME", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_NumberZapWithName_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_NumberZapWithName_[satman2013].jpg", 
@@ -411,7 +411,7 @@
             {
                 "category": "PICONMANAGER", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_Piconmanager_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_Piconmanager_[Django80].jpg", 
@@ -422,7 +422,7 @@
             {
                 "category": "PVRSTATE", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_PvrState_Mitte_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_PvrState_Mitte_[Django80].jpg", 
@@ -433,7 +433,7 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "danyh75", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_SecondInfoBar_[danyh75].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfoBar_[danyh75].jpg", 
@@ -444,7 +444,7 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_SecondInfoBar_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfoBar_[satman2013].jpg", 
@@ -455,8 +455,8 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "SecondInfoBar V1.0 by Vize\r\n\r\n- mit Kanalnummer\r\n- mit Datum\r\n- Uhrzeit gr\u00f6\u00dfer\r\n- mit SNR/AGC-Anzeige\r\n- mit ECM-Info\r\n- diverse kleinere Anpassungen", 
+                "dateadded": 1432299735, 
+                "description": "SecondInfoBar V1.0 by Vize\r \r - mit Kanalnummer\r - mit Datum\r - Uhrzeit gr\u00f6\u00dfer\r - mit SNR/AGC-Anzeige\r - mit ECM-Info\r - diverse kleinere Anpassungen", 
                 "filename": "skin_SecondInfoBar_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfoBar_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfoBar_[Vize].xml", 
@@ -466,7 +466,7 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_SecondInfobar_high_400x240_ECM_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfobar_high_400x240_ECM_[Frau Ploen].jpg", 
@@ -477,7 +477,7 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_SecondInfobar_high_Next_Events_400x240_ECM_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfobar_high_Next_Events_400x240_ECM_[Frau Ploen].jpg", 
@@ -488,7 +488,7 @@
             {
                 "category": "SECONDINFOBAR", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_SecondInfoBar_Old_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_SecondInfoBar_Old_[Django80].jpg", 
@@ -499,7 +499,7 @@
             {
                 "category": "SPLITSCREEN", 
                 "creator": "taanja", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_splitscreen_[taanja].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_splitscreen_[taanja].jpg", 
@@ -510,7 +510,7 @@
             {
                 "category": "TIMEREDITLIST", 
                 "creator": "satman2013", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_TimerEditList_[satman2013].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TimerEditList_[satman2013].jpg", 
@@ -521,8 +521,8 @@
             {
                 "category": "TIMEREDITLIST", 
                 "creator": "Vize", 
-                "dateadded": 1432299413, 
-                "description": "TimerEditList V1.0 by Vize\r\n\r\n- mit Farbtasten\r\n- mit Sendungsbeschreibung", 
+                "dateadded": 1432299735, 
+                "description": "TimerEditList V1.0 by Vize\r \r - mit Farbtasten\r - mit Sendungsbeschreibung", 
                 "filename": "skin_TimerEditList_[Vize].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TimerEditList_[Vize].jpg", 
                 "link": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TimerEditList_[Vize].xml", 
@@ -532,7 +532,7 @@
             {
                 "category": "TIMESHIFTSTATE", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_TimeShiftState_mini_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TimeShiftState_mini_[Django80].jpg", 
@@ -543,7 +543,7 @@
             {
                 "category": "TIMESHIFTSTATE", 
                 "creator": "Frau Ploen", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_TimeShiftState_mini_[Frau Ploen].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TimeShiftState_mini_[Frau Ploen].jpg", 
@@ -554,7 +554,7 @@
             {
                 "category": "TMDB", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_TMDb_black_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_TMDb_black_[Django80].jpg", 
@@ -565,7 +565,7 @@
             {
                 "category": "ZAPHISTORY", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_ZapHistory_big_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ZapHistory_big_[Django80].jpg", 
@@ -576,7 +576,7 @@
             {
                 "category": "ZAPHISTORY", 
                 "creator": "Django80", 
-                "dateadded": 1432299413, 
+                "dateadded": 1432299735, 
                 "description": "N/A", 
                 "filename": "skin_ZapHistory_Breit_[Django80].xml", 
                 "imagelink": "https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skin_ZapHistory_Breit_[Django80].jpg", 

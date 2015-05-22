@@ -44,7 +44,7 @@ for file in os.listdir(path):
         filename =  file
         description =  'N/A'
         if os.path.exists(os.path.join(path,  title + '.txt')):
-            description =  open(os.path.join(path,  title + '.txt'), 'r').read().decode("ISO-8859-1").encode("utf-8")
+            description =  open(os.path.join(path,  title + '.txt'), 'r').read().decode("ISO-8859-1").encode("utf-8").replace('\n', ' ')
         imagelink =  'https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/' +  title +  '.jpg'
         link =  'https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/' +  file
         s = Skinpart(title = screentitle, filename = file, link = link, category = category, description = description, version='1.1', imagelink = imagelink, creator = creator, dateadded = dateadded ).to_JSON()
