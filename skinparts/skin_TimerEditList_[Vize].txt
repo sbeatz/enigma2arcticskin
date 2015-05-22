@@ -1,4 +1,0 @@
-TimerEditList V1.0 by Vize
-
-- mit Farbtasten
-- mit Sendungsbeschreibung

@@ -1,4 +1,0 @@
-EventView V1.0 by Vize
-
-- mit Farbtasten
-- größeres Fenster (1200x880)

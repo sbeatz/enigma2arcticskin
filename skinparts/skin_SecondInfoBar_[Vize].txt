@@ -1,8 +1,0 @@
-SecondInfoBar V1.0 by Vize
-
-- mit Kanalnummer
-- mit Datum
-- Uhrzeit größer
-- mit SNR/AGC-Anzeige
-- mit ECM-Info
-- diverse kleinere Anpassungen

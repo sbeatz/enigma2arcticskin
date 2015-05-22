@@ -1,6 +1,0 @@
-InfoBar V1.0 by Vize
-
-- mit Kanalnummer
-- mit Datum
-- Uhrzeit größer
-- diverse kleinere Anpassungen
