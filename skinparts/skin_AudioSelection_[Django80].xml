@@ -1,0 +1,31 @@
+<skin>
+<screen backgroundColor="background" name="AudioSelection" position="1110,70" size="810,1000" title="Audio" transparent="0">
+  <widget backgroundColor="lightgrey" enableWrapAround="1" itemHeight="50" position="0,500" render="Listbox" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" size="810,500" source="streams" transparent="0" zPosition="100">
+    <convert type="TemplatedMultiContent">{"templates":
+                                {"default": (50, [ 
+                                    MultiContentEntryText(pos = (0, 0), size = (35, 50),font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1), # key,
+                                    MultiContentEntryText(pos = (40, 0),size = (60, 50),font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2), # number,
+                                    MultiContentEntryText(pos = (110, 0), size = (200, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 3), # description,
+                                    MultiContentEntryText(pos = (320, 0), size = (290, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 4), # language,
+                                    MultiContentEntryText(pos = (670, 0), size = (90, 50),font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 5), # selection,
+                                ], True, "showNever"),
+                                "notselected": (50, [ 
+                                    MultiContentEntryText(pos = (0, 0), size = (35, 50),font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 1), # key,
+                                    MultiContentEntryText(pos = (40, 0),size = (60, 50),font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 2), # number,
+                                    MultiContentEntryText(pos = (110, 0), size = (220, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 3), # description,
+                                    MultiContentEntryText(pos = (340, 0), size = (200, 50), font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 4), # language,
+                                    MultiContentEntryText(pos = (550, 4), size = (90, 50),font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER, text = 5), # selection,
+                                ], False, "showNever")
+                                },
+                            "fonts": [gFont("Regular", 20), gFont("Regular", 16)],
+                            "itemHeight": 25
+                            }</convert>
+  </widget>
+  <widget backgroundColor="background" itemHeight="50" name="config" textOffset="45,7" position="0,0" scrollbarMode="showOnDemand" size="810,500" zPosition="1" />
+  <eLabel name=" " position="0,3" size="40,40" font="PVR; 35" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name=" " position="0,53" size="40,40" font="PVR; 35" text="I" foregroundColor="button_green" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name=" " position="0,103" size="40,40" font="PVR; 35" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name=" " position="0,153" size="40,40" font="PVR; 35" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+<eLabel size="810,1" position="0,496" backgroundColor="foreground" zPosition="10" />
+</screen>
+</skin>
