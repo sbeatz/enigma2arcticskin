@@ -1,0 +1,37 @@
+<skin>
+<screen name="InfoBarZapHistory" position="10,80" size="1900,302" title="InfoBarZapHistory" flags="wfBorder">
+  <eLabel text="-" position="1778,19" size="15,50" font="Bold; 25" halign="center" foregroundColor="accent" backgroundColor="background" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="450,7" size="1190,65" noWrap="1" font="Bold; 40" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1695,21" size="85,45" font="Bold; 22" foregroundColor="accent" backgroundColor="background" valign="center" halign="left">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText" />
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1802,17" size="96,50" font="Bold; 25" foregroundColor="accent" backgroundColor="background" valign="center" halign="left">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="ServiceEvent" render="NextEvents" position="450,108" size="900,180" noWrap="1" font="Regular; 18">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <eLabel backgroundColor="lightgrey" name="" position="0,0" size="430,300" />
+  <widget name="ZapHistoryList" position="0,4" size="430,300" zPosition="30" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" itemHeight="48" backgroundColor="lightgrey" font="Regular; 24" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="410,0" size="20,300" transparent="1" zPosition="31" />
+  <widget alphatest="blend" position="1450,120" render="Picon" size="400,160" source="ServiceEvent" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  
+  <ePixmap name="" position="1430,100" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTL.png" />
+  <ePixmap name="" position="1455,100" size="395,20" pixmap="Arctic/pic/CoverOverlayT.png" alphatest="blend" />
+  <ePixmap name="" position="1845,100" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayTR.png" />
+  <ePixmap name="" position="1430,275" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBL.png" />
+  <ePixmap name="" position="1455,280" size="400,20" pixmap="Arctic/pic/CoverOverlayB.png" alphatest="blend" />
+  <ePixmap name="" position="1845,275" size="25,25" alphatest="blend" pixmap="Arctic/pic/CoverOverlayBR.png" />
+  <ePixmap name="" position="1430,125" size="20,150" alphatest="blend" pixmap="Arctic/pic/CoverOverlayL.png" />
+  <ePixmap name="" position="1850,125" size="20,150" alphatest="blend" pixmap="Arctic/pic/CoverOverlayR.png" />
+
+<eLabel size="1440,1" position="450,78" backgroundColor="foreground" zPosition="10" />
+
+</screen>
+</skin>

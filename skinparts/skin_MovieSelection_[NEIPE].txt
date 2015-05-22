@@ -1,0 +1,4 @@
+MOVIESELECTION_ NEIPE
+eine bereinigte MovieSelection für den DArctic, es wurden alle icons usw entfernt.
+Rechts ist ein Riesencover , links die Filmnamen.
+Einzeilige Ansicht auswahlen und die Zusatzinfos wie gewünscht deaktivieren.

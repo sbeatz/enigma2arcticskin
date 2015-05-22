@@ -1,0 +1,160 @@
+<skin>
+    
+<parameters>
+<parameter name="FileListName" value="35,1,1900,36" />
+</parameters>
+    
+<screen position="0,190" size="1920,700" title="" name="FilebrowserVTi_ver" backgroundColor="background">
+  <widget name="list_left_head_name" position="0,10" size="950,100" font="Regular; 23" backgroundColor="background_medium" halign="center" />
+  <widget name="list_left" position="0,115" size="950,440" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" backgroundColor="background_medium" font="Regular; 16" />
+  <widget name="list_left_head_state" position="0,560" size="950,65" font="Regular; 25" backgroundColor="background_medium" halign="center" valign="bottom" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="940,10" size="20,615" transparent="1" zPosition="5" />
+  <widget name="list_right_head_name" position="960,10" size="960,100" font="Regular; 23" backgroundColor="background_medium" halign="center" />
+  <widget name="list_right" position="960,115" size="960,440" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" font="Regular; 16" backgroundColor="background_medium" />
+  <widget name="list_right_head_state" position="960,560" size="960,65" font="Regular; 25" backgroundColor="background_medium" halign="center" valign="bottom" />
+  <widget name="help" position="500,50" size="800,600" zPosition="5" font="Regular;20" backgroundColor="darkpanel" foregroundColor="white" />
+  <widget name="helpBack" position="498,48" size="804,604" zPosition="4" font="Regular;20" transparent="1" backgroundColor="darkpanel" foregroundColor="white" />
+  <widget name="helpShadow" position="508,58" size="804,604" zPosition="3" font="Regular;20" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_green" position="620,650" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_red" position="90,650" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_blue" position="1620,650" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_yellow" position="1130,650" size="245,39" transparent="0" valign="top" zPosition="2" />
+  <eLabel position="1080,650" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="570,650" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name="" position="1570,650" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name="" position="40,650" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+<eLabel size="1920,1" position="0,630" backgroundColor="darkpanel" zPosition="10" />
+</screen>
+    
+    <screen position="0,190" size="1920,700" title="" name="FilebrowserVTi_hor">
+  <widget name="list_left_head_name" position="0,5" size="1920,30" font="Regular;20" backgroundColor="background_medium" foregroundColor="accent" halign="center" />
+  <widget name="list_left" position="0,40" size="1920,240" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" backgroundColor="background_medium" font="Regular; 16" />
+  <widget name="list_left_head_state" position="0,285" size="1920,30" font="Regular;20" backgroundColor="background_medium" foregroundColor="accent" halign="center" />
+  <widget name="list_right_head_name" position="0,330" size="1920,30" font="Regular;20" backgroundColor="background_medium" foregroundColor="accent" halign="center" />
+  <widget name="list_right" position="0,365" size="1920,240" itemHeight="50" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" font="Regular; 16" backgroundColor="background_medium" />
+  <widget name="list_right_head_state" position="0,610" size="1920,30" font="Regular;20" backgroundColor="background_medium" foregroundColor="accent" valign="center" halign="center" />
+  <widget name="help" position="500,50" size="800,600" zPosition="5" font="Regular;20" backgroundColor="darkpanel" foregroundColor="white" />
+  <widget name="helpBack" position="498,48" size="804,604" zPosition="4" font="Regular;20" transparent="1" backgroundColor="darkpanel" foregroundColor="white" />
+  <widget name="helpShadow" position="508,58" size="804,604" zPosition="3" font="Regular;20" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_green" position="620,660" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_red" position="90,660" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_blue" position="1620,660" size="245,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" halign="left" name="key_yellow" position="1130,660" size="245,39" transparent="0" valign="top" zPosition="2" />
+  <eLabel position="1080,660" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="570,660" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name="" position="1570,660" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name="" position="40,660" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel size="1920,5" position="0,320" backgroundColor="darkpanel" zPosition="10" />
+<eLabel size="1920,1" position="0,648" backgroundColor="darkpanel" zPosition="10" />
+</screen>
+    
+    <screen name="FilebrowserVTi_unpack" position="260,90" size="1400,900" title="Filebrowser VTi" flags="wfBorder" backgroundColor="background">
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="433,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="90,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="1096,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="770,850" size="245,39" transparent="0" valign="top" zPosition="2" />
+    <eLabel position="727,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+    <eLabel name="" position="380,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+    <eLabel name="" position="1029,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+    <eLabel name="" position="40,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+    <widget name="list_left_head" position="0,5" size="1400,100" backgroundColor="background" font="Regular;23" foregroundColor="foreground" transparent="1" />
+    <widget name="list_left" position="0,160" size="1400,670" itemHeight="35" backgroundColor="background" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" font="Regular; 16" />
+    <widget name="unpacking" position="5,109" size="1390,45" foregroundColor="foreground" />
+  </screen>
+    
+    <screen name="FilebrowserVTi_unpack_info" position="260,90" size="1400,900" title=" Filebrowser VTi" flags="wfBorder" backgroundColor="background">
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="433,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="90,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="1096,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="770,850" size="245,39" transparent="0" valign="top" zPosition="2" />
+    <eLabel position="727,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+    <eLabel name="" position="380,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+    <eLabel name="" position="1029,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+    <eLabel name="" position="40,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+    <widget name="list_left_head" position="0,5" size="1400,100" font="Regular;23" backgroundColor="grey_dark" foregroundColor="white" transparent="1" />
+    <widget name="list_left" position="0,110" size="1400,720" itemHeight="35" backgroundColor="background" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" font="Regular; 16" />
+  </screen>
+    
+    <screen name="vEditor" position="260,90" size="1400,900" title=" Filebrowser VTi" flags="wfBorder" backgroundColor="background">
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="433,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="90,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="1096,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+    <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="770,850" size="245,39" transparent="0" valign="top" zPosition="2" />
+    <eLabel position="727,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+    <eLabel name="" position="380,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+    <eLabel name="" position="1029,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+    <eLabel name="" position="40,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+    <widget name="filedata" position="0,110" size="1400,720" itemHeight="40" font="Regular;23" scrollbarMode="showOnDemand" />
+    <widget name="list_head" position="0,5" size="1400,100" font="Regular;30" foregroundColor="white" backgroundColor="grey_dark" valign="center" />
+  </screen>
+    
+    <screen name="InputBoxmod" position="center,center" size=" 1600,120" title="Input">
+    <widget name="text" position="10,10" size="1560,34" font="Regular;21" />
+    <widget name="input" position="10,50" size="1560,40" font="Regular;21" />
+  </screen>
+    
+    <screen name="skin2HD" position="center,center" size="800,170" zPosition="1" title="Convert selected skinfile-xml from 1280 to 1920">
+    <ePixmap position="50,22" size="54,54" pixmap="skin_default/icons/input_info.png" transparent="1" alphatest="blend" />
+    <widget source="label" render="Label" position="5,5" size="790,165" font="Regular;48" transparent="1" />
+  </screen>
+    
+    <screen name="FilebrowserConfigScreenVTi" position="center,center" size="1200,800" title="">
+  <widget name="config" position="0,0" size="1200,730" itemHeight="50" textOffset="20,7" backgroundColor="background" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" zPosition="5" />
+  <widget name="help" position="10,605" size="0,0" font="Regular;22" halign="center" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="60,756" size="226,39" transparent="0" valign="top" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="365,756" size="288,39" transparent="0" valign="top" zPosition="2" />
+  <eLabel position="313,756" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="12,756" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+</screen>
+    
+    <screen name="JobView" position="center,center" size="840,750" title="Job View" flags="wfBorder" backgroundColor="background">
+  <widget source="job_name" render="Label" position="70,110" size="700,80" font="Regular; 23" backgroundColor="background" transparent="1" />
+  <widget source="job_task" render="Label" position="70,200" size="700,40" font="Regular;24" backgroundColor="background" transparent="1" />
+  <widget source="job_progress" render="Progress" position="70,260" size="700,40" foregroundColor="button_green" backgroundColor="background" />
+  <widget source="job_progress" render="Label" position="70,260" size="700,40" font="Regular;25" foregroundColor="foreground" backgroundColor="background" zPosition="2" valign="center" halign="center" transparent="1">
+    <convert type="ProgressToText" />
+  </widget>
+  <widget source="job_status" render="Label" position="70,325" size="700,40" font="Regular;24" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget name="config" position="70,384" size="700,40" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" transparent="1" />
+  <widget source="cancelable" render="FixedLabel" text="Cancel" position="63,680" size="120,50" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="button_red" transparent="1">
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="finished" render="FixedLabel" text="OK" position="247,680" size="60,50" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="button_green" transparent="1">
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="backgroundable" render="FixedLabel" text="Continue in background" position="560,675" size="260,60" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="button_blue" transparent="1">
+    <convert type="ConditionalShowHide" />
+  </widget>
+<eLabel name="" position="15,685" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+<eLabel name="" position="197,685" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+<eLabel name="" position="511,685" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+
+<eLabel position="338,685" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+</screen>
+    
+    <screen name="TaskListScreen" position="center,center" size="1400,900" title="Task list" flags="wfBorder" backgroundColor="background">
+  <eLabel position="0,40" size="1400,710" zPosition="-15" backgroundColor="background" />
+  
+  <eLabel position="727,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="380,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel name="" position="1029,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name="" position="40,850" size="44,39" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  
+  <widget source="tasklist" render="Listbox" position="70,70" size="1260,650" textOffset="20,7" itemHeight="70" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" transparent="1">
+    <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos = (5, 1), size = (1250, 35), font=1, flags = RT_HALIGN_LEFT, text = 1), # name
+						MultiContentEntryText(pos = (5, 35), size = (180, 28), font=1, flags = RT_HALIGN_LEFT, text = 2), # state
+						MultiContentEntryProgress(pos = (185, 38), size = (900, 20), percent = -3), # progress
+						MultiContentEntryText(pos = (1088, 35), size = (100, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 70
+				}
+			</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="90,850" size="245,39" transparent="0" valign="top" zPosition="11" />
+</screen>
+    
+    
+</skin>

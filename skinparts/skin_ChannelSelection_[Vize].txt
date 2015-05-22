@@ -1,0 +1,5 @@
+ChannelSelection V1.0 by Vize
+
+- mit Datum/Uhrzeit
+- mit Farbtasten
+- Nächste Sendungen auf drei reduziert

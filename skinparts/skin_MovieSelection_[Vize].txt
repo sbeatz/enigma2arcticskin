@@ -1,0 +1,6 @@
+MovieSelection V1.0 by Vize
+
+- mit Datum/Uhrzeit
+- mit Farbtasten
+- mit Festplattenplatz
+- Fix für abgeschnittene Anzeige der Filmlänge (nur für einzeilige Listenansicht VTi)

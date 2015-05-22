@@ -1,0 +1,72 @@
+<skin>
+
+<parameters>
+  <parameter name="ServicelistPicon" value="0,0,100,60" />
+  <parameter name="ServicelistServiceEventProgressbar" value="-25,25,75,5" />
+  <parameter name="ServicelistServiceNumber" value="50,0,0,0" />
+  <parameter name="ServicelistRecordServicePixmap" value="-40,0,60,60" />
+  <parameter name="ServicelistServiceName" value="45,0,0,0" />
+</parameters>
+
+<screen backgroundColor="background" flags="wfNoBorder" name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" zPosition="0" transparent="0">
+  <widget backgroundColor="accent" font="headlineUnscaled; 50" foregroundColor="white" halign="center" position="971,10" render="Label" size="150,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="20">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="accent" font="Bold; 16" foregroundColor="white" halign="center" position="971,63" render="Label" size="150,30" source="global.CurrentTime" transparent="1" valign="center" zPosition="21">
+    <convert type="ClockToText">Format:%d. %b. %Y</convert>
+  </widget>
+  <eLabel backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="center" name="" position="115,35" size="150,50" text="LIVE TV" valign="center" zPosition="9" />
+  <eLabel backgroundColor="background" font="headline; 22" foregroundColor="foreground" name="" noWrap="1" position="1185,772" size="390,39" text="Folgende Sendungen" transparent="1" valign="top" zPosition="35" />
+  <eLabel backgroundColor="background" font="headline; 22" foregroundColor="foreground" name="" noWrap="1" position="1185,991" size="390,35" text="Primetime" transparent="1" valign="top" zPosition="35" />
+  <eLabel backgroundColor="background_medium" name="" position="1154,771" size="772,215" zPosition="30" />
+  <eLabel name="" position="0,0" size="100,100" zPosition="2" font="PVR; 80" text="l" backgroundColor="accent" valign="top" halign="right" foregroundColor="white" />
+  <eLabel name="" position="0, 0" size="1154,1020" backgroundColor="background_medium" />
+  <eLabel name="" position="0, 0" size="1154,100" backgroundColor="accent" />
+  <ePixmap alphatest="blend" name="" pixmap="Arctic/pic/PIGPanel.png" position="1159,0" size="759,445" zPosition="-100" />
+  <ePixmap name="" pixmap="Arctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="31" />
+  <widget OverScan="0" backgroundColor="darkgrey" position="1159,0" render="Pig" size="759,445" source="session.VideoPicture" zPosition="-501">
+    <convert type="ConfigEntryTest">config.usage.use_pig,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="accent" font="Bold; 24" foregroundColor="white" halign="center" noWrap="1" position="277,35" zPosition="10" render="Label" size="680,50" source="Title" valign="center">
+    <convert type="Textreplace">Kanalliste (TV) Bouquets/</convert>
+    <convert type="Textreplace">Kanalliste (TV) User - bouquets/</convert>
+  </widget>
+  <widget backgroundColor="background" font="Bold;20" foregroundColor="foreground" noWrap="1" position="1185,817" render="NextEvents" size="701,160" source="ServiceEvent" transparent="1" zPosition="55">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget backgroundColor="background" position="1185,1031" render="Label" font="Bold;20" foregroundColor="foreground" noWrap="1" size="700,35" source="ServiceEvent">
+    <convert type="ArcticPrimetimeEvent" />
+  </widget>
+  <widget backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" position="1185,436" render="Label" size="493,45" source="ServiceEvent" transparent="1" valign="top" zPosition="35">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget backgroundColor="background" font="Bold; 22" foregroundColor="foreground" halign="left" noWrap="1" position="1185,479" render="Label" size="700,45" source="ServiceEvent" transparent="1" valign="top" zPosition="35">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget position="1154,540" render="Progress" size="766,10" source="ServiceEvent" backgroundColor="grey_light" foregroundColor="accent" zPosition="3">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget backgroundColor="background" font="Bold;22" foregroundColor="foreground" halign="left" options=" movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=3000,wrap" position="1185,568" render="VRunningText" size="700,196" source="ServiceEvent" transparent="1" zPosition="20">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget backgroundColor="background" font="headline; 20" foregroundColor="foreground" halign="left" position="1677,436" render="Label" size="110,50" source="ServiceEvent" transparent="1" valign="top" zPosition="3">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="background" font="headline; 20" foregroundColor="foreground" halign="left" position="1755,436" render="Label" size="120,50" source="ServiceEvent" transparent="1" valign="top" zPosition="3">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:- %H:%M</convert>
+  </widget>
+  <widget backgroundColor="background" colorEventProgressbarBorder="foreground" colorEventProgressbarBorderSelected="white" colorServiceDescription="foreground" foregroundColor="foreground" foregroundColorServiceNotAvail="grey_light" itemHeight="46" name="list" position="3,111" scrollbarMode="showNever" scrollbarSliderBorderWidth="0" scrollbarWidth="0" serviceInfoFont="Bold;22" serviceItemHeight="46" serviceNameFont="Regular;22" serviceNumberFont="Bold;22" size="1132,900" transparent="1" zPosition="30" />
+  <eLabel size="1143,2" position="5,1024" backgroundColor="darkpanel" zPosition="10" />
+  <eLabel name=" " position="0,1030" size="50,50" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="center" backgroundColor="background" />
+  <eLabel name="" position="275,1030" size="50,50" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" halign="center" backgroundColor="background" />
+  <eLabel name="" position="550,1030" size="50,50" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" halign="center" backgroundColor="background" />
+  <eLabel name="" position="825,1030" size="50,50" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="center" backgroundColor="background" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="50,1030" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="325,1030" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="600,1030" size="225,50" transparent="0" valign="center" zPosition="11" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="875,1030" size="278,50" transparent="0" valign="center" zPosition="11" />
+</screen>
+</skin>  

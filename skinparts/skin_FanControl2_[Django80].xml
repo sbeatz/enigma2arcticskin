@@ -1,0 +1,35 @@
+<skin>
+<screen name="FanControl2Plugin" position="center,center" size="1000,650" title="Fan Control 2">
+  <widget source="Version" render="Label" position="9,635" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" transparent="1" />
+  <widget name="config" position="0,61" size="1000,260" itemHeight="40" textOffset="20,7" scrollbarMode="showOnDemand" backgroundColor="accent" foregroundColor="white" />
+  <ePixmap position="9,328" size="980,30" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+  <widget source="introduction" render="Label" position="9,330" size="980,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <ePixmap position="9,359" size="980,3" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+  <widget source="TxtTemp" render="Label" position="160,380" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtZielRPM" render="Label" position="160,420" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtRPM" render="Label" position="160,460" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtVLT" render="Label" position="160,500" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="TxtPWM" render="Label" position="160,540" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="background" transparent="1" />
+  <widget source="PixTemp" render="Progress" position="460,380" size="375,25" borderWidth="1" />
+  <widget source="PixZielRPM" render="Progress" position="460,500" size="375,25" borderWidth="1" />
+  <widget source="PixRPM" render="Progress" position="460,540" size="375,25" borderWidth="1" />
+  <widget source="PixVLT" render="Progress" position="460,420" size="375,25" borderWidth="1" />
+  <widget source="PixPWM" render="Progress" position="460,580" size="375,25" borderWidth="1" />
+  <widget source="TxtERR" render="Label" position="160,580" size="300,25" zPosition="1" font="Regular;17" halign="center" valign="center" transparent="1" />
+  <widget source="PixERR" render="Progress" position="460,460" size="375,25" borderWidth="1" />
+  <widget source="T10ERR" render="Label" position="77,635" size="40,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="background" transparent="1" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="yellow" render="Label" position="550,8" size="190,40" transparent="0" valign="center" zPosition="2" />
+  <eLabel name=" " position="10,8" size="44,40" font="PVR; 40" text="I" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <eLabel name="" position="255,8" size="44,40" font="PVR; 40" text="I" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background" />
+  <eLabel position="500,8" size="44,40" font="PVR; 40" text="I" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background" halign="left" />
+  <eLabel name="" position="750,8" size="44,39" font="PVR; 40" text="I" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="blue" render="Label" position="800,8" size="190,40" transparent="0" valign="center" zPosition="2" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="green" render="Label" position="305,8" size="190,40" transparent="0" valign="center" zPosition="2" />
+  <widget backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" source="red" render="Label" position="60,8" size="190,40" transparent="0" valign="center" zPosition="2" />
+  <ePixmap alphatest="blend" pixmap="/usr/share/enigma2/Arctic/skin_default/buttons/key_menu.png" position="901,622" size="40,40" />
+  <ePixmap alphatest="blend" pixmap="/usr/share/enigma2/Arctic/skin_default/buttons/key_info.png" position="950,620" size="40,40" />
+</screen>
+   <screen name="FanControl2SpezialSetup" position="center,center" size="1000,450" title="Fan Control 2 - Setup" transparent="0">
+<widget backgroundColor="background" zPosition="10" itemHeight="50" enableWrapAround="1" name="config" position="1,12" scrollbarMode="showOnDemand" scrollbarWidth="5" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" scrollbarSliderBorderWidth="0" size="1000,450" transparent="0" />
+</screen>
+</skin>

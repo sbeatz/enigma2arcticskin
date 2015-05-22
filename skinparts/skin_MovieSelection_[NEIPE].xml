@@ -1,0 +1,23 @@
+<skin>
+ <screen name="MovieSelection" position="0,0" flags="wfNoBorder" transparent="0" backgroundColor="background" size="1920,1080" zPosition="0">
+    <eLabel position="274,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_yellow" zPosition="10" valign="center" backgroundColor="background_medium" halign="left" />
+    <eLabel name="" position="0,0" size="1154,123" backgroundColor="accent" zPosition="1" />
+    <eLabel name="" position="0,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" backgroundColor="background_medium" />
+    <eLabel name="" position="274,1032" size="44,39" font="PVR; 40" text="a" foregroundColor="button_blue" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+    <eLabel name="" position="10,0" size="100, 100" zPosition="13" font="PVR; 80" text="b" halign="right" valign="top" backgroundColor="accent" foregroundColor="white" />
+    <eLabel name="" position="0, 0" size="1154,1080" backgroundColor="background_medium" />
+    <eLabel name=" " position="0,973" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" backgroundColor="background_medium" />
+    <ePixmap name="" pixmap="DArctic/pic/dsl20.png" alphatest="blend" position="1134,0" size="20,1080" transparent="1" zPosition="50" />
+    <widget font="Regular;22" foregroundColor="foreground" halign="center" position="850,262" render="Label" size="375,0" source="Service" valign="center">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget backgroundColor="accent" font="headline; 24" foregroundColor="white" halign="left" position="114,28" render="Label" size="1027,90" source="Title" transparent="0" zPosition="2" valign="center" />
+    <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_blue" position="320,1028" size="288,50" transparent="0" valign="center" zPosition="11" />
+    <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_green" position="42,1027" size="228,50" transparent="0" valign="center" zPosition="11" />
+    <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_red" position="42,968" size="226,50" transparent="0" valign="center" zPosition="11" />
+    <widget backgroundColor="background_medium" font="Regular;18" foregroundColor="foreground" halign="left" name="key_yellow" position="320,968" size="288,50" transparent="0" valign="center" zPosition="2" />
+    <widget backgroundColor="background" name="list" position="0,123" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="4" size="1154,810" transparent="1" zPosition="3" />
+    <widget font="Regular;22" halign="center" name="waitingtext" position="1,122" size="1154,827" valign="center" zPosition="40" backgroundColor="background_medium" />
+    <widget source="Service" render="Cover" position="1170,7" size="744,1069" zPosition="50" backgroundColor="darkgrey" alphatest="blend" transparent="1" />
+  </screen>
+</skin>
