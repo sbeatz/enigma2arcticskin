@@ -40,7 +40,7 @@ for file in os.listdir(path):
         screen =  title.split('_')[1].strip()
         creator =  title.split('[')[1].replace(']', '').strip()
         screentitle =  title.split('[')[0].replace('skin_', '').replace('_', ' ').strip()
-        category =  title.replace('skin_',  '').split('_')[0].strip()
+        category =  title.replace('skin_',  '').split('_')[0].strip().upper()
         filename =  file
         description =  'N/A'
         if os.path.exists(os.path.join(path,  title + '.txt')):
