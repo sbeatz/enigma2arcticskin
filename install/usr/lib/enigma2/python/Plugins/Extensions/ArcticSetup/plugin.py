@@ -8,8 +8,9 @@ import pyinotify
 from Tools.LoadPixmap import LoadPixmap
 from enigma import eTimer
 config.plugins.ArcticSetup = ConfigSubsection()
+config.plugins.ArcticSetup.CachePath =  ConfigSelection(choices = [("/tmp", "/tmp"), ("/hdd", "/hdd"), ("/media/usb", "/media/usb")], default = "/tmp")
 config.plugins.ArcticSetup.Version = ConfigInteger(default = 200)
-config.plugins.ArcticSetup.VersionString = ConfigText(default = "2.0.0")
+config.plugins.ArcticSetup.VersionString = ConfigText(default = "3.0.6")
 config.plugins.ArcticSetup.primetime = ConfigClock(default=((20 * 3600)+ (15*60)))
 config.plugins.ArcticSetup.button = ConfigSelection(choices = [("0", "Rund"), ("1", "Linie")], default = "0")
 config.plugins.ArcticSetup.colorstyle = ConfigSelection(choices = [("0", "Light"), ("1", "Dark"), ("2", "Black")], default = "0")

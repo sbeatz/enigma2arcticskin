@@ -47,9 +47,10 @@ def DownloadListBoxImage(q):
     while True:
         print 'Looking for the next link' 
         item, List = q.get()
+        print "Cache: " +  str(config.plugins.ArcticSetup.CachePath.value)
         print 'Downloading ' + str((str(item.imagelink)))
-        print 'to ' + item.imagepath
-        VMC_BaseFunctions_downloadFile((str(item.imagelink)),item.imagepath,10)
+        print 'to ' + str(config.plugins.ArcticSetup.CachePath.value)+item.imagepath
+        VMC_BaseFunctions_downloadFile((str(item.imagelink)),str(config.plugins.ArcticSetup.CachePath.value) + item.imagepath,10)
         List.updateListObject(item.index)
         q.task_done()
 
@@ -93,11 +94,11 @@ class CheckUpdate():
             self.parent['updateinfo'].show()
             filename = str(open('/usr/lib/enigma2/python/Plugins/Extensions/ArcticSetup/ipkonlineversion','r').read()).strip()
             filename = 'enigma2-plugin-skin-arctic_' + filename + '_all.ipk'
-            urllib.urlretrieve("https://github.com/sbeatz/enigma2arcticskin/blob/master/ipk/" + filename + "?raw=true",'/tmp/' + filename)
+            urllib.urlretrieve("https://github.com/sbeatz/enigma2arcticskin/blob/master/ipk/" + filename + "?raw=true", os.path.join(config.plugins.ArcticSetup.CachePath.value, filename))
             self.container = eConsoleAppContainer()
             self.container.appClosed.append(self.finishedUpdate)
             self.container.stdoutAvail.append(self.log)
-            self.container.execute("opkg update ; opkg install --force-overwrite --force-depends /tmp/" + filename)
+            self.container.execute("opkg update ; opkg install --force-overwrite --force-depends " + os.path.join(config.plugins.ArcticSetup.CachePath.value, filename))
 
 
     def doUpdate(self, answer):
@@ -105,7 +106,9 @@ class CheckUpdate():
             update = str(urllib.urlopen('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skin2.xml').read())
             if update.startswith("<skin>") and update.strip().endswith("</skin>"):
                 if str(config.plugins.ArcticSetup.button.value) == "1":
-                    update = update.replace('text="a"','text="I"')         
+                    update = update.replace('text="a"','text="I"')
+                else:
+                    update = update.replace('text="I"','text="a"')
                 file = open('/usr/share/enigma2/Arctic/skin.xml','w')
                 file.write(str(update))
                 file.close()
@@ -139,11 +142,12 @@ class Skinpart():
     def __init__(self, title = None, filename = '', link = '', imagelink = '', category = None, description = '', version = None, creator = '', type = 0, dateadded = 0, isinstalled = False, updateavailable = False, index = 0):
         self.index = index
         self.title = title
-        print str(title)
+        
         self.filename = filename
         self.link = str(link).replace('https','http')
         self.imagelink = str(imagelink).replace('https','http')
-        self.imagepath =  str(imagelink).replace("https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/", "/tmp/")
+        self.imagepath =   str(imagelink).replace("https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts", "")
+        print "IMAGEPATH: " +  self.imagepath
         self.category = category
         self.description = description
         self.version = version
@@ -208,8 +212,8 @@ class SkinpartList(GUIComponent, object):
                         ))            
         else:
             if data.imagelink:
-                if os.path.exists(str(data.imagepath)):
-                    ptr = self.loadPixmap(str(data.imagepath))
+                if os.path.exists(config.plugins.ArcticSetup.CachePath.value+data.imagepath):
+                    ptr = self.loadPixmap(config.plugins.ArcticSetup.CachePath.value+ data.imagepath)
                 else:
                     ListBoxImageLoaderQueue.put((data, self))            
             res.append((eListboxPythonMultiContent.TYPE_TEXT,
@@ -356,7 +360,7 @@ class SkinpartList(GUIComponent, object):
 
 class SkinpartsBrowser(Screen):
     skin = '''<screen name="SkinpartsBrowser" position="center,center" size="1200,900" title="Arctic Skinparts">
-			 <widget name="SkinpartsList" position="0,0" size="1200,840" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="/usr/share/enigma2/Arctic/pic/scrollbarbg.png" />
+			 <widget name="SkinpartsList" position="0,0" size="1200,840" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="/usr/share/enigma2/Arctic/pic/scrollbarbg.png" zPosition="9" />
 			 <widget name="message" size="150,50" backgroundColor="foreground" foregroundColor="background" font="Regular;20" position="525,275" zPosition="10"/>
 			 <eLabel name="" position="10,857" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
             <eLabel backgroundColor="background" font="Regular;18" foregroundColor="foreground" halign="left" name="" text="Alle Skinparts aktualisieren" position="52,862" size="400,39" transparent="0" valign="top" zPosition="11" />
@@ -408,7 +412,6 @@ class SkinpartsBrowser(Screen):
         try:
             request = Request('https://raw.githubusercontent.com/sbeatz/enigma2arcticskin/master/skinparts/skinparts.json')
             skinparts = urlopen(request, timeout=15).read()
-            print str(skinparts)
             skinparts = json.loads(str(skinparts))
             skinparts = skinparts['skinparts']['skinpart']
             skincategories = {}
@@ -436,6 +439,7 @@ class SkinpartsBrowser(Screen):
     def keySelect(self):
         if self.listmode == 0:
             cur = self["SkinpartsList"].getCurrentSelection()[0]
+            self.title =  "Arctic Skin Parts - "  + cur.title
             self.catindex = self["SkinpartsList"].getCurrentIndex()
             self["SkinpartsList"].setList(cur.items, 1)
             self.listmode = 1
@@ -516,6 +520,7 @@ class SkinpartsBrowser(Screen):
             self.close()
         else:
             self.listmode = 0
+            self.title =  "Arctic Skin Parts"
             self["SkinpartsList"].setList(self.categorylist, 0)
             self["SkinpartsList"].moveUp()
             self["SkinpartsList"].moveDown()
@@ -578,6 +583,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
     def createSetup(self):
 
         self.Update = getConfigListEntry(_("Skin Update"), NoSave(ConfigNothing()))
+        self.list.append(getConfigListEntry(_("Cachepfad"), config.plugins.ArcticSetup.CachePath, None))        
         self.list.append(getConfigListEntry(_("Buttonstil"), config.plugins.ArcticSetup.button, None))
         self.list.append(getConfigListEntry(_("Primetime"),config.plugins.ArcticSetup.primetime, None))
         self.list.append(self.Update)
@@ -747,7 +753,7 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
                             f.close()
     
                 else:                
-                    update = update.replace('text="a"','text="I"')
+                    update = update.replace('text="I"','text="a"')
                     for root, dirs, files in os.walk('/usr/share/enigma2/Arctic/allScreens', topdown=True, onerror=None, followlinks=False):    
                         files = [file for file in files if file.endswith((".xml"))]
                         for file in files:
@@ -772,6 +778,8 @@ class ArcticSetupScreen(ConfigListScreen, Screen):
 
     def keyGreen(self):
         if self.updaterunning ==  False:
+            print str(config.plugins.ArcticSetup.CachePath.value)
+            config.plugins.ArcticSetup.save()
             self.session.openWithCallback(self.skinpartsClosed, SkinpartsBrowser)
     def skinpartsClosed(self):
         pass

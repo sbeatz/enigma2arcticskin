@@ -1,11 +1,12 @@
 #!/bin/sh
-echo „Installing dependencies“
+echo „Installing Arctic dependencies“
 rm /var/lib/opkg/lock
 opkg update
 opkg install python-imaging
+opkg install python-subprocess
 touch /var/lib/opkg/lock
 
 echo "********************************************************"
-echo "*  Dependencies installes                               *"
+echo "*  Dependencies installed                          *"
 echo "********************************************************"
 exit 0
