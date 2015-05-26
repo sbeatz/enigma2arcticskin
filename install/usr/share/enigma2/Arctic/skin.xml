@@ -2638,6 +2638,7 @@ flags = RT_HALIGN_LEFT, text = 4),
 from enigma import eSize, ePoint, gFont,eLabel
 from Components.Label import Label
 self["symbols"] = Label()
+print 'PVRState: ' + str(self['state'].getText())
 </applet>
 </screen>
 	<screen position="center,center" size="880,600" title="Bitte Captcha l&#xF6;sen" name="pyLoadCaptchaScreen">
@@ -4209,5 +4210,45 @@ self["symbols"] = Label()
   <eLabel name="" position="1,-1" size="1154,1080" backgroundColor="lightgrey" />
   <eLabel name="" position="0,0" size="1154,123" backgroundColor="accent" zPosition="1" />
   <eLabel name="" position="1,-1" size="1154,1080" backgroundColor="lightgrey" />
+</screen>
+<screen name="MediaPlayer" position="center,center" size="1280,720" title="Media Player">
+  <widget name="filelist" position="0,0" size="460,620" itemHeight="39" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
+  <widget name="coverArt" position="900,0" size="380,380" transparent="1" alphatest="blend" />
+  <widget name="title" position="900,380" size="380,62" font="Regular; 22" valign="top" />
+  <widget name="artist" position="900,447" size="380,39" font="Regular;22" valign="top" />
+  <widget name="album" position="900,491" size="380,39" font="Regular;22" valign="top" />
+  <widget name="year" position="900,534" size="380,39" font="Regular;22" valign="top" />
+  <widget name="genre" position="900,575" size="380,39" font="Regular;22" valign="top" />
+  <eLabel text="P L A Y L I S T" position="475,0" size="200,39" font="Regular; 20" />
+  <eLabel position="465,11" size="2,600" backgroundColor="background_medium" />
+  <widget name="playlist" position="475,40" size="418,580" itemHeight="39" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" />
+  <widget name="repeat" position="10,645" size="32,32" pixmaps="Arctic/pic/repeat_off.png,Arctic/pic/repeat_on.png" alphatest="blend" scale="1"/>
+  <widget source="session.CurrentService" render="Label" position="1080,650" size="90,25" font="Regular; 18" halign="right">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <eLabel text="/" position="1180,650" size="10,25" font="Regular; 18" halign="center" />
+  <widget source="session.CurrentService" render="Label" position="1190,650" size="90,25" font="Regular; 18" halign="left">
+    <convert type="ServicePosition">Length</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Progress" position="0,680" size="1280,8" borderWidth="0" backgroundColor="grey_light" foregroundColor="accent">
+    <convert type="ServicePosition">Position</convert>
+  </widget>
+  <widget name="artisttext" position="0,0" size="0,0" />
+  <widget name="albumtext" position="0,0" size="0,0" />
+  <widget name="yeartext" position="0,0" size="0,0" />
+  <widget name="genretext" position="0,0" size="0,0" />
+  <widget name="titletext" position="0,0" size="0,0" />
+  <widget name="currenttext" position="0,0" size="0,0" />
+  <widget name="PositionGauge" position="0,0" size="0,0" />
+</screen>
+<screen name="UIPositionSetup" title=" " position="center,center" size="1920,1080">
+  <ePixmap alphatest="blend" pixmap="Arctic/pic/positioner.png" position="1,0" size="1920,1080" transparent="0" zPosition="-20" />
+  <eLabel name=" " position="1020,770" size="44,39" font="PVR; 40" text="a" foregroundColor="button_green" zPosition="10" valign="center" halign="left" />
+  <eLabel name=" " position="615,770" size="44,39" font="PVR; 40" text="a" foregroundColor="button_red" zPosition="10" valign="center" halign="left" />
+  <eLabel backgroundColor="background" font="Regular; 30" halign="center" name="new eLabel" position="1070,765" size="225,45" text="Speichern" foregroundColor="foreground" valign="top" />
+  <eLabel backgroundColor="background" font="Regular; 30" halign="center" name="new eLabel" position="665,765" size="225,45" text="Abbrechen" foregroundColor="foreground" valign="top" />
+  <widget name="config" position="535,450" size="850,250" zPosition="2" textOffset="20,7" itemHeight="50" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarWidth="7" scrollbarBackgroundPicture="Arctic/pic/scrollbarbg.png" transparent="0" />
+  <eLabel backgroundColor="background" font="Regular; 30" halign="center" name="" position="487,360" size="950,50" text="Die Pfeilspitzen an die Bildr&#xE4;nder positionieren" foregroundColor="foreground" valign="top" />
+  <eLabel backgroundColor="background" font="Regular; 38" halign="center" name="" position="487,260" size="950,60" text="UIPositionersetup" foregroundColor="foreground" valign="top" />
 </screen>
 </skin>

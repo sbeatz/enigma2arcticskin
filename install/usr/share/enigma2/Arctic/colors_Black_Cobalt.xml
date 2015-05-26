@@ -1,0 +1,80 @@
+<!--Black-->
+<skin>
+<!--Colors-->
+    <colors>
+    <color name="accent" value="#000050ef" />
+    <color name="accentlight" value="#200050ef" />
+    <color name="aawhite" value="#aaffffff" />
+    <color name="background" value="#00151515" />
+    <color name="transpBlack" value="#ffffffff"/>
+    <color name="background_dark" value="#00212121" />
+    <color name="background_medium" value="#00333333" />
+    <color name="black" value="#ff000000" />
+    <color name="blue" value="#ff7acafe" />
+    <color name="darkgrey" value="#ff2c2c2c" />
+    <color name="darkgrey2" value="#ff666769" />
+    <color name="darkpanel" value="#002c2d2b" />
+    <color name="foreground" value="#00dddddd" />
+    <color name="foreground_light" value="#008a8a8a" />
+    <color name="green" value="#00389416" />
+    <color name="grey" value="#ffc0c2c2" />
+    <color name="grey_dark" value="#00484850" />
+    <color name="grey_light" value="#00999999" />
+    <color name="lightgrey" value="#003f3f3f" />
+    <color name="lightpanel" value="#00edeceb" />
+    <color name="listselback" value="#001ba1e2" />
+    <color name="listwhite" value="#ffffffff" />
+    <color name="orange" value="#00ffc000" />
+    <color name="red" value="#00ce4421" />
+    <color name="transparent" value="#ff111111" />
+    <color name="white" value="#00ffffff" />
+    <color name="yellow" value="#00FFB60A" />
+    <color name="yellow_light" value="#00d0dda8" />
+    <color name="button_blue" value="#200064c7" />
+    <color name="button_green" value="#00389416" />
+    <color name="button_red" value="#04a00a0a" />
+    <color name="button_yellow" value="yellow" />
+    <color name="dark" value="grey_dark" />
+
+  </colors>
+  <!--  WindowStyles -->
+    <windowstyle id="0" type="skinned">
+    <title font="Regular;30" offset="20,15" />
+    <color color="background" name="Background" />
+    <color color="foreground" name="LabelForeground" />
+    <color color="background" name="ListboxBackground" />
+    <color color="foreground" name="ListboxForeground" />
+    <color color="accent" name="ListboxSelectedBackground" />
+    <color color="foreground" name="ListboxSelectedForeground" />
+    <color color="accent" name="ListboxMarkedBackground" />
+    <color color="foreground" name="ListboxMarkedForeground" />
+    <color color="accent" name="ListboxMarkedAndSelectedBackground" />
+    <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
+    <color name="WindowTitleForeground" color="white" />
+    <color name="WindowTitleBackground" color="accent" />
+    <borderset name="bsWindow">
+      <pixmap filename="Arctic/windowstyles/tl_cobalt.png" pos="bpTopLeft" />
+      <pixmap filename="Arctic/windowstyles/t_cobalt.png" pos="bpTop" />
+      <pixmap filename="Arctic/windowstyles/tr_cobalt.png" pos="bpTopRight" />
+      <pixmap filename="Arctic/windowstyles/bl_151515.png" pos="bpBottomLeft" />
+      <pixmap filename="Arctic/windowstyles/b_151515.png" pos="bpBottom" />
+      <pixmap filename="Arctic/windowstyles/br_151515.png" pos="bpBottomRight" />
+      <pixmap filename="Arctic/windowstyles/l.png" pos="bpLeft" />
+      <pixmap filename="Arctic/windowstyles/r.png" pos="bpRight" />
+    </borderset>
+  </windowstyle>
+  <!--  Display -->
+  <windowstyle id="1" type="skinned">
+    <color color="black" name="Background" />
+    <color color="white" name="LabelForeground" />
+    <color color="black" name="ListboxBackground" />
+    <color color="white" name="ListboxForeground" />
+    <color color="accent" name="ListboxSelectedBackground" />
+    <color color="white" name="ListboxSelectedForeground" />
+    <color color="accent" name="ListboxMarkedBackground" />
+    <color color="white" name="ListboxMarkedForeground" />
+    <color color="accent" name="ListboxMarkedAndSelectedBackground" />
+    <color color="white" name="ListboxMarkedAndSelectedForeground" />
+  </windowstyle>
+
+</skin>
