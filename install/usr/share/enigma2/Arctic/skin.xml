@@ -53,8 +53,10 @@
 		<parameter name="ServicelistServiceName" value="0,0,1900,3" />
 		<parameter name="ServicelistServiceInfo100" value="30,5,1900,40" />
 		<parameter name="ServicelistServiceInfo" value="0,0,1900,40" />
-	<parameter name="ChoicelistDash" value="0,5,1920,36" />
-	<parameter name="ChoicelistName" value="45,5,1920,36" />
+		<parameter name="MediaPlayerPlayList" value="30,0,750,39" />
+		<parameter name="MediaPlayerPlayListFont" value="Regular;20" />
+		<parameter name="ChoicelistDash" value="0,5,1920,36" />
+		<parameter name="ChoicelistName" value="45,5,1920,36" />
 		<parameter name="ChoicelistIcon" value="5,10,35,25" />
 		<parameter name="ChoicelistItemHeight" value="36" />
 		<parameter name="ChoicelistFontSize" value="22" />

@@ -44,11 +44,11 @@
     <color color="foreground" name="LabelForeground" />
     <color color="background" name="ListboxBackground" />
     <color color="foreground" name="ListboxForeground" />
-    <color color="accent" name="ListboxSelectedBackground" />
+    <color color="background_dark" name="ListboxSelectedBackground" />
     <color color="foreground" name="ListboxSelectedForeground" />
-    <color color="accent" name="ListboxMarkedBackground" />
+    <color color="background_dark" name="ListboxMarkedBackground" />
     <color color="foreground" name="ListboxMarkedForeground" />
-    <color color="accent" name="ListboxMarkedAndSelectedBackground" />
+    <color color="background_dark" name="ListboxMarkedAndSelectedBackground" />
     <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
     <color name="WindowTitleForeground" color="white" />
     <color name="WindowTitleBackground" color="accent" />
@@ -56,9 +56,9 @@
       <pixmap filename="Arctic/windowstyles/tl_cyan.png" pos="bpTopLeft" />
       <pixmap filename="Arctic/windowstyles/t_cyan.png" pos="bpTop" />
       <pixmap filename="Arctic/windowstyles/tr_cyan.png" pos="bpTopRight" />
-      <pixmap filename="Arctic/windowstyles/bl_151515.png" pos="bpBottomLeft" />
-      <pixmap filename="Arctic/windowstyles/b_151515.png" pos="bpBottom" />
-      <pixmap filename="Arctic/windowstyles/br_151515.png" pos="bpBottomRight" />
+      <pixmap filename="Arctic/windowstyles/bl_333333.png" pos="bpBottomLeft" />
+      <pixmap filename="Arctic/windowstyles/b_333333.png" pos="bpBottom" />
+      <pixmap filename="Arctic/windowstyles/br_333333.png" pos="bpBottomRight" />
       <pixmap filename="Arctic/windowstyles/l.png" pos="bpLeft" />
       <pixmap filename="Arctic/windowstyles/r.png" pos="bpRight" />
     </borderset>

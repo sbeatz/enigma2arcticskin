@@ -9,6 +9,7 @@
     <color name="transpBlack" value="#ffffffff"/>
     <color name="background_dark" value="#00212121" />
     <color name="background_medium" value="#00333333" />
+<color name="background_light" value="#00555555" />
     <color name="black" value="#ff000000" />
     <color name="blue" value="#ff7acafe" />
     <color name="darkgrey" value="#ff2c2c2c" />
@@ -44,12 +45,12 @@
     <color color="foreground" name="LabelForeground" />
     <color color="background" name="ListboxBackground" />
     <color color="foreground" name="ListboxForeground" />
-    <color color="accent" name="ListboxSelectedBackground" />
-    <color color="background" name="ListboxSelectedForeground" />
-    <color color="accent" name="ListboxMarkedBackground" />
-    <color color="background" name="ListboxMarkedForeground" />
-    <color color="accent" name="ListboxMarkedAndSelectedBackground" />
-    <color color="background" name="ListboxMarkedAndSelectedForeground" />
+    <color color="background_light" name="ListboxSelectedBackground" />
+    <color color="foreground" name="ListboxSelectedForeground" />
+    <color color="background_light" name="ListboxMarkedBackground" />
+    <color color="foreground" name="ListboxMarkedForeground" />
+    <color color="background_light" name="ListboxMarkedAndSelectedBackground" />
+    <color color="foreground" name="ListboxMarkedAndSelectedForeground" />
     <color name="WindowTitleForeground" color="background" />
     <color name="WindowTitleBackground" color="accent" />
     <borderset name="bsWindow">
